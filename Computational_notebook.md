@@ -146,10 +146,9 @@ dev.off()
 
 
 ```
+<img src= "./Figures/Heatmap_plot_all_values_v1.png" width = "100"/>
 
-![](Figures/Heatmap_plot_all_values_v1.png)
-
-![](Figures/Heatmap_plot_all_values_v2.png)
+![](Figures/Heatmap_plot_all_values_v2.png =250x)
 
 
 
@@ -239,9 +238,9 @@ Grapefruit_ht <- Small_subset_heatmap(Grapefruit_melt)
 Grapefruit_ht
 #dev.off()
 ```
-![](Figures/Kumquats_heatmap_subset.png)
-![](Figures/Lemon_heatmap_subset.png)
-![](Figures/Grapefruit_heatmap_subset.png)
+![](Figures/Kumquats_heatmap_subset.png)<!-- .element height="50%" width="50%" -->
+![](Figures/Lemon_heatmap_subset.png)<!-- .element height="50%" width="50%" -->
+![](Figures/Grapefruit_heatmap_subset.png)<!-- .element height="50%" width="50%" -->
 
 #### plot indivisdial values - boxplot? for each tribe data set
 
@@ -326,7 +325,7 @@ Toddalioideae_box/Balsamocitrinae_box/Citrinae_box/Clauseninae_box/Triphasiinae_
 dev.off()
 
 ```
-![](Figures/Comparison_of_Max_RLUs_across_Tribes.png)
+![](Figures/Comparison_of_Max_RLUs_across_Tribes.png){:height="50%" width="50%"}
 
 
 #### plot degress of variation
@@ -362,4 +361,4 @@ png("Degress_of_variation_Comparison_of_Max_RLUs_across_Tribes.png", height = 8,
     dev.off()
 ```
 
-![](Figures/Degress_of_variation_Comparison_of_Max_RLUs_across_Tribes.png)
+![](Figures/Degress_of_variation_Comparison_of_Max_RLUs_across_Tribes.png){:height="50%" width="50%"}
