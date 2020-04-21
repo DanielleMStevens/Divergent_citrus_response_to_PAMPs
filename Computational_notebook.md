@@ -148,7 +148,7 @@ dev.off()
 ```
 <img src= "./Figures/Heatmap_plot_all_values_v1.png" width = "450"/>
 
-<img src= "./Figures/Heatmap_plot_all_values_v2.png" width = "500"/>
+<img src= "./Figures/Heatmap_plot_all_values_v2.png" width = "550"/>
 
 
 
@@ -238,9 +238,9 @@ Grapefruit_ht
 #dev.off()
 ```
 
-<img src= "./Figures/Kumquats_heatmap_subset.png" width = "300"/>
-<img src= "./Figures/Lemon_heatmap_subset.png" width = "350"/>
-<img src= "./Figures/Grapefruit_heatmap_subset.png" width = "350"/>
+<img src= "./Figures/Kumquats_heatmap_subset.png" width = "350"/>
+<img src= "./Figures/Lemon_heatmap_subset.png" width = "450"/>
+<img src= "./Figures/Grapefruit_heatmap_subset.png" width = "450"/>
 
 
 #### plot indivisdial values - boxplot? for each tribe data set
@@ -327,7 +327,7 @@ dev.off()
 
 ```
 
-<img src= "./Figures/Comparison_of_Max_RLUs_across_Tribes.png" width = "300"/>
+<img src= "./Figures/Comparison_of_Max_RLUs_across_Tribes.png" width = "400"/>
 
 
 
@@ -364,5 +364,5 @@ png("Degress_of_variation_Comparison_of_Max_RLUs_across_Tribes.png", height = 8,
     dev.off()
 ```
 
-<img src= "./Figures/Degress_of_variation_Comparison_of_Max_RLUs_across_Tribes.png" width = "300"/>
+<img src= "./Figures/Degress_of_variation_Comparison_of_Max_RLUs_across_Tribes.png" width = "450"/>
 
