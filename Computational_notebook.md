@@ -1,14 +1,7 @@
 
-
-```{r setup, include=FALSE}
-library(devtools)
-devtools::install_github("viking/r-yaml")
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 ###############################################################
-#library packages need to load
-######################################################################
+library packages need to load
+###############################################################
 
 ```{r}
 library(RColorBrewer)
@@ -24,19 +17,19 @@ library(patchwork)
 library(reshape2)
 
 ```
-# NOTE: I have had issues sometimes loading the complex heatmap package (not sure why), 
-# Try one of the many ways to download the package and if still running into troubles,
-# consult google or contact me
+NOTE: I have had issues sometimes loading the complex heatmap package (not sure why), 
+Try one of the many ways to download the package and if still running into troubles,
+consult google or contact me
 
-#install_github("jokergoo/ComplexHeatmap")
-#devtools::install_github("jokergoo/ComplexHeatmap")
-#if (!requireNamespace("BiocManager", quietly=TRUE))
-#install.packages("BiocManager")
-#BiocManager::install("ComplexHeatmap")
+install_github("jokergoo/ComplexHeatmap")
+devtools::install_github("jokergoo/ComplexHeatmap")
+if (!requireNamespace("BiocManager", quietly=TRUE))
+install.packages("BiocManager")
+BiocManager::install("ComplexHeatmap")
 
 
 ##############################################
-# Load Processed Data and Colors
+Load Processed Data and Colors
 ##############################################
 
 
@@ -49,7 +42,7 @@ source("./Figure_colors.R")
 ```
 
 ######################################################################
-#row name settings
+row name settings
 ######################################################################
 
 ```{r}
@@ -65,7 +58,7 @@ row.names(melted_filtered_avg_PAMP_responses) <- row_names_to_apply
 
 
 ######################################################################
-#settings for inital response - color code
+settings for inital response - color code
 ######################################################################
 
 ```{r}
@@ -98,7 +91,7 @@ col_list_ht <- circlize::colorRamp2(append(a,b),append(col1_only,col2_only))
 ```
 
 ######################################################################
-#plot heatmap max rlu 
+plot heatmap max rlu 
 ######################################################################
 
 
@@ -163,7 +156,7 @@ dev.off()
 
 
 ######################################################################
-#plot indivisdial values - heatmap
+plot indivisdial values - heatmap
 ######################################################################
 
 ```{r}
@@ -252,7 +245,7 @@ Grapefruit_ht
 
 
 ######################################################################
-#plot indivisdial values - boxplot? for each tribe data set
+plot indivisdial values - boxplot? for each tribe data set
 ######################################################################
 
 Toddalioideae_melt <- reshape2::melt(Toddalioideae)
@@ -335,7 +328,7 @@ dev.off()
 
 
 ######################################################################
-#plot degress of variation
+plot degress of variation
 ######################################################################
 
 ```{r}
@@ -350,8 +343,7 @@ degree_of_variation_bargraph <- function(data_frame_in){
     labs(subtitle = c(as.character(unique(reset_data$Tribe))))
 }
 ```
-
-#png("Degress_of_variation_Comparison_of_Max_RLUs_across_Tribes.png", height = 8, width = 3.5, units = "in", res = 800)
+png("Degress_of_variation_Comparison_of_Max_RLUs_across_Tribes.png", height = 8, width = 3.5, units = "in", res = 800)
 
 ```{r}
 (degree_of_variation_bargraph(Toddalioideae_alt)/
@@ -365,4 +357,4 @@ degree_of_variation_bargraph <- function(data_frame_in){
     degree_of_variation_bargraph(Triphasiinae_alt))
 ```
 
-#dev.off()
+dev.off()
