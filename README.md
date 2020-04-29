@@ -11,5 +11,5 @@ Danielle M. Stevens<sup>1,2</sup>,Jessica Y. Franco<sup>1</sup>, Tania Toruno<su
 Purpose: The script in this repository is for processing and ploting ROS data collected from diverse citrus species and relative after treatment with different MAMPs. 
 
 
-There are two main scripts in this repository. One processes the data and one plots the data. To assess all the plots made in the script including preliminary, visit this markdown file.
+There are two main scripts in this repository. One processes the data and one plots the data. To assess all the plots made in the script including preliminary data analyses, visit this markdown file: [Computational_notebook.md](Computational_notebook.md) 
 
