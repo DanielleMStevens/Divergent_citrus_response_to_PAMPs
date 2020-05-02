@@ -13,3 +13,8 @@ Purpose: The script in this repository is for processing and ploting ROS data co
 
 There are two main scripts in this repository. One processes the data and one plots the data. To assess all the plots made in the script including preliminary data analyses, visit this markdown file: [Computational_notebook.md](Computational_notebook.md) 
 
+To run scripts, in the R console, run the following commands:
+```R
+source("./Plot_Responses_ggplot_only.R")
+
+```

@@ -23,6 +23,7 @@ library(stringr)
 library(ggplot2)
 library(patchwork)
 library(reshape2)
+library(rstudioapi)
 
 # NOTE: I have had issues sometimes loading the complex heatmap package (not sure why), 
 # Try one of the many ways to download the package and if still running into troubles,
@@ -266,140 +267,7 @@ Small_subset_heatmap(Grapefruit_melt)
 dev.off()
 
 
-######################################################################
-#plot indivisdial values - boxplot? for each tribe data set
-######################################################################
 
-Toddalioideae_melt <- reshape2::melt(Toddalioideae)
-Toddalioideae_box <- ggplot(Toddalioideae_melt, aes(x = variable, y = value, fill = `Sub-family`)) +
-  geom_boxplot() +
-  geom_jitter(aes(colour = `Sub-family`), size = 1.5, alpha = 0.8, width= 0.2, colour = "black") +
-  theme_bw() +
-  ylab("Max RLUs") + 
-  xlab("") +
-  scale_y_log10() +
-  theme(legend.position = "none")+
-  scale_fill_manual("Sub-Family", values = col.list$a)+
-  scale_colour_manual("Sub-Family", values = col.list$a) +
-  labs(subtitle = c(as.character(unique(Toddalioideae_melt$Tribe))))
-
-
-
-Balsamocitrinae_melt <- reshape2::melt(Balsamocitrinae)
-Balsamocitrinae_box <- ggplot(Balsamocitrinae_melt, aes(x = variable, y = value, fill = Tribe)) +
-  geom_boxplot(alpha = 0.5) +
-  geom_jitter(aes(color = Tribe), size = 1.5, alpha = 0.8, width= 0.2, colour = "black") +
-  theme_bw() +
-  ylab("Max RLUs") +
-  xlab("") +
-  scale_y_log10() +
-  theme(legend.position = "none")+
-  scale_fill_manual("Tribe", values = col.list$b) +
-  scale_colour_manual("Tribe", values = col.list$b) +
-  labs(subtitle = c(as.character(unique(Balsamocitrinae_melt$Tribe))))
-
-
-
-Citrinae_melt <- reshape2::melt(Citrinae)
-Citrinae_box <- ggplot(Citrinae_melt, aes(x = variable, y = value, fill = Tribe)) +
-  geom_boxplot(alpha = 0.5) +
-  geom_jitter(aes(color = Tribe), size = 1.5, alpha = 0.8, width= 0.2, colour = "black") +
-  my_ggplot_theme +
-  ylab("Max RLUs") + 
-  xlab("") +
-  scale_y_log10() +
-  theme(legend.position = "none")+
-  scale_fill_manual("Tribe", values = col.list$b) +
-  scale_colour_manual("Tribe", values = col.list$b) +
-  labs(subtitle = c(as.character(unique(Citrinae_melt$Tribe))))
-
-
-
-Clauseninae_melt <- reshape2::melt(Clauseninae)
-Clauseninae_box <- ggplot(Clauseninae_melt, aes(x = variable, y = value, fill = Tribe)) +
-  geom_boxplot(alpha = 0.5) +
-  geom_jitter(aes(color = Tribe), size = 1.5, alpha = 0.8, width= 0.2, colour = "black") +
-  theme_bw() +
-  ylab("Max RLUs") + 
-  xlab("") +
-  scale_y_log10() +
-  theme(legend.position = "none")+
-  scale_fill_manual("Tribe", values = col.list$b) +
-  scale_colour_manual("Tribe", values = col.list$b) +
-  labs(subtitle = c(as.character(unique(Clauseninae_melt$Tribe))))
-
-
-
-Triphasiinae_melt <- reshape2::melt(Triphasiinae)
-Triphasiinae_box <- ggplot(Triphasiinae_melt, aes(x = variable, y = value, fill = Tribe)) +
-  geom_boxplot(alpha = 0.5) +
-  geom_jitter(aes(color = Tribe), size = 1.5, alpha = 0.8, width= 0.2, colour = "black") +
-  theme_bw() +
-  ylab("Max RLUs") + 
-  xlab("") +
-  scale_y_log10() +
-  theme(legend.position = "none")+
-  scale_fill_manual("Tribe", values = col.list$b) +  
-  scale_colour_manual("Tribe", values = col.list$b) +
-  labs(subtitle = c(as.character(unique(Triphasiinae_melt$Tribe))))
-
-
-png("Comparison_of_Max_RLUs_across_Tribes.png", height = 8, width = 3.5, units = "in", res = 800)
-Toddalioideae_box/Balsamocitrinae_box/Citrinae_box/Clauseninae_box/Triphasiinae_box
-dev.off()
-
-
-######################################################################
-#plot degress of variation
-######################################################################
-
-
-degree_of_variation_bargraph <- function(data_frame_in){
-  reset_data <- reshape2::melt(data_frame_in, id=c("Botanical name",'Sub-family','Tribe','Common name'))
-  reset_data$value <- as.factor(reset_data$value)
-  ggplot(reset_data, aes(x= variable, fill = value))+
-    geom_bar(position = "fill")+
-    xlab("")+
-    theme_bw() +
-    scale_fill_manual("Response", values= color_code_samples_col) +
-    labs(subtitle = c(as.character(unique(reset_data$Tribe))))
-}
-
-png("Degress_of_variation_Comparison_of_Max_RLUs_across_Tribes.png", height = 8, width = 3.5, units = "in", res = 800)
-
-(degree_of_variation_bargraph(Toddalioideae_alt)/
-    degree_of_variation_bargraph(Rutoideae_alt)/
-    
-    degree_of_variation_bargraph(Balsamocitrinae_alt)/
-    degree_of_variation_bargraph(Citrinae_alt)/
-    degree_of_variation_bargraph(Clauseninae_alt)/
-    degree_of_variation_bargraph(Merrilliinae_alt)/
-    degree_of_variation_bargraph(Micromelinae_alt)/
-    degree_of_variation_bargraph(Triphasiinae_alt))
-
-dev.off()
-
-
-######################################################################
-#plot degress of variation - as facets
-######################################################################
-
-reset_data <- reshape2::melt(alternate_maping_data, id=c("Botanical name",'Sub-family','Tribe','Common name'))
-reset_data$value <- as.factor(reset_data$value)
-
-png("Degress_of_variation_Comparison_of_Max_RLUs_across_Tribes_as_facets.png", height = 9, width = 3.5, units = "in", res = 800)
-
-ggplot(reset_data, aes(x= variable, fill = value))+
-  geom_bar(position = "fill")+
-  facet_grid(Tribe ~ .)+
-  xlab("")+
-  ylab("Proportion of Response\n") +
-  scale_y_continuous(breaks = c(0.5,1))+
-  theme_bw() +
-  theme(axis.text.x = element_text(angle = 90))+
-  scale_fill_manual("Response", values= color_code_samples_col) 
-
-dev.off()
 
 
 ######################################################################

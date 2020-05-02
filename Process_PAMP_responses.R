@@ -17,7 +17,7 @@ library(devtools)
 library(readxl)
 library(stringr)
 library(reshape2)
-
+library(rstudioapi)
 
 ######################################################################
 #upload raw data 
@@ -25,7 +25,7 @@ library(reshape2)
 
 #setwd to where repo was cloned and maintained
 setwd(dirname(rstudioapi::getSourceEditorContext()$path))
-
+#try(setwd(dirname(rstudioapi::getActiveDocumentContext()$path)))
 
 #raw go-terms file to process - load in file
 average_PAMP_response <- as.data.frame(read_excel("./Raw_files/Summary_of_PAMP_response.xlsx", sheet=1, col_names = TRUE), stringsAsFactors = F)
