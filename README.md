@@ -16,5 +16,6 @@ There are two main scripts in this repository. One processes the data and one pl
 To run scripts, in the R console, run the following commands:
 ```R
 source("./Plot_Responses_ggplot_only.R")
+source("./Plot_Responses_ComplexHeatmap.R")
 
 ```
