@@ -24,4 +24,4 @@ my_ggplot_theme <- theme_bw() +
         axis.text.x = element_text(color = "black", family = "Arial"),
         axis.text.y = element_text(color = "black", family = "Arial"),
         panel.grid = element_blank(), 
-        panel.border = element_rect(color = "black", size = 1))
+        panel.border = element_rect(color = "black", size = 0.8))

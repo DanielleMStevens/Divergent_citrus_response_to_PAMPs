@@ -41,7 +41,7 @@ alternate_maping_data <- alternate_maping_data[1:85,2:9]
 alternate_maping_data <- alternate_maping_data[,c(1,2,3,4,7,8,6,5)]
 
 ############this line is temporary - remove one all data is aquired################
-filtered_avg_PAMP_response[is.na(filtered_avg_PAMP_response)] <- 0
+#filtered_avg_PAMP_response[is.na(filtered_avg_PAMP_response)] <- 0
 
 
 
@@ -142,7 +142,7 @@ alternate_maping_data <- rbind(Toddalioideae_alt,Rutoideae_alt,
                               Balsamocitrinae_alt, Citrinae_alt, Clauseninae_alt, Merrilliinae_alt, Micromelinae_alt, Triphasiinae_alt)
 
 
-
+melted_alternate_maping_data <- as.matrix(alternate_maping_data[,5:8])
 
 
 
