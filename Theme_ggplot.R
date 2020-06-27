@@ -21,7 +21,7 @@ library(ggplot2)
 my_ggplot_theme <- theme_bw() +
   theme(axis.title.x = element_text(size = 12, color = "black", family = "Arial"),
         axis.title.y = element_text(size = 12, color = "black", family = "Arial"),
-        axis.text.x = element_text(color = "black", family = "Arial"),
-        axis.text.y = element_text(color = "black", family = "Arial"),
+        axis.text.x = element_text(size = 11,  color = "black", family = "Arial"),
+        axis.text.y = element_text(size = 11, color = "black", family = "Arial"),
         panel.grid = element_blank(), 
         panel.border = element_rect(color = "black", size = 0.8))

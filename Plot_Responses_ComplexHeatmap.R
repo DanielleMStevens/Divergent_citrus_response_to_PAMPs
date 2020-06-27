@@ -8,33 +8,6 @@
 #-----------------------------------------------------------------------------------------------
 
 
-######################################################################
-#library packages need to load
-######################################################################
-
-library(RColorBrewer)
-library(devtools)
-library(ComplexHeatmap)
-library(readxl)
-library(circlize)
-library(treemap)
-library(data.tree)
-library(stringr)
-library(ggplot2)
-library(patchwork)
-library(reshape2)
-library(rstudioapi)
-
-# NOTE: I have had issues sometimes loading the complex heatmap package (not sure why), 
-# Try one of the many ways to download the package and if still running into troubles,
-# consult google or contact me
-
-#install_github("jokergoo/ComplexHeatmap")
-devtools::install_github("jokergoo/ComplexHeatmap")
-#if (!requireNamespace("BiocManager", quietly=TRUE))
-#install.packages("BiocManager")
-#BiocManager::install("ComplexHeatmap")
-
 
 ##############################################
 # Load Processed Data and Colors
@@ -43,6 +16,9 @@ devtools::install_github("jokergoo/ComplexHeatmap")
 #make sure to set path to the same place where the figure 
 setwd(dirname(rstudioapi::getSourceEditorContext()$path))
 
+
+# Load libraries to run scripts
+source("./Libraries_to_load.R")
 
 # load processed data
 source("./Process_PAMP_responses.R")
@@ -97,7 +73,7 @@ citrus_realtionship_info$Tribe <- as.character(citrus_realtionship_info$Tribe)
 ######################################################################
 
 
-png("Heatmap_plot_all_values_organize_by_taxonomy.png", units="in", width=8, height=10, res=800)
+png("Heatmap_plot_all_values_organize_by_taxonomy.png", units="in", width=8, height=10, res=1200)
 
 
 
@@ -153,7 +129,7 @@ ht = ComplexHeatmap::Heatmap(melted_filtered_avg_PAMP_responses,
                                                          grid_width = unit(0.5, "cm"),
                                                          legend_label_gp = gpar(col = "black",fontsize = 10, fontfamily = "Arial")),
                              
-                             use_raster = TRUE, raster_quality = 2) 
+                             use_raster = TRUE, raster_quality = 2.5, raster_device = 'png') 
 
 
 draw(ht, heatmap_legend_side = "left")
@@ -167,21 +143,29 @@ dev.off()
 
 sub_clustered_heatmap <- function(matrix_in, df_in){
   
-  #determine height of image
-  number_of_samples <- nrow(matrix_in)
-  height_of_heatmap <- number_of_samples*0.16
-  if (number_of_samples > 20){
-    height_of_heatmap <- number_of_samples*0.14
+  #determine height of image & width of image
+  if (is.null(ncol(matrix_in)) == FALSE){
+    number_of_samples <- nrow(matrix_in)
+    height_of_heatmap <- number_of_samples*0.16
+    if (number_of_samples > 20){
+      height_of_heatmap <- number_of_samples*0.14
+    }
+    
+    max_char_length <<- (max(nchar(row.names(matrix_in)))*0.25)
+  }
+  if (is.null(ncol(matrix_in)) == TRUE){
+    number_of_samples <- length(matrix_in)
+    height_of_heatmap <- number_of_samples*0.16
+    if (number_of_samples > 20){
+      height_of_heatmap <- number_of_samples*0.14
+    }
+    
+    max_char_length <<- (max(nchar(names(matrix_in)))*0.25)
   }
   
-  #determine width of image
-  max_char_length <<- (max(nchar(row.names(matrix_in)))*0.25)
-  
-  
+
   
   #determine coloring
-  colnames(df_in) <- c("Botanical name","Sub-family","Tribe","Common name","Chitin","Flg22","Csp22","CLas csp22")
-  
   colors_subfamily <- c("Toddalioideae" = "#FBBE4E", "Rutoideae" = "#E3DECA", "Aurantioideae" = "#273253")
   
   colors_tribe <- c("Balsamocitrinae" = "#1F6768", "Citrinae" = "#A8C653", "Clauseninae" = "#E45D50",
@@ -202,7 +186,7 @@ sub_clustered_heatmap <- function(matrix_in, df_in){
                                     Tribe = colors_tribe_filtered))
   
   
-  ComplexHeatmap::Heatmap(matrix_in,
+  ht = ComplexHeatmap::Heatmap(matrix_in,
                           #cluster color modificaiton
                           col = my_color_scale_breaks,
                           show_heatmap_legend = c(col = FALSE),
@@ -221,14 +205,37 @@ sub_clustered_heatmap <- function(matrix_in, df_in){
                           
                           #sizing and border
                           border = T,
-                          width = unit(1.5, "in"),
+                          width = unit(1, "in"),
                           height = unit(height_of_heatmap, "in"),
                           use_raster = TRUE, raster_quality = 2)
   
+  draw(ht, annotation_legend_side = "left", heatmap_legend_side = "left")
+  
 }
 
+# plot different combination of inidivudal PAMPs
+png("just_chitin_by_taxonomy.png", height = 14, width = 8, units = "in", res = 1000)
+just_chitin <- sub_clustered_heatmap(melted_filtered_avg_PAMP_responses[,1], filtered_avg_PAMP_response[,1:5])
+dev.off()
+
+png("just_flg22_by_taxonomy.png", height = 14, width = 8,  units = "in", res = 1000)
+just_flg22 <- sub_clustered_heatmap(melted_filtered_avg_PAMP_responses[,2], filtered_avg_PAMP_response[,c(1,2,3,4,6)])
+dev.off()
+
+png("just_csp22_by_taxonomy.png", height = 14, width = 8,  units = "in", res = 1000)
+just_csp22 <- sub_clustered_heatmap(melted_filtered_avg_PAMP_responses[,3], filtered_avg_PAMP_response[,c(1,2,3,4,7)])
+dev.off()
+
+png("just_clascsp22_by_taxonomy.png", height = 14, width = 8,  units = "in", res = 1000)
+just_clasCsp22 <- sub_clustered_heatmap(melted_filtered_avg_PAMP_responses[,4], filtered_avg_PAMP_response[,c(1,2,3,4,8)])
+dev.off()
 
 
+chitin_flg22 <- sub_clustered_heatmap(melted_filtered_avg_PAMP_responses[,1:2], filtered_avg_PAMP_response[,1:6])
+chitin_csp22 <- sub_clustered_heatmap(melted_filtered_avg_PAMP_responses[,c(1,3)], filtered_avg_PAMP_response[,c(1,2,3,4,5,7)])
+
+
+# cluster by subfamily/tribe individually -> then add together
 Toddalioideae_mat <- as.matrix(Toddalioideae[,5:8])
 row.names(Toddalioideae_mat) <- Toddalioideae$`Botanical name`                   
 Tod <- sub_clustered_heatmap(Toddalioideae_mat, Toddalioideae)
@@ -408,33 +415,121 @@ dev.off()
 ######################################################################
 
 
+box_and_bar_heatmap <- function(matrix_in, df_in){
+  
+  #determine height of image
+  number_of_samples <- nrow(matrix_in)
+  height_of_heatmap <- number_of_samples*0.2
+  if (number_of_samples > 20){
+    height_of_heatmap <- number_of_samples*0.14
+  }
+  
+  #determine width of image
+  max_char_length <<- (max(nchar(row.names(matrix_in)))*0.25)
+  
+  
+  
+  
+  #determine coloring - row annotation
+  colnames(df_in) <- c("Botanical name","Sub-family","Tribe","Common name","Chitin","Flg22","Csp22","CLas csp22")
+  
+  colors_subfamily <- c("Toddalioideae" = "#FBBE4E", "Rutoideae" = "#E3DECA", "Aurantioideae" = "#273253")
+  
+  colors_tribe <- c("Balsamocitrinae" = "#1F6768", "Citrinae" = "#A8C653", "Clauseninae" = "#E45D50",
+                    "Merrilliinae" = "#544275", "Micromelinae" = "#CAA2DD", "Triphasiinae" = "#4EAEDF",
+                    "Toddalioideae" = "#FBBE4E", "Rutoideae" = "#E3DECA", "Aurantioideae" = "#273253")
+  
+  
+  colors_subfamily_filtered <- colors_subfamily[names(colors_subfamily) %in% as.character(unique(df_in$`Sub-family`))]
+  colors_tribe_filtered <- colors_tribe[names(colors_tribe) %in% as.character(unique(df_in$Tribe))]
+  
+  Taxon_df <- df_in[,2:3]
+  Taxon_df$`Sub-family` <- as.character(Taxon_df$`Sub-family`)
+  Taxon_df$Tribe <- as.character(Taxon_df$Tribe)
+  
+  # row annotation on taxonomy
+  row_anno <- rowAnnotation(df = Taxon_df,
+                            border = TRUE,
+                            show_legend =c(FALSE,FALSE),
+                            col = list(`Sub-family` = colors_subfamily_filtered,
+                                       Tribe = colors_tribe_filtered))
+  
+  
+  # top annotation
+  ha = HeatmapAnnotation('Avg. Max RLUs' = anno_boxplot(matrix_in), height = unit(3, "cm"))
+  
+  # row annotation on total response of all MAMPs
+  ra = rowAnnotation('Total RLU Response' = anno_barplot(matrix_in), width = unit(2 , "cm"))
+  
+  
+  plot_off <- ComplexHeatmap::Heatmap(matrix_in,
+                                      #cluster color modificaiton
+                                      col = my_color_scale_breaks,
+                                      show_heatmap_legend = c(col = FALSE),
+                                      
+                                      #column modifications
+                                      cluster_columns = F,
+                                      cluster_rows = T,
+                                      
+                                      #row modifications + dendrogram
+                                      show_row_names = T,
+                                      row_names_gp = gpar(fontsize = 12),
+                                      
+                                      #annotate Taxnonomy Info
+                                      left_annotation = row_anno,
+                                      top_annotation = ha,
+                                      right_annotation = ra,
+                                      
+                                      #sizing and border
+                                      border = T,
+                                      width = unit(1.5, "in"),
+                                      height = unit(height_of_heatmap, "in"),
+                                      
+                                      
+                                      use_raster = TRUE, raster_quality = 2)
+  
+  return(draw(plot_off, annotation_legend_side = "left"))
+  
+  
+}
+
+
+#subset by all data which is known to respond to clas csp22
 clascsp22_data <- subset(filtered_avg_PAMP_response, filtered_avg_PAMP_response$`CLas csp22` > 0)
 clascsp22_data_asMatrix <- as.matrix(clascsp22_data[,c(5,6,7,8)])
 row.names(clascsp22_data_asMatrix) <- clascsp22_data$`Botanical name`
 
 
 png("ClasCps22_subset_heatmap.png", height = 6, width = 5, units = "in", res = 1200)
-Small_subset_heatmap(clascsp22_data_asMatrix, clascsp22_data)
+box_and_bar_heatmap(clascsp22_data_asMatrix, clascsp22_data)
 dev.off()
 
 
 
-
+#subset by all data which is known not to respond to clas csp22
 not_clascsp22_data <- subset(filtered_avg_PAMP_response, filtered_avg_PAMP_response$`CLas csp22` == 0)
+
+#arrrange and plot by top 9 hits of chitin
+not_clascsp22_data <- dplyr::arrange(not_clascsp22_data, desc(Chitin))
 not_clascsp22_data_asMatrix <- as.matrix(not_clascsp22_data[,c(5,6,7,8)])
 row.names(not_clascsp22_data_asMatrix) <- not_clascsp22_data$`Botanical name`
-Small_subset_heatmap(not_clascsp22_data_asMatrix,not_clascsp22_data)
+box_and_bar_heatmap(not_clascsp22_data_asMatrix[1:9,],not_clascsp22_data[1:9,])
 
+#arrrange and plot by top 9 hits of flg22
+not_clascsp22_data <- dplyr::arrange(not_clascsp22_data, desc(Flg22))
+not_clascsp22_data_asMatrix <- as.matrix(not_clascsp22_data[,c(5,6,7,8)])
+row.names(not_clascsp22_data_asMatrix) <- not_clascsp22_data$`Botanical name`
+box_and_bar_heatmap(not_clascsp22_data_asMatrix[1:9,],not_clascsp22_data[1:9,])
+
+#arrrange and plot by top 9 hits of csp22
+not_clascsp22_data <- dplyr::arrange(not_clascsp22_data, desc(Csp22))
+not_clascsp22_data_asMatrix <- as.matrix(not_clascsp22_data[,c(5,6,7,8)])
+row.names(not_clascsp22_data_asMatrix) <- not_clascsp22_data$`Botanical name`
+box_and_bar_heatmap(not_clascsp22_data_asMatrix[1:9,],not_clascsp22_data[1:9,])
 
 ######################################################################
 #subset data which has a response for clas csp22
 ######################################################################
-
-
-disease_index <- subset(disease_index, disease_index$Disease_category != 'N/A')
-
-
-disease_index <- disease_index[order(disease_index$Disease_category, decreasing = F),]
 
 
 ###create function to create automated ploting
@@ -477,8 +572,9 @@ disease_index_heatmap <- function(matrix_in, df_in){
   ha = HeatmapAnnotation('Avg. Max RLUs' = anno_boxplot(matrix_in), height = unit(3, "cm"))
   
   #right annotation 
-  ra = rowAnnotation('Disease Index' = as.numeric(df_in$Disease_category),
-                     col = list('Disease index' =circlize::colorRamp2(c(0, 8), c("green", "red"))))
+  ra = rowAnnotation('Disease Index' = as.numeric(df_in$Disease_category))
+  
+
   
   ht = ComplexHeatmap::Heatmap(matrix_in,
                           #cluster color modificaiton
@@ -511,8 +607,13 @@ disease_index_heatmap <- function(matrix_in, df_in){
   
 }
 
-disease_subset_RLUs <- melted_filtered_avg_PAMP_responses[row.names(melted_filtered_avg_PAMP_responses) %in% disease_index$`Botanical name`,]
 
+disease_index <- subset(disease_index, disease_index$Disease_category != 'N/A')
+disease_index <- disease_index[order(disease_index$Disease_category, decreasing = F),]
+disease_index$Disease_category <- as.numeric(disease_index$Disease_category)
+
+disease_subset_RLUs <- melted_filtered_avg_PAMP_responses[row.names(melted_filtered_avg_PAMP_responses) %in% disease_index$`Botanical name`,]
+disease_subset_RLUs <- disease_subset_RLUs[disease_index$`Botanical name`,]
 
 png("Disease_data_subset_heatmap.png", height = 9, width = 10, units = "in", res = 1200)
 
