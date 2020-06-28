@@ -26,8 +26,8 @@ library(reshape2)
 library(rstudioapi)
 library(dplyr)
 
-install_version("pbkrtest", version = "0.4-7", repos = "http://cran.us.r-project.org")
-library(pbkrtest)
+if(!require(pbkrtest)) install_version("pbkrtest", version = "0.4-7", repos = "http://cran.us.r-project.org")
+
 
 # Install
 if(!require(devtools)) install.packages("devtools")

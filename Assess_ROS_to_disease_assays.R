@@ -13,7 +13,8 @@
 ######################################################################
 
 #make sure to set path to the same place where the figure 
-setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+#setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+getSrcDirectory(function(x) {x})
 
 # Load libraries to run scripts
 source("./Libraries_to_load.R")
