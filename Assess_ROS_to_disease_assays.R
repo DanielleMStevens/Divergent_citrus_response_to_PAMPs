@@ -13,7 +13,7 @@
 ######################################################################
 
 #make sure to set path to the same place where the figure 
-#setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 getSrcDirectory(function(x) {x})
 
 # Load libraries to run scripts
@@ -108,7 +108,7 @@ correlation_curves <- function(df_in){
     my_ggplot_theme +
     scale_color_manual(values = colors_tribe_filtered) +
     theme(axis.text = element_text(size = 11)) +
-    stat_cor(method="pearson")
+    stat_cor(method="spearman")
     
 }
 

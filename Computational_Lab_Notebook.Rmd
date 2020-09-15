@@ -3,6 +3,7 @@ title: "Computational Lab Notebook"
 author: "Danielle M. Stevens"
 date: "6/27/2020"
 output:
+  pdf_document: default
   html_document: default
 ---
 
@@ -121,7 +122,7 @@ correlation_curves <- function(df_in){
     my_ggplot_theme +
     scale_color_manual(values = colors_tribe_filtered) +
     theme(axis.text = element_text(size = 11)) +
-    stat_cor(method="pearson")
+    stat_cor(method="spearman")
     
 }
 ```
@@ -132,26 +133,31 @@ correlation_curves <- function(df_in){
 
 ```{r, warning = FALSE}
 #tiff("Correlation_curves_all_MAMPs.tiff", height = 2816, width = 5116, units='px', compression = "lzw", res = 600)
-correlation_curves(disease_subset_RLUs) + ggtitle("All MAMPs")
+All_MAMPs <- correlation_curves(disease_subset_RLUs) + ggtitle("All MAMPs")
 #dev.off()
 
+All_MAMPs
+```
+
+
+```{r} 
 
 
 #tiff("Correlation_curves_by_MAMP.tiff", height = 2816, width = 8383, units='px', compression = "lzw", res = 600)
 
-ggpubr::ggarrange(correlation_curves(subset(disease_subset_RLUs, variable == "Chitin")) + ggtitle("Chitin"),
+Single_MAMPs <- ggpubr::ggarrange(correlation_curves(subset(disease_subset_RLUs, variable == "Chitin")) + ggtitle("Chitin"),
                   correlation_curves(subset(disease_subset_RLUs, variable == "Flg22")) + ylab("") + ggtitle("Flg22"), 
                   correlation_curves(subset(disease_subset_RLUs, variable == "Csp22")) + ylab("") + ggtitle("Csp22"), 
                   correlation_curves(subset(disease_subset_RLUs, variable == "CLas csp22")) + ylab("") + ggtitle("CLas Csp22"),
-                  ncol = 4, nrow = 1, common.legend = TRUE, legend = "bottom") + 
+                  ncol = 2, nrow = 2, common.legend = TRUE, legend = "bottom") + 
   theme(legend.text = element_text(size = 11), legend.direction = "vertical", legend.box = "vertical")
 
+Single_MAMPs
 #dev.off()
-  
+  #library(patchwork)
+#All_MAMPs
+#Single_MAMPs
 ```
-
-
-
 
 ### plot indivisdial values - boxplot? for each tribe data set
 
