@@ -30,14 +30,14 @@ getSrcDirectory(function(x) {x})
 
 #raw go-terms file to process - load in file
 average_PAMP_response <- as.data.frame(read_excel("./Raw_files/Summary_of_PAMP_response.xlsx", sheet=1, col_names = TRUE), stringsAsFactors = F)
-filtered_avg_PAMP_response <- average_PAMP_response[1:85,c(2:9)]
+filtered_avg_PAMP_response <- average_PAMP_response[1:86,c(2:9)]
 
 filtered_avg_PAMP_response <- filtered_avg_PAMP_response[,c(1,2,3,4,7,8,6,5)]
 
 
 #load in alterante data set for mapping on NA data and variable data
 alternate_maping_data <- as.data.frame(read_excel("./Raw_files/Summary_of_PAMP_response.xlsx", sheet = 2, col_names = TRUE), stringsAsFactors =F)
-alternate_maping_data <- alternate_maping_data[1:85,2:9]
+alternate_maping_data <- alternate_maping_data[1:86,2:9]
 
 alternate_maping_data <- alternate_maping_data[,c(1,2,3,4,7,8,6,5)]
 

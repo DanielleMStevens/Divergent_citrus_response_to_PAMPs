@@ -54,8 +54,10 @@ row.names(melted_filtered_avg_PAMP_responses) <- row_names_to_apply
 
 
 #create a customs scale to take in differential responses
-my_scale_breaks <- c(0,200, 500, 1000, 5000, 20000, 50000, 100000)
+my_scale_breaks <-  c(200, 500, 1000, 5000, 20000, 50000, 100000)
 colors <- RColorBrewer::brewer.pal(length(my_scale_breaks), "Reds")
+my_scale_breaks <-  c(0, 200, 500, 1000, 5000, 20000, 50000, 100000)
+colors <- c("#FFFFFF",colors)
 my_color_scale_breaks <- circlize::colorRamp2(my_scale_breaks, colors)
 
 
@@ -72,69 +74,131 @@ citrus_realtionship_info$Tribe <- as.character(citrus_realtionship_info$Tribe)
 #plot heatmap max rlu  - plot by taxonomy
 ######################################################################
 
-
-png("Heatmap_plot_all_values_organize_by_taxonomy.png", units="in", width=8, height=10, res=1200)
-
+png("Heatmap_plot_all_values_organize_by_taxonomy.png", units="in", width=9, height=11, res=1200)
 
 
+#pdf("Heatmap_plot_all_values_organize_by_taxonomy.pdf", width = 8, height = 10)
+##need to fix this error: 
+#Error in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y,  : 
+#invalid font type
+#coomon error: https://github.com/stan-dev/rstan/issues/381
+##
 
 row_anno <- rowAnnotation(df = citrus_realtionship_info,
                           border = TRUE,
+                          gap = unit(1, "mm"),
+                          show_legend = FALSE,
                           col = list(`Sub-family` =  c("Toddalioideae" = "#FBBE4E", "Rutoideae" = "#E3DECA", "Aurantioideae" = "#273253"), 
                                      
                                      Tribe = c("Balsamocitrinae" = "#1F6768", "Citrinae" = "#A8C653", "Clauseninae" = "#E45D50",
                                                "Merrilliinae" = "#544275", "Micromelinae" = "#CAA2DD", "Triphasiinae" = "#4EAEDF",
                                                "Toddalioideae" = "#FBBE4E", "Rutoideae" = "#E3DECA", "Aurantioideae" = "#273253")))
-                          
-
+                            
 
 ht = ComplexHeatmap::Heatmap(melted_filtered_avg_PAMP_responses,
-                             
-                             #cluster color modificaiton
-                             col = my_color_scale_breaks,
-                             
-                             #column modifications
-                             cluster_columns = F,
-                             cluster_rows = F,
-                             #row_km = 11,
-                             #row_dend_width = unit(30, "mm"),
-                             
-                             #row modifications + dendrogram
-                             show_row_names = T,
-                             row_names_gp = gpar(fontsize = 8),
-                             
-                             
-                             
-                             #row_split = filtered_avg_PAMP_response$Tribe, #manual row split
-                             #cluster_row_slices = T,
-                             #row_dend_reorder = T,
-                             
-                             #sizing and border
-                             border = T,
-                             width = unit(1.5, "in"),
-                             height = unit(8.5, "in"),
-                             
-                             #annotate Taxnonomy Info
-                             left_annotation = row_anno,
-                             
-                             #details regarding modifying legend
-                             heatmap_legend_param = list(col_fun = my_color_scale_breaks, 
-                                                         legend_width = unit(35, "mm"),
-                                                         legend_height = unit(38, "mm"),
-                                                         title = "Max RLUs", 
-                                                         border = "black",
-                                                         at = my_scale_breaks,
-                                                         title_gp = gpar(fontsize = 12, fontface = "bold", fontfamily = "Arial"),
-                                                         labels_gp = gpar(fontsize = 10,fontfamily = "Arial"),
-                                                         grid_width = unit(0.5, "cm"),
-                                                         legend_label_gp = gpar(col = "black",fontsize = 10, fontfamily = "Arial")),
-                             
-                             use_raster = TRUE, raster_quality = 2.5, raster_device = 'png') 
+                               
+                               #cluster color modificaiton
+                               col = my_color_scale_breaks,
+                               
+                               #column modifications
+                               cluster_columns = F,
+                               cluster_rows = F,
+                               #row_km = 11,
+                               #row_dend_width = unit(30, "mm"),
+                               
+                               #row modifications + dendrogram
+                               show_row_names = T,
+                               row_names_gp = gpar(fontsize = 8),
+                               
+                               
+                               
+                               #row_split = filtered_avg_PAMP_response$Tribe, #manual row split
+                               #cluster_row_slices = T,
+                               #row_dend_reorder = T,
+                               
+                               #sizing and border
+                               border = T,
+                               width = unit(1.5, "in"),
+                               height = unit(9, "in"),
+                               
+                               #annotate Taxnonomy Info
+                               left_annotation = row_anno,
+                               
+                               
+                               
+                               #details regarding modifying legend
+                               heatmap_legend_param = list(col_fun = my_color_scale_breaks, #main MAX RLU annotation
+                                                           legend_width = unit(35, "mm"),
+                                                           legend_height = unit(40, "mm"),
+                                                           #direction = "horizontal",
+                                                           #labels_rot = 90,
+                                                           title = "Max RLUs", 
+                                                           border = "black",
+                                                           at = my_scale_breaks,
+                                                           title_gp = gpar(fontsize = 12, fontface = "bold", fontfamily = "Arial"),
+                                                           labels_gp = gpar(fontsize = 10, fontfamily = "Arial"),
+                                                           grid_width = unit(0.7, "cm"),
+                                                           legend_label_gp = gpar(col = "black", fontsize = 10, fontfamily = "Arial")
+                                                           ),
+                               use_raster = TRUE, raster_quality = 4, raster_device = 'png')
+                               #use_raster = TRUE, raster_device = "CairoJPEG") 
+                              #
+  
+lgd_list = list(
+    # Sub-family annotation
+    Legend(labels = c("Toddalioideae", "Rutoideae", "Aurantioideae"), title = "Sub-family", 
+           border = "black",
+           gap = unit(2, "mm"),
+           legend_gp = gpar(fill = c("#FBBE4E","#E3DECA", "#273253"))),
+    
+    # Tribe annotation
+    Legend(labels = c("Balsamocitrinae", "Citrinae", "Clauseninae", 
+                      "Merrilliinae", "Micromelinae", "Triphasiinae"), title = "Tribe",
+           border = "black",
+           gap = unit(2, "mm"),
+           legend_gp = gpar(fill = c("#1F6768", "#A8C653", "#E45D50",
+                                     "#544275", "#CAA2DD", "#4EAEDF")))
+    
+    # Variable annottion
+    #Legend(labels = c("Represents one positive ROS burst with several negatives"), title = "Variable ROS", type = "points", pch="*")
+    
+  )
 
 
-draw(ht, heatmap_legend_side = "left")
+draw(ht, adjust_annotation_extension = TRUE, heatmap_legend_side = "left", annotation_legend_side = "left", annotation_legend_list = lgd_list)
+  
+  
+##### add 'variable samples' stars
+# This function takes the input alternate data mapping, finds which points are labeled variable, 
+# and plots * are coordinate points respective to which samples are smapled as variable
+#####################
+plot_variable_dots <- function(alternate_data_in){
+    name_of_heatmap <- grepl("heatmap_body_1_1", list_components())
+    name_of_heatmap <- list_components()[name_of_heatmap]
+    name_of_heatmap <- str_remove(name_of_heatmap,"_heatmap_body_1_1")
+    for (j in 1:nrow(alternate_data_in)){
+      for (i in 1:ncol(alternate_data_in)){
+        if (alternate_data_in[j,i] == 'Variable'){
+          ComplexHeatmap::decorate_heatmap_body(name_of_heatmap, grid.text("*",
+                                                                           #x coordinate 
+                                                                           (i-0.5)/ncol(alternate_data_in), 
+                                                                           #y coordinate
+                                                                           (nrow(alternate_data_in)-j)/nrow(alternate_data_in), 
+                                                                           just = "center",
+                                                                           gp = gpar(fontsize = 16)))
+        }      
+      }
+    }
+  }
+  
+  
+plot_variable_dots(melted_alternate_maping_data)
+  
 
 dev.off()
+  
+
+
 
 ######################################################################
 #plot heatmap max rlu  - plot by taxonomy with clustering within taxanomic group
@@ -499,15 +563,21 @@ clascsp22_data <- subset(filtered_avg_PAMP_response, filtered_avg_PAMP_response$
 clascsp22_data_asMatrix <- as.matrix(clascsp22_data[,c(5,6,7,8)])
 row.names(clascsp22_data_asMatrix) <- clascsp22_data$`Botanical name`
 
-
-png("ClasCps22_subset_heatmap.png", height = 6, width = 5, units = "in", res = 1200)
+#png("ClasCps22_subset_heatmap.png", height = 6, width = 5, units = "in", res = 1200)
 box_and_bar_heatmap(clascsp22_data_asMatrix, clascsp22_data)
-dev.off()
-
-
+#dev.off()
 
 #subset by all data which is known not to respond to clas csp22
 not_clascsp22_data <- subset(filtered_avg_PAMP_response, filtered_avg_PAMP_response$`CLas csp22` == 0)
+
+
+## choose from "Chitin", "Flg22", "Csp22"
+plot_top_nine <- function(MAMP_name){
+  data_in <- dplyr::arrange(not_clascsp22_data, desc(MAMP_name))
+  data_in_asMatrix <- as.matrix(data_in[,c(5,6,7,8)])
+  row.names(data_in_asMatrix) <- not_clascsp22_data$`Botanical name`
+  return(data_in_asMatrix[1:9,])
+}
 
 #arrrange and plot by top 9 hits of chitin
 not_clascsp22_data <- dplyr::arrange(not_clascsp22_data, desc(Chitin))
@@ -615,11 +685,11 @@ disease_index$Disease_category <- as.numeric(disease_index$Disease_category)
 disease_subset_RLUs <- melted_filtered_avg_PAMP_responses[row.names(melted_filtered_avg_PAMP_responses) %in% disease_index$`Botanical name`,]
 disease_subset_RLUs <- disease_subset_RLUs[disease_index$`Botanical name`,]
 
-png("Disease_data_subset_heatmap.png", height = 9, width = 10, units = "in", res = 1200)
+#png("Disease_data_subset_heatmap.png", height = 9, width = 10, units = "in", res = 1200)
 
 disease_index_heatmap(disease_subset_RLUs, disease_index)
 
-dev.off()
+#dev.off()
 
 
 
