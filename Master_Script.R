@@ -20,26 +20,29 @@ setwd(dirname(rstudioapi::getSourceEditorContext()$path))
 
 #### Loading libraries, color codes, and processing data
 # Load libraries to run scripts
-source("./Libraries_to_load.R")
+source("./R_scripts/Libraries_to_load.R")
 
 # load processed data
-source("./Process_PAMP_responses.R")
+source("./R_scripts/Process_PAMP_responses.R")
 
 # load figure colors
-source("./Figure_colors.R")
+source("./R_scripts/Figure_colors.R")
 
 # Load custom ggplot
-source("./Theme_ggplot.R")
+source("./R_scripts/Theme_ggplot.R")
+
+
 
 
 #### Run to create all the figures use in these scripts
 # run complex heatmap script figures
-source("./Plot_Responses_ComplexHeatmap.R")
+source("./R_scripts/Plot_Responses_ComplexHeatmap.R")
 
 # run inital ggplot script figure
-source("./Plot_Responses_ggplot_only.R")
+source("./R_scripts/Plot_Responses_ggplot_only.R")
 
 # run ggplot script for assessing responses in relationship with disease
+source("./R_scripts/Assess_ROS_to_disease_assay.R")
 
 
 ####################################################

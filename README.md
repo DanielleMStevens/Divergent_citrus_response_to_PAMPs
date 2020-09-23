@@ -8,15 +8,21 @@ Danielle M. Stevens<sup>1,2</sup>,Jessica Y. Franco<sup>1</sup>, Tania Toruno<su
 
 -----------------------
 
-Purpose: The script in this repository is for processing and ploting ROS data collected from diverse citrus species and relative after treatment with different MAMPs. 
+Purpose: The scripts in this repository are for processing and ploting ROS data collected from diverse citrus species and relative after treatment with different MAMPs. 
 
 
-There are two main scripts in this repository. One processes the data and one plots the data. To assess all the plots made in the script including preliminary data analyses, visit this markdown file: [Computational_notebook.md](Computational_notebook.md) 
+There is one main script that controls several scripts in this repository.  
 
-To run scripts, in the R console, run the following commands in the following scripts:
+
+
+To run scripts, in the R console, run the following command:
 ```R
-Plot_Responses_ggplot_only.R
-Plot_Responses_ComplexHeatmap.R
-Assess_ROS_to_disease_assays. R
+source("./Master_Script.R")
 
 ```
+
+
+To assess all the plots made in the script including preliminary data analyses, visit this markdown file: [Computational_notebook.md](Computational_notebook.md).
+
+
+
