@@ -29,8 +29,8 @@ names(Subfamily_colors) <- Subfamily_list
 
 
 Tribe_list <- c("Balsamocitrinae","Citrinae","Clauseninae","Merrilliinae",
-                "Micromelinae","Triphasiinae","Toddalioideae","Rutoideae","Aurantioideae")
+                "Micromelinae","Triphasiinae")
 Tribe_colors <- c("#1F6768","#A8C653","#E45D50","#544275","#CAA2DD",
-                  "#4EAEDF","#FBBE4E","#E3DECA","#273253")
+                  "#4EAEDF")
 names(Tribe_colors) <- Tribe_list
 

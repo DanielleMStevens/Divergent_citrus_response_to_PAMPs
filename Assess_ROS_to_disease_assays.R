@@ -7,31 +7,6 @@
 # Outputs: 
 #-----------------------------------------------------------------------------------------------
   
-  
-######################################################################
-#library packages need to load
-######################################################################
-
-#make sure to set path to the same place where the figure 
-setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
-getSrcDirectory(function(x) {x})
-
-# Load libraries to run scripts
-source("./Libraries_to_load.R")
-
-# load processed data
-source("./Process_PAMP_responses.R")
-
-# load figure colors
-source("./Figure_colors.R")
-
-# Load custom ggplot
-source("./Theme_ggplot.R")
-
-
-
-
-# NOTE: If you have issues loading packages, I reccomend restarting R. This fixed the issues most times in my experience
 
 ######################################################################
 #row name settings

@@ -77,10 +77,14 @@ alternate_maping_data <- alternate_maping_data[order(alternate_maping_data$`Sub-
 #need to subset each 'tribe'
 ######################################################################
 
-#subset raw data
-Toddalioideae <- subset(filtered_avg_PAMP_response, Tribe == "Toddalioideae")
-Rutoideae <- subset(filtered_avg_PAMP_response, Tribe =="Rutoideae")
+########## subset raw data
+# Break up by sub-family
+Toddalioideae <- subset(filtered_avg_PAMP_response, `Sub-family` == "Toddalioideae")
+Rutoideae <- subset(filtered_avg_PAMP_response, `Sub-family` == "Rutoideae")
+Aurantioideae <- subset(filtered_avg_PAMP_response, `Sub-family` == "Aurantioideae")
 
+
+# Break up by tribe for Aurantioideae Subfamily
 Triphasiinae<- subset(filtered_avg_PAMP_response, Tribe == "Triphasiinae")
 Micromelinae <- subset(filtered_avg_PAMP_response, Tribe == "Micromelinae")
 Merrilliinae <- subset(filtered_avg_PAMP_response, Tribe == "Merrilliinae")
@@ -88,10 +92,14 @@ Clauseninae <- subset(filtered_avg_PAMP_response, Tribe == "Clauseninae")
 Citrinae <- subset(filtered_avg_PAMP_response, Tribe == "Citrinae")
 Balsamocitrinae <- subset(filtered_avg_PAMP_response, Tribe == "Balsamocitrinae")
 
-#subset alternate data
-Toddalioideae_alt <- subset(alternate_maping_data, Tribe == "Toddalioideae")
-Rutoideae_alt <- subset(alternate_maping_data, Tribe =="Rutoideae")
+########## subset alternate (Y,N,V) data
+# Break up by sub-family
+Toddalioideae_alt <- subset(alternate_maping_data, `Sub-family` == "Toddalioideae")
+Rutoideae_alt <- subset(alternate_maping_data, `Sub-family` == "Rutoideae")
+Aurantioideae_alt <- subset(alternate_maping_data, `Sub-family` == "Aurantioideae")
 
+
+# Break up by tribe for Aurantioideae Subfamily
 Triphasiinae_alt <- subset(alternate_maping_data, Tribe == "Triphasiinae")
 Micromelinae_alt <- subset(alternate_maping_data, Tribe == "Micromelinae")
 Merrilliinae_alt <- subset(alternate_maping_data, Tribe == "Merrilliinae")

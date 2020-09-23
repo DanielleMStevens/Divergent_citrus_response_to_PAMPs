@@ -8,27 +8,6 @@
 #-----------------------------------------------------------------------------------------------
 
 
-
-##############################################
-# Load Processed Data and Colors
-##############################################
-
-#make sure to set path to the same place where the figure 
-setwd(dirname(rstudioapi::getSourceEditorContext()$path))
-
-
-# Load libraries to run scripts
-source("./Libraries_to_load.R")
-
-# load processed data
-source("./Process_PAMP_responses.R")
-
-# load figure colors
-source("./Figure_colors.R")
-
-# Load custom ggplot
-source("./Theme_ggplot.R")
-
 ######################################################################
 #row name settings
 ######################################################################
@@ -38,13 +17,13 @@ row.names(melted_filtered_avg_PAMP_responses) <- filtered_avg_PAMP_response$`Bot
 row.names(melted_alternate_maping_data) <- filtered_avg_PAMP_response$`Botanical name`
 
 #collect row nameinformation annotation - common name + botanical name
-row_names_to_apply <- filtered_avg_PAMP_response$`Common name`
-for (i in 1:length(row_names_to_apply)){
-  if(row_names_to_apply[i] == "0"){
-    row_names_to_apply[i] <- filtered_avg_PAMP_response$`Botanical name`[i]
-  }
-}
-row.names(melted_filtered_avg_PAMP_responses) <- row_names_to_apply
+#row_names_to_apply <- filtered_avg_PAMP_response$`Common name`
+#for (i in 1:length(row_names_to_apply)){
+#  if(row_names_to_apply[i] == "0"){
+#    row_names_to_apply[i] <- filtered_avg_PAMP_response$`Botanical name`[i]
+#  }
+#}
+#row.names(melted_filtered_avg_PAMP_responses) <- row_names_to_apply
 
 
 
@@ -278,21 +257,21 @@ sub_clustered_heatmap <- function(matrix_in, df_in){
 }
 
 # plot different combination of inidivudal PAMPs
-png("just_chitin_by_taxonomy.png", height = 14, width = 8, units = "in", res = 1000)
+#png("just_chitin_by_taxonomy.png", height = 14, width = 8, units = "in", res = 1000)
 just_chitin <- sub_clustered_heatmap(melted_filtered_avg_PAMP_responses[,1], filtered_avg_PAMP_response[,1:5])
-dev.off()
+#dev.off()
 
-png("just_flg22_by_taxonomy.png", height = 14, width = 8,  units = "in", res = 1000)
+#png("just_flg22_by_taxonomy.png", height = 14, width = 8,  units = "in", res = 1000)
 just_flg22 <- sub_clustered_heatmap(melted_filtered_avg_PAMP_responses[,2], filtered_avg_PAMP_response[,c(1,2,3,4,6)])
-dev.off()
+#dev.off()
 
-png("just_csp22_by_taxonomy.png", height = 14, width = 8,  units = "in", res = 1000)
+#png("just_csp22_by_taxonomy.png", height = 14, width = 8,  units = "in", res = 1000)
 just_csp22 <- sub_clustered_heatmap(melted_filtered_avg_PAMP_responses[,3], filtered_avg_PAMP_response[,c(1,2,3,4,7)])
-dev.off()
+#dev.off()
 
-png("just_clascsp22_by_taxonomy.png", height = 14, width = 8,  units = "in", res = 1000)
+#png("just_clascsp22_by_taxonomy.png", height = 14, width = 8,  units = "in", res = 1000)
 just_clasCsp22 <- sub_clustered_heatmap(melted_filtered_avg_PAMP_responses[,4], filtered_avg_PAMP_response[,c(1,2,3,4,8)])
-dev.off()
+#dev.off()
 
 
 chitin_flg22 <- sub_clustered_heatmap(melted_filtered_avg_PAMP_responses[,1:2], filtered_avg_PAMP_response[,1:6])
