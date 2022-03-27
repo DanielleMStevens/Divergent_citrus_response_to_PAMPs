@@ -1,0 +1,1382 @@
+IQ-TREE multicore version 2.1.2 COVID-edition for Linux 64-bit built Mar 30 2021
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    danimstevens-MS-7B93 (AVX2, FMA3, 62 GB RAM)
+Command: iqtree -s LYK5_alignment -bb 1000 -T AUTO -st AA -v -m TEST -safe
+Seed:    204488 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Sat Nov 20 22:36:59 2021
+Kernel:  Safe AVX+FMA - auto-detect threads (16 CPU cores detected)
+
+Reading alignment file LYK5_alignment ... Fasta format detected
+Name shortening took 0.000087 seconds.
+Duplicate sequence name check took 0.000095 seconds.
+Alignment most likely contains protein sequences
+Alignment has 131 sequences with 1168 columns, 1064 distinct patterns
+758 parsimony-informative, 153 singleton sites, 257 constant sites
+Empirical state frequencies: 0.0798228979 0.0435927368 0.0554286994 0.0472390520 0.0211323668 0.0343779273 0.0485321542 0.0640144321 0.0203751448 0.0521202216 0.1058014378 0.0441985144 0.0155755222 0.0392124987 0.0528657941 0.0979962263 0.0582828439 0.0093546521 0.0395969345 0.0704799432 
+                                                     Gap/Ambiguity  Composition  p-value
+   1  NP_180916.1|Arabidopsis_thaliana                      43.15%    passed     88.73%
+   2  XP_010413840.1|Camelina_sativa                        42.64%    passed     76.47%
+   3  XP_010469453.1|Camelina_sativa                        37.67%    passed     57.00%
+   4  XP_010509863.1|Camelina_sativa                        38.44%    passed     18.82%
+   5  XP_006295585.1|Capsella_rubella                       42.12%    passed     80.94%
+   6  XP_013671298.1|Brassica_napus                         43.24%    passed     74.85%
+   7  XP_013662422.1|Brassica_napus                         43.07%    passed     47.39%
+   8  XP_009141328.1|Brassica_rapa                          43.07%    passed     67.06%
+   9  XP_018484364.1|Raphanus_sativus                       42.64%    passed     73.05%
+  10  XP_006410503.2|Eutrema_salsugineum                    44.26%    passed     93.81%
+  11  XP_010523260.1|Tarenaya_hassleriana                   36.39%    passed     86.10%
+  12  XP_029126859.1|Cajanus_cajan                          42.98%    passed     99.03%
+  13  TKY57014.1|Spatholobus_suberectus                     43.66%    passed     97.19%
+  14  XP_017430370.1|Vigna_angularis                        43.41%    passed     83.56%
+  15  XP_014505078.1|Vigna_radiata_var_radiata              43.41%    passed     98.21%
+  16  XP_027940256.1|Vigna_unguiculata                      43.58%    passed     97.01%
+  17  XP_003616926.2|Medicago_truncatula                    43.49%    passed      8.39%
+  18  XP_003601388.3|Medicago_truncatula                    39.98%    passed     20.43%
+  19  XP_031404507.1|Punica_granatum                        43.92%    passed     97.30%
+  20  XP_030514269.1|Rhodamnia_argentea                     43.75%    passed     98.20%
+  21  XP_042988561.1|Carya_illinoinensis                    44.35%    passed     99.96%
+  22  XP_041017675.1|Juglans_microcarpa_x_Juglans_regia     44.09%    passed    100.00%
+  23  XP_018843092.1|Juglans_regia                          44.09%    passed     99.96%
+  24  XP_030951100.1|Quercus_lobata                         44.01%    passed     89.25%
+  25  XP_023912979.1|Quercus_suber                          44.01%    passed     91.73%
+  26  XP_042991128.1|Carya_illinoinensis                    43.75%    passed     70.33%
+  27  XP_022718677.1|Durio_zibethinus                       43.75%    passed     87.38%
+  28  XP_007029832.2|Theobroma_cacao                        43.84%    passed     91.99%
+  29  XP_022718676.1|Durio_zibethinus                       39.81%    passed     47.29%
+  30  XP_017977387.1|Theobroma_cacao                        43.32%    passed     88.02%
+  31  XP_017631612.1|Gossypium_arboreum                     42.64%    passed     94.49%
+  32  XP_016727798.1|Gossypium_hirsutum                     42.64%    passed     95.28%
+  33  XP_016697670.1|Gossypium_hirsutum                     42.64%    passed     97.22%
+  34  XP_012492359.1|Gossypium_raimondii                    42.64%    passed     96.27%
+  35  XP_006494433.1|Citrus_sinensis                        42.72%    passed     80.09%
+  36  XP_006435494.1|Citrus_clementina                      42.72%    passed     80.65%
+  37  Tango_mandarin|LYK5                                   42.72%    passed     80.65%
+  38  Rio_red_grapefruit|LYK5                               42.72%    passed     72.52%
+  39  Lisbon_lemon|LYK5                                     42.72%    passed     77.37%
+  40  Eremolemon|LYK5                                       42.64%    passed     81.54%
+  41  Microcitrus_australasica|LYK5                         42.64%    passed     75.44%
+  42  XP_021671711.1|Hevea_brasiliensis                     40.24%    passed     97.93%
+  43  XP_012073533.1|Jatropha_curcas                        44.18%    passed     33.55%
+  44  XP_011041114.1|Populus_euphratica                     44.01%    passed     61.54%
+  45  XP_002307830.2|Populus_trichocarpa                    44.01%    passed     83.37%
+  46  XP_002510756.1|Ricinus_communis                       45.72%    passed     63.08%
+  47  XP_021900824.1|Carica_papaya                          40.75%    passed     93.75%
+  48  XP_038702640.1|Tripterygium_wilfordii                 44.35%    passed     93.57%
+  49  XP_034677033.1|Vitis_riparia                          40.92%    passed     40.37%
+  50  XP_002277331.3|Vitis_vinifera                         40.92%    passed     54.07%
+  51  XP_034677034.1|Vitis_riparia                          43.24%    passed     21.02%
+  52  XP_042507026.1|Macadamia_integrifolia                 43.32%    passed     84.12%
+  53  XP_043711390.1|Telopea_speciosissima                  43.24%    passed     71.48%
+  54  XP_010270638.1|Nelumbo_nucifera                       44.01%    passed     34.08%
+  55  XP_010275837.1|Nelumbo                                45.03%    passed     95.90%
+  56  XP_021652803.1|Hevea_brasiliensis                     45.38%    passed     35.51%
+  57  XP_002522569.1|Ricinus_communis                       46.58%    passed     73.42%
+  58  XP_020109757.1|Ananas_comosus                         40.92%    failed      4.38%
+  59  XP_020109553.1|Ananas_comosus                         40.50%    failed      1.85%
+  60  KAG1326821.1|Cocos_nucifera                           47.26%    passed     95.76%
+  61  XP_010913816.1|Elaeis_guineensis                      44.18%    passed     99.17%
+  62  XP_010913817.1|Elaeis_guineensis                      45.29%    passed     99.60%
+  63  XP_038984152.1|Phoenix_dactylifera                    45.98%    passed     97.49%
+  64  XP_038984149.1|Phoenix_dactylifera                    45.29%    passed     81.71%
+  65  RWW44345.1|Ensete_ventricosum                         43.32%    passed     31.25%
+  66  XP_009395847.1                                        43.66%    passed     40.21%
+  67  PKA56570.1|Apostasia_shenzhenica                      43.49%    passed     83.92%
+  68  PKA52841.1|Apostasia_shenzhenica                      43.66%    passed     78.55%
+  69  XP_020677521.1|Dendrobium_catenatum                   43.92%    passed     50.47%
+  70  XP_020592581.1|Phalaenopsis_equestris                 44.26%    passed     86.18%
+  71  XP_039134376.1|Dioscorea_cayenensis_subsp_rotundata   40.41%    passed     63.55%
+  72  KAE8782801.1|Hordeum_vulgare                          36.99%    failed      0.00%
+  73  XP_020169341.2|Aegilops_tauschii_subsp_strangulata    42.64%    failed      0.00%
+  74  XP_037451244.1|Triticum_dicoccoides                   42.72%    failed      0.00%
+  75  KAE8782796.1|Hordeum_vulgare                          41.70%    failed      0.00%
+  76  XP_020164009.2|Aegilops_tauschii_subsp_strangulata    52.65%    failed      0.00%
+  77  XP_020150460.2|Aegilops_tauschii_subsp_strangulata    41.70%    failed      0.00%
+  78  XP_037454515.1|Triticum_dicoccoides                   41.70%    failed      0.00%
+  79  XP_040376853.1|Oryza_brachyantha                      41.44%    failed      0.00%
+  80  XP_015623069.1|Oryza_sativa_Japonica_Group            41.01%    failed      0.00%
+  81  XP_025812004.1|Panicum_hallii                         41.61%    failed      0.00%
+  82  ACG29195.1|Zea_mays                                   41.52%    failed      0.00%
+  83  XP_002451701.1|Sorghum_bicolor                        41.87%    failed      0.00%
+  84  XP_040381256.1|Oryza_brachyantha                      40.41%    failed      0.00%
+  85  XP_015643312.1|Oryza_sativa_Japonica_Group            42.89%    failed      0.00%
+  86  CAD6336214.1|Miscanthus_lutarioriparius               39.73%    failed      0.00%
+  87  XP_020185086.2|Aegilops_tauschii_subsp_strangulata    33.30%    failed      0.00%
+  88  XP_037461922.1|Triticum_dicoccoides                   45.12%    failed      0.00%
+  89  XP_037419289.1|Triticum_dicoccoides                   43.07%    failed      0.00%
+  90  XP_020187858.1|Aegilops_tauschii_subsp_strangulata    41.01%    failed      0.00%
+  91  XP_037487189.1|Triticum_dicoccoides                   39.55%    failed      0.00%
+  92  XP_015642396.1|Oryza_sativa_Japonica_Group            46.06%    failed      0.00%
+  93  TMW99906.1|Solanum_chilense                           44.78%    passed     66.70%
+  94  XP_016561194.1|Capsicum_annuum                        44.69%    passed     97.16%
+  95  PHU27420.1|Capsicum_chinense                          44.69%    passed     96.98%
+  96  PHT57316.1|Capsicum_baccatum                          44.69%    passed     94.47%
+  97  XP_031406608.1|Punica_granatum                        47.09%    passed     14.42%
+  98  TMW99907.1|Solanum_chilense                           47.26%    failed      2.49%
+  99  XP_004233647.1|Solanum_lycopersicum                   47.26%    passed      5.36%
+ 100  XP_015065530.1|Solanum_pennellii                      47.26%    failed      2.95%
+ 101  KAH0700536.1|Solanum_tuberosum                        47.26%    failed      1.95%
+ 102  XP_016562232.1|Capsicum_annuum                        47.26%    passed      8.64%
+ 103  PHU27419.1|Capsicum_chinense                          47.26%    passed      9.06%
+ 104  PHT57317.1|Capsicum_baccatum                          47.26%    passed     11.50%
+ 105  XP_019224390.1|Nicotiana_attenuata                    47.17%    failed      4.12%
+ 106  XP_016492533.1|Nicotiana_tabacum                      47.26%    passed     10.07%
+ 107  XP_016465329.1|Nicotiana_tabacum                      47.26%    failed      0.10%
+ 108  XP_024036693.1|Citrus_clementina                      46.40%    passed     42.65%
+ 109  XP_002533279.2|Ricinus_communis                       47.35%    passed     18.37%
+ 110  XP_022775263.1|Durio_zibethinus                       48.03%    passed      8.50%
+ 111  XP_012071767.1|JatrophA_curcas                        45.03%    passed      7.41%
+ 112  XP_022768869.1|Durio_zibethinus                       46.66%    failed      4.59%
+ 113  XP_022772795.1|Durio_zibethinus                       47.00%    passed     16.14%
+ 114  XP_017644192.1|Gossypium_arboreum                     46.83%    passed     12.12%
+ 115  XP_016687524.2|Gossypium_hirsutum                     46.75%    passed     13.53%
+ 116  XP_012445275.1|Gossypium_raimondii                    46.92%    passed     15.49%
+ 117  XP_038715666.1|Tripterygium_wilfordii                 44.69%    passed     88.21%
+ 118  XP_015061890.1|Solanum_pennellii                      48.89%    failed      0.33%
+ 119  XP_004252782.1|Solanum_lycopersicum                   48.72%    failed      0.32%
+ 120  KAH0734087.1|Solanum_tuberosum                        47.86%    failed      0.87%
+ 121  XP_016550462.1|Capsicum_annuum                        47.69%    failed      0.11%
+ 122  CAD6253530.1|Miscanthus_lutarioriparius               40.24%    failed      0.00%
+ 123  XP_030969896.1|Quercus_lobata                         50.00%    failed      0.14%
+ 124  KAE8793428.1|Hordeum_vulgare                          45.80%    failed      0.00%
+ 125  XP_010999939.1|Populus_euphratica                     46.83%    passed     12.02%
+ 126  XP_011009883.1|Populus_euphratica                     46.66%    passed      7.17%
+ 127  XP_011025973.1|Populus_euphratica                     47.00%    passed     13.68%
+ 128  XP_012489156.1|Gossypium_raimondii                    47.35%    passed     18.58%
+ 129  KMZ57251.1|Zostera_marina                             46.75%    passed     14.98%
+ 130  XP_020084255.1|Ananas_comosus                         50.00%    failed      3.06%
+ 131  XP_021912215.1|Carica_papaya                          47.00%    failed      0.05%
+WARNING: 1 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                                                 43.98%  38 sequences failed composition chi2 test (p-value<5%; df=19)
+Hashing sequences took 0.009 wall-clock seconds
+NOTE: Tango_mandarin|LYK5 is identical to XP_006435494.1|Citrus_clementina but kept for subsequent analysis
+Checking for duplicate sequences took 0.000 wall-clock seconds
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.047 seconds
+Measuring multi-threading efficiency up to 16 CPU cores
+Increase to 10 rounds for branch lengths
+6 trees examined
+Threads: 1 / Time: 17.068 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -133923
+Threads: 2 / Time: 8.992 sec / Speedup: 1.898 / Efficiency: 95% / LogL: -133923
+Threads: 3 / Time: 6.192 sec / Speedup: 2.756 / Efficiency: 92% / LogL: -133923
+Threads: 4 / Time: 4.786 sec / Speedup: 3.566 / Efficiency: 89% / LogL: -133923
+Threads: 5 / Time: 3.950 sec / Speedup: 4.321 / Efficiency: 86% / LogL: -133923
+Threads: 6 / Time: 3.486 sec / Speedup: 4.896 / Efficiency: 82% / LogL: -133923
+Threads: 7 / Time: 3.111 sec / Speedup: 5.487 / Efficiency: 78% / LogL: -133923
+Threads: 8 / Time: 2.976 sec / Speedup: 5.735 / Efficiency: 72% / LogL: -133923
+Threads: 9 / Time: 3.776 sec / Speedup: 4.520 / Efficiency: 50% / LogL: -133923
+BEST NUMBER OF THREADS: 7
+
+Perform fast likelihood tree search using LG+I+G model...
+Estimate model parameters (epsilon = 5.000)
+1. Initial log-likelihood: -75410.449
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.041
+Gamma shape alpha: 1.240
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.026
+Gamma shape alpha: 1.349
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.022
+Gamma shape alpha: 1.353
+Optimal log-likelihood: -73758.021
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -73663.063
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.021
+Gamma shape alpha: 1.355
+Optimal log-likelihood: -73662.996
+Parameters optimization took 1 rounds (0.190 sec)
+Time for fast ML tree search: 1.953 seconds
+
+NOTE: ModelFinder requires 91 MB RAM!
+ModelFinder will test up to 168 protein models (sample size: 1168) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+Optimizing model LG
+1. Initial log-likelihood: -77158.942
+Optimal log-likelihood: -76799.405
+  1  LG            76799.405    259 154116.809   154265.135   155428.139
+Optimizing model LG+I
+1. Initial log-likelihood: -76568.648
+Proportion of invariable sites: 0.068
+Proportion of invariable sites: 0.041
+Proportion of invariable sites: 0.029
+Proportion of invariable sites: 0.025
+Proportion of invariable sites: 0.024
+Proportion of invariable sites: 0.024
+Optimal log-likelihood: -76470.948
+  2  LG+I          76470.948    260 153461.896   153611.532   154778.288
+Optimizing model LG+G4
+1. Initial log-likelihood: -73792.794
+Gamma shape alpha: 1.147
+Gamma shape alpha: 1.172
+Gamma shape alpha: 1.175
+Gamma shape alpha: 1.177
+Optimal log-likelihood: -73696.402
+  3  LG+G4         73696.402    260 147912.805   148062.441   149229.197
+Optimizing model LG+I+G4
+1. Initial log-likelihood: -73664.430
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.020
+Gamma shape alpha: 1.351
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.020
+Gamma shape alpha: 1.353
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.020
+Gamma shape alpha: 1.355
+Optimal log-likelihood: -73662.996
+  4  LG+I+G4       73662.996    261 147847.991   147998.945   149169.447
+Empirical state frequencies: 0.0798228979 0.0435927368 0.0554286994 0.0472390520 0.0211323668 0.0343779273 0.0485321542 0.0640144321 0.0203751448 0.0521202216 0.1058014378 0.0441985144 0.0155755222 0.0392124987 0.0528657941 0.0979962263 0.0582828439 0.0093546521 0.0395969345 0.0704799432 
+Optimizing model LG+F+I+G4
+1. Initial log-likelihood: -73586.8459294375
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0201270983
+Gamma shape alpha: 1.3246375773
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0201730873
+Gamma shape alpha: 1.3246375773
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0202028810
+Gamma shape alpha: 1.3246375773
+Optimal log-likelihood: -73582.7842025652
+  8  LG+F+I+G4     73582.784    280 147725.568   147902.975   149143.222
+Optimizing model WAG+I+G4
+1. Initial log-likelihood: -73412.001
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.020
+Gamma shape alpha: 1.421
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.020
+Gamma shape alpha: 1.438
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.019
+Gamma shape alpha: 1.442
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.019
+Gamma shape alpha: 1.442
+Optimal log-likelihood: -73395.141
+ 12  WAG+I+G4      73395.141    261 147312.282   147463.236   148633.738
+Empirical state frequencies: 0.0798228979 0.0435927368 0.0554286994 0.0472390520 0.0211323668 0.0343779273 0.0485321542 0.0640144321 0.0203751448 0.0521202216 0.1058014378 0.0441985144 0.0155755222 0.0392124987 0.0528657941 0.0979962263 0.0582828439 0.0093546521 0.0395969345 0.0704799432 
+Optimizing model WAG+F+I+G4
+1. Initial log-likelihood: -73314.1049314567
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0193586269
+Gamma shape alpha: 1.4324588543
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0194340597
+Gamma shape alpha: 1.4324588543
+Optimal log-likelihood: -73312.0340168815
+ 16  WAG+F+I+G4    73312.034    280 147184.068   147361.475   148601.722
+Optimizing model JTT+I+G4
+1. Initial log-likelihood: -72906.650
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.020
+Gamma shape alpha: 1.410
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.020
+Gamma shape alpha: 1.400
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.020
+Gamma shape alpha: 1.395
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.020
+Gamma shape alpha: 1.393
+Optimal log-likelihood: -72898.387
+ 20  JTT+I+G4      72898.387    261 146318.775   146469.728   147640.230
+Empirical state frequencies: 0.0798228979 0.0435927368 0.0554286994 0.0472390520 0.0211323668 0.0343779273 0.0485321542 0.0640144321 0.0203751448 0.0521202216 0.1058014378 0.0441985144 0.0155755222 0.0392124987 0.0528657941 0.0979962263 0.0582828439 0.0093546521 0.0395969345 0.0704799432 
+Optimizing model JTT+F+I+G4
+1. Initial log-likelihood: -72934.1853694441
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0198547052
+Gamma shape alpha: 1.3599183025
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0199470685
+Gamma shape alpha: 1.3483315586
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0200097170
+Gamma shape alpha: 1.3429657696
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0200457113
+Gamma shape alpha: 1.3416228037
+Optimal log-likelihood: -72930.6669631538
+ 24  JTT+F+I+G4    72930.667    280 146421.334   146598.741   147838.987
+Optimizing model JTTDCMut+I+G4
+1. Initial log-likelihood: -72920.233
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.020
+Gamma shape alpha: 1.388
+Optimal log-likelihood: -72920.114
+ 28  JTTDCMut+I+G4 72920.114    261 146362.228   146513.182   147683.684
+Empirical state frequencies: 0.0798228979 0.0435927368 0.0554286994 0.0472390520 0.0211323668 0.0343779273 0.0485321542 0.0640144321 0.0203751448 0.0521202216 0.1058014378 0.0441985144 0.0155755222 0.0392124987 0.0528657941 0.0979962263 0.0582828439 0.0093546521 0.0395969345 0.0704799432 
+Optimizing model JTTDCMut+F+I+G4
+1. Initial log-likelihood: -72959.6812672685
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0197721090
+Gamma shape alpha: 1.3561325763
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0198513450
+Gamma shape alpha: 1.3445506482
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0199115355
+Gamma shape alpha: 1.3391272743
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0199469664
+Gamma shape alpha: 1.3377881470
+Optimal log-likelihood: -72955.7749725549
+ 32  JTTDCMut+F+I+G4 72955.775    280 146471.550   146648.957   147889.203
+Optimizing model DCMut+I+G4
+1. Initial log-likelihood: -74217.660
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.017
+Gamma shape alpha: 1.221
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.015
+Gamma shape alpha: 1.201
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.015
+Gamma shape alpha: 1.196
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.015
+Gamma shape alpha: 1.195
+Optimal log-likelihood: -74199.435
+ 36  DCMut+I+G4    74199.435    261 148920.871   149071.825   150242.326
+Empirical state frequencies: 0.0798228979 0.0435927368 0.0554286994 0.0472390520 0.0211323668 0.0343779273 0.0485321542 0.0640144321 0.0203751448 0.0521202216 0.1058014378 0.0441985144 0.0155755222 0.0392124987 0.0528657941 0.0979962263 0.0582828439 0.0093546521 0.0395969345 0.0704799432 
+Optimizing model DCMut+F+I+G4
+1. Initial log-likelihood: -74022.3981228190
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0168716969
+Gamma shape alpha: 1.2111477205
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0158983903
+Gamma shape alpha: 1.1814842437
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0155207314
+Gamma shape alpha: 1.1748846669
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0153709212
+Gamma shape alpha: 1.1737097821
+Optimal log-likelihood: -73987.9906155549
+ 40  DCMut+F+I+G4  73987.991    280 148535.981   148713.388   149953.635
+Optimizing model VT+I+G4
+1. Initial log-likelihood: -73492.131
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.021
+Gamma shape alpha: 1.505
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.021
+Gamma shape alpha: 1.515
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.021
+Gamma shape alpha: 1.515
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.021
+Gamma shape alpha: 1.514
+Optimal log-likelihood: -73471.995
+ 44  VT+I+G4       73471.995    261 147465.990   147616.944   148787.445
+Empirical state frequencies: 0.0798228979 0.0435927368 0.0554286994 0.0472390520 0.0211323668 0.0343779273 0.0485321542 0.0640144321 0.0203751448 0.0521202216 0.1058014378 0.0441985144 0.0155755222 0.0392124987 0.0528657941 0.0979962263 0.0582828439 0.0093546521 0.0395969345 0.0704799432 
+Optimizing model VT+F+I+G4
+1. Initial log-likelihood: -73451.0003074195
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0208594956
+Gamma shape alpha: 1.4820935892
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0209880978
+Gamma shape alpha: 1.4969959669
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0209354988
+Gamma shape alpha: 1.4990065047
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0209037484
+Gamma shape alpha: 1.4990065047
+Optimal log-likelihood: -73435.2058833534
+ 48  VT+F+I+G4     73435.206    280 147430.412   147607.819   148848.065
+Optimizing model PMB+I+G4
+1. Initial log-likelihood: -74297.690
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.020
+Gamma shape alpha: 1.526
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.020
+Gamma shape alpha: 1.534
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.020
+Gamma shape alpha: 1.532
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.020
+Gamma shape alpha: 1.531
+Optimal log-likelihood: -74256.287
+ 52  PMB+I+G4      74256.287    261 149034.575   149185.528   150356.030
+Empirical state frequencies: 0.0798228979 0.0435927368 0.0554286994 0.0472390520 0.0211323668 0.0343779273 0.0485321542 0.0640144321 0.0203751448 0.0521202216 0.1058014378 0.0441985144 0.0155755222 0.0392124987 0.0528657941 0.0979962263 0.0582828439 0.0093546521 0.0395969345 0.0704799432 
+Optimizing model PMB+F+I+G4
+1. Initial log-likelihood: -74222.9088734070
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0204142137
+Gamma shape alpha: 1.5112938860
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0202352349
+Gamma shape alpha: 1.5186298095
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0200479441
+Gamma shape alpha: 1.5153810891
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0199747899
+Gamma shape alpha: 1.5153810891
+Optimal log-likelihood: -74193.0579667022
+ 56  PMB+F+I+G4    74193.058    280 148946.116   149123.523   150363.769
+Optimizing model Blosum62+I+G4
+1. Initial log-likelihood: -74524.041
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.021
+Gamma shape alpha: 1.527
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.020
+Gamma shape alpha: 1.528
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.020
+Gamma shape alpha: 1.525
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.020
+Gamma shape alpha: 1.525
+Optimal log-likelihood: -74487.321
+ 60  Blosum62+I+G4 74487.321    261 149496.642   149647.595   150818.097
+Empirical state frequencies: 0.0798228979 0.0435927368 0.0554286994 0.0472390520 0.0211323668 0.0343779273 0.0485321542 0.0640144321 0.0203751448 0.0521202216 0.1058014378 0.0441985144 0.0155755222 0.0392124987 0.0528657941 0.0979962263 0.0582828439 0.0093546521 0.0395969345 0.0704799432 
+Optimizing model Blosum62+F+I+G4
+1. Initial log-likelihood: -74364.6741329663
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0207046183
+Gamma shape alpha: 1.5081724468
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0206682797
+Gamma shape alpha: 1.5105926890
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0205772261
+Gamma shape alpha: 1.5090820962
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0205244897
+Gamma shape alpha: 1.5075730140
+Optimal log-likelihood: -74339.2050646329
+ 64  Blosum62+F+I+G4 74339.205    280 149238.410   149415.817   150656.064
+Optimizing model Dayhoff+I+G4
+1. Initial log-likelihood: -74217.370
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.017
+Gamma shape alpha: 1.218
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.015
+Gamma shape alpha: 1.198
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.015
+Gamma shape alpha: 1.192
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.015
+Gamma shape alpha: 1.191
+Optimal log-likelihood: -74198.769
+ 68  Dayhoff+I+G4  74198.769    261 148919.538   149070.492   150240.994
+Empirical state frequencies: 0.0798228979 0.0435927368 0.0554286994 0.0472390520 0.0211323668 0.0343779273 0.0485321542 0.0640144321 0.0203751448 0.0521202216 0.1058014378 0.0441985144 0.0155755222 0.0392124987 0.0528657941 0.0979962263 0.0582828439 0.0093546521 0.0395969345 0.0704799432 
+Optimizing model Dayhoff+F+I+G4
+1. Initial log-likelihood: -74023.1655615078
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0168457984
+Gamma shape alpha: 1.2087565533
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0158628052
+Gamma shape alpha: 1.1789692155
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0154805737
+Gamma shape alpha: 1.1723518970
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0153286039
+Gamma shape alpha: 1.1711795450
+Optimal log-likelihood: -73988.0424805224
+ 72  Dayhoff+F+I+G4 73988.042    280 148536.085   148713.492   149953.738
+Optimizing model mtREV+I+G4
+1. Initial log-likelihood: -77008.532
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.018
+Gamma shape alpha: 1.192
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.018
+Gamma shape alpha: 1.170
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.018
+Gamma shape alpha: 1.157
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.019
+Gamma shape alpha: 1.149
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.019
+Gamma shape alpha: 1.146
+Optimal log-likelihood: -76831.945
+ 76  mtREV+I+G4    76831.945    261 154185.890   154336.843   155507.345
+Empirical state frequencies: 0.0798228979 0.0435927368 0.0554286994 0.0472390520 0.0211323668 0.0343779273 0.0485321542 0.0640144321 0.0203751448 0.0521202216 0.1058014378 0.0441985144 0.0155755222 0.0392124987 0.0528657941 0.0979962263 0.0582828439 0.0093546521 0.0395969345 0.0704799432 
+Optimizing model mtREV+F+I+G4
+1. Initial log-likelihood: -74703.9611947316
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0185499079
+Gamma shape alpha: 1.1767215771
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0183811330
+Gamma shape alpha: 1.1588193598
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0184290577
+Gamma shape alpha: 1.1491423170
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0185040924
+Gamma shape alpha: 1.1426000841
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0185423110
+Gamma shape alpha: 1.1405476045
+Optimal log-likelihood: -74637.0935457723
+ 80  mtREV+F+I+G4  74637.094    280 149834.187   150011.594   151251.841
+Optimizing model mtART+I+G4
+1. Initial log-likelihood: -79458.793
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.017
+Gamma shape alpha: 0.986
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.017
+Gamma shape alpha: 0.935
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.017
+Gamma shape alpha: 0.907
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.017
+Gamma shape alpha: 0.893
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.017
+Gamma shape alpha: 0.888
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.017
+Gamma shape alpha: 0.887
+Optimal log-likelihood: -78664.621
+ 84  mtART+I+G4    78664.621    261 157851.242   158002.196   159172.698
+Empirical state frequencies: 0.0798228979 0.0435927368 0.0554286994 0.0472390520 0.0211323668 0.0343779273 0.0485321542 0.0640144321 0.0203751448 0.0521202216 0.1058014378 0.0441985144 0.0155755222 0.0392124987 0.0528657941 0.0979962263 0.0582828439 0.0093546521 0.0395969345 0.0704799432 
+Optimizing model mtART+F+I+G4
+1. Initial log-likelihood: -77085.2043232280
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0176378355
+Gamma shape alpha: 1.0442368473
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0173986498
+Gamma shape alpha: 1.0001861882
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0175068838
+Gamma shape alpha: 0.9823912934
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0176544864
+Gamma shape alpha: 0.9749618046
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0177682719
+Gamma shape alpha: 0.9705497151
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0178232812
+Gamma shape alpha: 0.9695791653
+Optimal log-likelihood: -76742.6349833612
+ 88  mtART+F+I+G4  76742.635    280 154045.270   154222.677   155462.923
+Optimizing model mtZOA+I+G4
+1. Initial log-likelihood: -76709.110
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.018
+Gamma shape alpha: 1.066
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.017
+Gamma shape alpha: 1.045
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.017
+Gamma shape alpha: 1.041
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.017
+Gamma shape alpha: 1.041
+Optimal log-likelihood: -76345.266
+ 92  mtZOA+I+G4    76345.266    261 153212.533   153363.486   154533.988
+Empirical state frequencies: 0.0798228979 0.0435927368 0.0554286994 0.0472390520 0.0211323668 0.0343779273 0.0485321542 0.0640144321 0.0203751448 0.0521202216 0.1058014378 0.0441985144 0.0155755222 0.0392124987 0.0528657941 0.0979962263 0.0582828439 0.0093546521 0.0395969345 0.0704799432 
+Optimizing model mtZOA+F+I+G4
+1. Initial log-likelihood: -75298.3119046947
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0176102441
+Gamma shape alpha: 1.0987584212
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0173444591
+Gamma shape alpha: 1.0701278114
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0173803236
+Gamma shape alpha: 1.0585848961
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0174276177
+Gamma shape alpha: 1.0544726013
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0174586786
+Gamma shape alpha: 1.0534181286
+Optimal log-likelihood: -75130.5954627354
+ 96  mtZOA+F+I+G4  75130.595    280 150821.191   150998.598   152238.844
+Optimizing model mtMet+I+G4
+1. Initial log-likelihood: -76396.609
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.018
+Gamma shape alpha: 1.146
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.019
+Gamma shape alpha: 1.146
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.019
+Gamma shape alpha: 1.142
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.019
+Gamma shape alpha: 1.140
+Optimal log-likelihood: -76229.006
+100  mtMet+I+G4    76229.006    261 152980.013   153130.966   154301.468
+Empirical state frequencies: 0.0798228979 0.0435927368 0.0554286994 0.0472390520 0.0211323668 0.0343779273 0.0485321542 0.0640144321 0.0203751448 0.0521202216 0.1058014378 0.0441985144 0.0155755222 0.0392124987 0.0528657941 0.0979962263 0.0582828439 0.0093546521 0.0395969345 0.0704799432 
+Optimizing model mtMet+F+I+G4
+1. Initial log-likelihood: -74099.2866345672
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0186599111
+Gamma shape alpha: 1.1747515854
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0187253870
+Gamma shape alpha: 1.1653642287
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0189068580
+Gamma shape alpha: 1.1582324743
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0190178652
+Gamma shape alpha: 1.1548470160
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0190720875
+Gamma shape alpha: 1.1535213111
+Optimal log-likelihood: -74030.8122910945
+104  mtMet+F+I+G4  74030.812    280 148621.625   148799.032   150039.278
+Optimizing model mtVer+I+G4
+1. Initial log-likelihood: -76815.813
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.018
+Gamma shape alpha: 1.077
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.018
+Gamma shape alpha: 1.042
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.019
+Gamma shape alpha: 1.022
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.019
+Gamma shape alpha: 1.016
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.019
+Gamma shape alpha: 1.015
+Optimal log-likelihood: -76512.452
+108  mtVer+I+G4    76512.452    261 153546.903   153697.857   154868.359
+Empirical state frequencies: 0.0798228979 0.0435927368 0.0554286994 0.0472390520 0.0211323668 0.0343779273 0.0485321542 0.0640144321 0.0203751448 0.0521202216 0.1058014378 0.0441985144 0.0155755222 0.0392124987 0.0528657941 0.0979962263 0.0582828439 0.0093546521 0.0395969345 0.0704799432 
+Optimizing model mtVer+F+I+G4
+1. Initial log-likelihood: -74542.6232495900
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0187953364
+Gamma shape alpha: 1.1239600264
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0189980602
+Gamma shape alpha: 1.0738922882
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0192150921
+Gamma shape alpha: 1.0497641003
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0193388579
+Gamma shape alpha: 1.0377981696
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0193956602
+Gamma shape alpha: 1.0324921349
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0194194374
+Gamma shape alpha: 1.0302953886
+Optimal log-likelihood: -74397.9023738888
+112  mtVer+F+I+G4  74397.902    280 149355.805   149533.212   150773.458
+Optimizing model mtInv+I+G4
+1. Initial log-likelihood: -76900.306
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.019
+Gamma shape alpha: 1.219
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.019
+Gamma shape alpha: 1.219
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.019
+Gamma shape alpha: 1.217
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.019
+Gamma shape alpha: 1.217
+Optimal log-likelihood: -76801.046
+116  mtInv+I+G4    76801.046    261 154124.091   154275.045   155445.547
+Empirical state frequencies: 0.0798228979 0.0435927368 0.0554286994 0.0472390520 0.0211323668 0.0343779273 0.0485321542 0.0640144321 0.0203751448 0.0521202216 0.1058014378 0.0441985144 0.0155755222 0.0392124987 0.0528657941 0.0979962263 0.0582828439 0.0093546521 0.0395969345 0.0704799432 
+Optimizing model mtInv+F+I+G4
+1. Initial log-likelihood: -73977.0637555736
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0192273823
+Gamma shape alpha: 1.2437581795
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0193272424
+Gamma shape alpha: 1.2286758389
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0194830674
+Gamma shape alpha: 1.2196703174
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0195777542
+Gamma shape alpha: 1.2155568989
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0196269002
+Gamma shape alpha: 1.2143413419
+Optimal log-likelihood: -73939.9822711663
+120  mtInv+F+I+G4  73939.982    280 148439.965   148617.372   149857.618
+Optimizing model mtMAM+I+G4
+1. Initial log-likelihood: -78845.766
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.017
+Gamma shape alpha: 0.941
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.017
+Gamma shape alpha: 0.923
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.017
+Gamma shape alpha: 0.906
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.018
+Gamma shape alpha: 0.897
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.018
+Gamma shape alpha: 0.893
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.018
+Gamma shape alpha: 0.891
+Optimal log-likelihood: -78084.695
+124  mtMAM+I+G4    78084.695    261 156691.389   156842.343   158012.845
+Empirical state frequencies: 0.0798228979 0.0435927368 0.0554286994 0.0472390520 0.0211323668 0.0343779273 0.0485321542 0.0640144321 0.0203751448 0.0521202216 0.1058014378 0.0441985144 0.0155755222 0.0392124987 0.0528657941 0.0979962263 0.0582828439 0.0093546521 0.0395969345 0.0704799432 
+Optimizing model mtMAM+F+I+G4
+1. Initial log-likelihood: -75992.2236607563
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0180041878
+Gamma shape alpha: 1.0434376789
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0179429863
+Gamma shape alpha: 0.9998735105
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0180668766
+Gamma shape alpha: 0.9827266723
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0181539326
+Gamma shape alpha: 0.9758553028
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0181947878
+Gamma shape alpha: 0.9748794474
+Optimal log-likelihood: -75673.0607808108
+128  mtMAM+F+I+G4  75673.061    280 151906.122   152083.529   153323.775
+Optimizing model HIVb+I+G4
+1. Initial log-likelihood: -74149.422
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.019
+Gamma shape alpha: 1.321
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.019
+Gamma shape alpha: 1.318
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.019
+Gamma shape alpha: 1.318
+Optimal log-likelihood: -74132.119
+132  HIVb+I+G4     74132.119    261 148786.238   148937.192   150107.694
+Empirical state frequencies: 0.0798228979 0.0435927368 0.0554286994 0.0472390520 0.0211323668 0.0343779273 0.0485321542 0.0640144321 0.0203751448 0.0521202216 0.1058014378 0.0441985144 0.0155755222 0.0392124987 0.0528657941 0.0979962263 0.0582828439 0.0093546521 0.0395969345 0.0704799432 
+Optimizing model HIVb+F+I+G4
+1. Initial log-likelihood: -73745.9818024640
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0192000216
+Gamma shape alpha: 1.2593365538
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0192398294
+Gamma shape alpha: 1.2467781287
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0193963869
+Gamma shape alpha: 1.2274485217
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0195340183
+Gamma shape alpha: 1.2007181520
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0196200798
+Gamma shape alpha: 1.1717179911
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0196822903
+Gamma shape alpha: 1.1517562534
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0197141240
+Gamma shape alpha: 1.1389349264
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0197219495
+Gamma shape alpha: 1.1349242240
+Optimal log-likelihood: -73701.1374028681
+136  HIVb+F+I+G4   73701.137    280 147962.275   148139.682   149379.928
+Optimizing model HIVw+I+G4
+1. Initial log-likelihood: -76314.802
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.017
+Gamma shape alpha: 1.214
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.016
+Gamma shape alpha: 1.194
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.016
+Gamma shape alpha: 1.183
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.016
+Gamma shape alpha: 1.176
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.016
+Gamma shape alpha: 1.175
+Optimal log-likelihood: -76255.141
+140  HIVw+I+G4     76255.141    261 153032.283   153183.236   154353.738
+Empirical state frequencies: 0.0798228979 0.0435927368 0.0554286994 0.0472390520 0.0211323668 0.0343779273 0.0485321542 0.0640144321 0.0203751448 0.0521202216 0.1058014378 0.0441985144 0.0155755222 0.0392124987 0.0528657941 0.0979962263 0.0582828439 0.0093546521 0.0395969345 0.0704799432 
+Optimizing model HIVw+F+I+G4
+1. Initial log-likelihood: -75064.7817775793
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0168674100
+Gamma shape alpha: 1.2250777943
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0161823871
+Gamma shape alpha: 1.1832204492
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0160703474
+Gamma shape alpha: 1.1631585042
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0160762432
+Gamma shape alpha: 1.1524942441
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0160850768
+Gamma shape alpha: 1.1495538202
+Optimal log-likelihood: -74998.5613932673
+144  HIVw+F+I+G4   74998.561    280 150557.123   150734.530   151974.776
+Optimizing model FLU+I+G4
+1. Initial log-likelihood: -74101.018
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.016
+Gamma shape alpha: 1.281
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.015
+Gamma shape alpha: 1.276
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.015
+Gamma shape alpha: 1.264
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.015
+Gamma shape alpha: 1.252
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.015
+Gamma shape alpha: 1.245
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.015
+Gamma shape alpha: 1.243
+Optimal log-likelihood: -74051.995
+148  FLU+I+G4      74051.995    261 148625.990   148776.943   149947.445
+Empirical state frequencies: 0.0798228979 0.0435927368 0.0554286994 0.0472390520 0.0211323668 0.0343779273 0.0485321542 0.0640144321 0.0203751448 0.0521202216 0.1058014378 0.0441985144 0.0155755222 0.0392124987 0.0528657941 0.0979962263 0.0582828439 0.0093546521 0.0395969345 0.0704799432 
+Optimizing model FLU+F+I+G4
+1. Initial log-likelihood: -73554.6203165888
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0163547858
+Gamma shape alpha: 1.3240700986
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0154620174
+Gamma shape alpha: 1.3127465381
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0152765907
+Gamma shape alpha: 1.2989964004
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0152870417
+Gamma shape alpha: 1.2854887809
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0153416304
+Gamma shape alpha: 1.2733720114
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0153955562
+Gamma shape alpha: 1.2634466429
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0154223178
+Gamma shape alpha: 1.2601680773
+Optimal log-likelihood: -73519.9155667928
+152  FLU+F+I+G4    73519.916    280 147599.831   147777.238   149017.485
+Optimizing model rtREV+I+G4
+1. Initial log-likelihood: -74842.224
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.020
+Gamma shape alpha: 1.395
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.020
+Gamma shape alpha: 1.386
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.020
+Gamma shape alpha: 1.384
+Optimal log-likelihood: -74827.515
+156  rtREV+I+G4    74827.515    261 150177.030   150327.984   151498.486
+Empirical state frequencies: 0.0798228979 0.0435927368 0.0554286994 0.0472390520 0.0211323668 0.0343779273 0.0485321542 0.0640144321 0.0203751448 0.0521202216 0.1058014378 0.0441985144 0.0155755222 0.0392124987 0.0528657941 0.0979962263 0.0582828439 0.0093546521 0.0395969345 0.0704799432 
+Optimizing model rtREV+F+I+G4
+1. Initial log-likelihood: -74280.7030607853
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0200077719
+Gamma shape alpha: 1.3153430476
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0200678093
+Gamma shape alpha: 1.3125429199
+Optimal log-likelihood: -74269.0329832560
+160  rtREV+F+I+G4  74269.033    280 149098.066   149275.473   150515.719
+Optimizing model cpREV+I+G4
+1. Initial log-likelihood: -73719.402
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.020
+Gamma shape alpha: 1.368
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.020
+Gamma shape alpha: 1.367
+Optimal log-likelihood: -73700.361
+164  cpREV+I+G4    73700.361    261 147922.722   148073.676   149244.177
+Empirical state frequencies: 0.0798228979 0.0435927368 0.0554286994 0.0472390520 0.0211323668 0.0343779273 0.0485321542 0.0640144321 0.0203751448 0.0521202216 0.1058014378 0.0441985144 0.0155755222 0.0392124987 0.0528657941 0.0979962263 0.0582828439 0.0093546521 0.0395969345 0.0704799432 
+Optimizing model cpREV+F+I+G4
+1. Initial log-likelihood: -73812.7231341638
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0195449026
+Gamma shape alpha: 1.3244661059
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0195560149
+Gamma shape alpha: 1.3111530700
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0195883683
+Gamma shape alpha: 1.3063512503
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0196086187
+Gamma shape alpha: 1.3050448989
+Optimal log-likelihood: -73790.2372875108
+168  cpREV+F+I+G4  73790.237    280 148140.475   148317.882   149558.128
+Akaike Information Criterion:           JTT+I+G4
+Corrected Akaike Information Criterion: JTT+I+G4
+Bayesian Information Criterion:         JTT+I+G4
+Best-fit model: JTT+I+G4 chosen according to BIC
+
+All model information printed to LYK5_alignment.model.gz
+CPU time for ModelFinder: 544.971 seconds (0h:9m:4s)
+Wall-clock time for ModelFinder: 104.695 seconds (0h:1m:44s)
+Empirical state frequencies: 0.0798228979 0.0435927368 0.0554286994 0.0472390520 0.0211323668 0.0343779273 0.0485321542 0.0640144321 0.0203751448 0.0521202216 0.1058014378 0.0441985144 0.0155755222 0.0392124987 0.0528657941 0.0979962263 0.0582828439 0.0093546521 0.0395969345 0.0704799432 
+Generating 1000 samples for ultrafast bootstrap (seed: 204488)...
+
+ML-TREE SEARCH START WITH THE FOLLOWING PARAMETERS:
+Model of evolution: JTT+I+G4 with user-defined frequencies (261 free parameters)
+Fixed branch lengths: No
+Tree search algorithm: Stochastic nearest neighbor interchange
+Termination condition: min 0.9900000000 correlation coefficient
+NNI assessed on: 5 branches
+Phylogenetic likelihood library: No
+Branch length optimization method: Newton
+Number of Newton-Raphson steps in NNI evaluation and branch length optimization: 10 / 10
+SSE instructions: Yes
+
+NOTE: 91 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.1000000000)
+Thoroughly optimizing +I+G parameters from 10 start values...
+1. Initial log-likelihood: -72938.4363977368
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0000334452
+Gamma shape alpha: 1.2594105077
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0008740392
+Gamma shape alpha: 1.2697823920
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0059509138
+Gamma shape alpha: 1.3255580514
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0135095420
+Gamma shape alpha: 1.3758929784
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0175713244
+Gamma shape alpha: 1.3868607114
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0190948148
+Gamma shape alpha: 1.3894689053
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0196271937
+Gamma shape alpha: 1.3894689053
+Optimal log-likelihood: -72898.3385514926
+Init pinv, alpha: 0.0000010000, 1.3933721820 / Estimate: 0.0196271937, 1.3894689053 / LogL: -72898.3385514926
+1. Initial log-likelihood: -72898.7023227136
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0213397856
+Gamma shape alpha: 1.3898137464
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0203826733
+Gamma shape alpha: 1.3870266967
+Optimal log-likelihood: -72898.2998730585
+Init pinv, alpha: 0.0244490274, 1.3933721820 / Estimate: 0.0203826733, 1.3870266967 / LogL: -72898.2998730585
+1. Initial log-likelihood: -72907.8784237165
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0280555525
+Gamma shape alpha: 1.3837218403
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0224707188
+Gamma shape alpha: 1.3793101362
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0207977185
+Gamma shape alpha: 1.3779308260
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0202649170
+Gamma shape alpha: 1.3779308260
+Optimal log-likelihood: -72898.2977912702
+Init pinv, alpha: 0.0488970548, 1.3933721820 / Estimate: 0.0202649170, 1.3779308260 / LogL: -72898.2977912702
+1. Initial log-likelihood: -72923.4399125613
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0340977515
+Gamma shape alpha: 1.3772885765
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0241918619
+Gamma shape alpha: 1.3772885765
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0213447747
+Gamma shape alpha: 1.3745303358
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0204549536
+Gamma shape alpha: 1.3745303358
+Optimal log-likelihood: -72898.3315101032
+Init pinv, alpha: 0.0733450822, 1.3933721820 / Estimate: 0.0204549536, 1.3745303358 / LogL: -72898.3315101032
+1. Initial log-likelihood: -72942.7576031895
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0398763799
+Gamma shape alpha: 1.3667611421
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0257548621
+Gamma shape alpha: 1.3733985497
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0218287302
+Gamma shape alpha: 1.3720251511
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0206210759
+Gamma shape alpha: 1.3720251511
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0202291618
+Gamma shape alpha: 1.3734377638
+Optimal log-likelihood: -72898.3383989137
+Init pinv, alpha: 0.0977931096, 1.3933721820 / Estimate: 0.0202291618, 1.3734377638 / LogL: -72898.3383989137
+1. Initial log-likelihood: -72965.0596299799
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0454975013
+Gamma shape alpha: 1.3561882122
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0272414939
+Gamma shape alpha: 1.3682922229
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0222597884
+Gamma shape alpha: 1.3734010573
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0207545071
+Gamma shape alpha: 1.3734010573
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0202759413
+Gamma shape alpha: 1.3754590244
+Optimal log-likelihood: -72898.3307329372
+Init pinv, alpha: 0.1222411370, 1.3933721820 / Estimate: 0.0202759413, 1.3754590244 / LogL: -72898.3307329372
+1. Initial log-likelihood: -72990.0198542482
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0510048079
+Gamma shape alpha: 1.3440626615
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0286657227
+Gamma shape alpha: 1.3624339887
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0226858491
+Gamma shape alpha: 1.3704715596
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0208984900
+Gamma shape alpha: 1.3704715596
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0203266781
+Gamma shape alpha: 1.3719300334
+Optimal log-likelihood: -72898.3628258905
+Init pinv, alpha: 0.1466891644, 1.3933721820 / Estimate: 0.0203266781, 1.3719300334 / LogL: -72898.3628258905
+1. Initial log-likelihood: -73017.4567302930
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0564277803
+Gamma shape alpha: 1.3317448592
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0300441400
+Gamma shape alpha: 1.3558267826
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0230929047
+Gamma shape alpha: 1.3672222191
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0210252986
+Gamma shape alpha: 1.3707689568
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0203745190
+Gamma shape alpha: 1.3732965158
+Optimal log-likelihood: -72898.3632629695
+Init pinv, alpha: 0.1711371918, 1.3933721820 / Estimate: 0.0203745190, 1.3732965158 / LogL: -72898.3632629695
+1. Initial log-likelihood: -73047.2975982371
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0617765704
+Gamma shape alpha: 1.3164812050
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0313902872
+Gamma shape alpha: 1.3491402200
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0234865637
+Gamma shape alpha: 1.3634989552
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0211458937
+Gamma shape alpha: 1.3709708058
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0204129361
+Gamma shape alpha: 1.3733517428
+Optimal log-likelihood: -72898.3642049528
+Init pinv, alpha: 0.1955852192, 1.3933721820 / Estimate: 0.0204129361, 1.3733517428 / LogL: -72898.3642049528
+1. Initial log-likelihood: -73079.6096650130
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0670623016
+Gamma shape alpha: 1.2992169304
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0327037222
+Gamma shape alpha: 1.3400103338
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0238683238
+Gamma shape alpha: 1.3589392123
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0212737728
+Gamma shape alpha: 1.3686092358
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0204567207
+Gamma shape alpha: 1.3700252001
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0201842679
+Gamma shape alpha: 1.3718203331
+Optimal log-likelihood: -72898.3595794367
+Init pinv, alpha: 0.2200332466, 1.3933721820 / Estimate: 0.0201842679, 1.3718203331 / LogL: -72898.3595794367
+Optimal pinv,alpha: 0.0202649170, 1.3779308260 / LogL: -72898.2977912702
+
+Parameters optimization took 11.0754468441 sec
+Best tree printed to LYK5_alignment.treefile
+Computing ML distances based on estimated model parameters...
+0.000018s Decided on visit order
+0.179218s Longest distance was 3.570607
+Distance calculation time: 0.179382 seconds
+Computing ML distances took 0.179417 sec (of wall-clock time) 1.251529 sec(of CPU time)
+Computing RapidNJ tree took 0.003868 sec (of wall-clock time) 0.024957 sec (of CPU time)
+Computing RapidNJ tree (from in-memory) distance matrix took 0.004 sec.
+Time taken to write distance file: 0.005 seconds 
+Loading tree (from file LYK5_alignment.bionj) took 0.000 sec.
+Wall-clock time spent creating initial tree was 0.006 seconds
+Log-likelihood of RapidNJ tree: -73038.961
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 6.942 second
+Computing log-likelihood of 98 initial trees ... 6.208 seconds
+Current best score: -72898.298
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -72890.949
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.020
+Gamma shape alpha: 1.381
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.020
+Gamma shape alpha: 1.383
+Optimal log-likelihood: -72890.717
+BETTER TREE FOUND at iteration 1: -72890.717
+Iteration 1 / LogL: -72890.717 / Time: 0h:0m:26s
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -72875.799
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.020
+Gamma shape alpha: 1.394
+Optimal log-likelihood: -72875.747
+BETTER TREE FOUND at iteration 2: -72875.747
+Iteration 2 / LogL: -72875.747 / Time: 0h:0m:27s
+Iteration 3 / LogL: -72898.142 / Time: 0h:0m:27s
+Iteration 4 / LogL: -72889.511 / Time: 0h:0m:28s
+Iteration 5 / LogL: -72898.267 / Time: 0h:0m:29s
+Iteration 6 / LogL: -72902.057 / Time: 0h:0m:30s
+Iteration 7 / LogL: -72894.106 / Time: 0h:0m:31s
+Iteration 8 / LogL: -72877.669 / Time: 0h:0m:32s
+Iteration 9 / LogL: -72877.736 / Time: 0h:0m:33s
+Iteration 10 / LogL: -72884.652 / Time: 0h:0m:34s
+Iteration 11 / LogL: -72897.452 / Time: 0h:0m:34s
+Iteration 12 / LogL: -72884.651 / Time: 0h:0m:35s
+Iteration 13 / LogL: -72886.405 / Time: 0h:0m:36s
+Iteration 14 / LogL: -72895.301 / Time: 0h:0m:37s
+Iteration 15 / LogL: -72877.932 / Time: 0h:0m:38s
+Iteration 16 / LogL: -72884.620 / Time: 0h:0m:39s
+Iteration 17 / LogL: -72897.263 / Time: 0h:0m:40s
+Iteration 18 / LogL: -72887.421 / Time: 0h:0m:41s
+Iteration 19 / LogL: -72889.209 / Time: 0h:0m:42s
+Iteration 20 / LogL: -72916.855 / Time: 0h:0m:42s
+Best tree printed to LYK5_alignment.treefile
+Finish initializing candidate tree set (13)
+Current best tree score: -72875.747 / CPU time: 30.409
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 21 / LogL: -72884.958 / Time: 0h:0m:43s (0h:2m:57s left)
+Iteration 22 / LogL: -72884.135 / Time: 0h:0m:45s (0h:2m:51s left)
+Iteration 23 / LogL: -72883.782 / Time: 0h:0m:46s (0h:2m:45s left)
+Iteration 24 / LogL: -72884.180 / Time: 0h:0m:47s (0h:2m:39s left)
+Iteration 25 / LogL: -72878.588 / Time: 0h:0m:48s (0h:2m:34s left)
+Iteration 26 / LogL: -72876.444 / Time: 0h:0m:49s (0h:2m:30s left)
+Iteration 27 / LogL: -72890.475 / Time: 0h:0m:51s (0h:2m:27s left)
+Iteration 28 / LogL: -72876.027 / Time: 0h:0m:52s (0h:2m:22s left)
+Iteration 29 / LogL: -72885.210 / Time: 0h:0m:53s (0h:2m:18s left)
+Iteration 30 / LogL: -72883.095 / Time: 0h:0m:54s (0h:2m:15s left)
+Iteration 31 / LogL: -72876.686 / Time: 0h:0m:55s (0h:2m:12s left)
+Iteration 32 / LogL: -72876.031 / Time: 0h:0m:57s (0h:2m:8s left)
+Iteration 33 / LogL: -72877.208 / Time: 0h:0m:58s (0h:2m:5s left)
+Iteration 34 / LogL: -72877.334 / Time: 0h:0m:59s (0h:2m:2s left)
+Iteration 35 / LogL: -72884.164 / Time: 0h:1m:0s (0h:1m:59s left)
+Iteration 36 / LogL: -72876.359 / Time: 0h:1m:1s (0h:1m:56s left)
+Iteration 37 / LogL: -72886.382 / Time: 0h:1m:3s (0h:1m:53s left)
+Iteration 38 / LogL: -72878.997 / Time: 0h:1m:4s (0h:1m:50s left)
+Iteration 39 / LogL: -72877.097 / Time: 0h:1m:5s (0h:1m:48s left)
+Iteration 40 / LogL: -72876.675 / Time: 0h:1m:6s (0h:1m:45s left)
+Iteration 41 / LogL: -72883.966 / Time: 0h:1m:7s (0h:1m:43s left)
+Iteration 42 / LogL: -72877.161 / Time: 0h:1m:8s (0h:1m:40s left)
+Iteration 43 / LogL: -72876.476 / Time: 0h:1m:9s (0h:1m:38s left)
+Iteration 44 / LogL: -72876.791 / Time: 0h:1m:11s (0h:1m:35s left)
+Iteration 45 / LogL: -72876.377 / Time: 0h:1m:12s (0h:1m:33s left)
+Iteration 46 / LogL: -72879.622 / Time: 0h:1m:13s (0h:1m:31s left)
+Iteration 47 / LogL: -72876.682 / Time: 0h:1m:14s (0h:1m:29s left)
+Iteration 48 / LogL: -72875.932 / Time: 0h:1m:16s (0h:1m:27s left)
+Iteration 49 / LogL: -72884.910 / Time: 0h:1m:17s (0h:1m:25s left)
+Iteration 50 / LogL: -72885.440 / Time: 0h:1m:18s (0h:1m:22s left)
+1000 tree(s) converted
+Using hash_map
+Converting collection of tree(s) into split system...
+Log-likelihood cutoff on original alignment: -72973.919
+Iteration 51 / LogL: -72893.319 / Time: 0h:1m:19s (0h:1m:21s left)
+Iteration 52 / LogL: -72876.337 / Time: 0h:1m:20s (0h:1m:19s left)
+Iteration 53 / LogL: -72878.666 / Time: 0h:1m:21s (0h:1m:17s left)
+Iteration 54 / LogL: -72876.857 / Time: 0h:1m:23s (0h:1m:15s left)
+Iteration 55 / LogL: -72877.091 / Time: 0h:1m:24s (0h:1m:13s left)
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -72875.665
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.020
+Gamma shape alpha: 1.389
+Optimal log-likelihood: -72875.598
+UPDATE BEST LOG-LIKELIHOOD: -72875.598
+Iteration 56 / LogL: -72875.598 / Time: 0h:1m:26s (0h:1m:12s left)
+Best tree printed to LYK5_alignment.treefile
+Iteration 57 / LogL: -72883.069 / Time: 0h:1m:27s (0h:1m:10s left)
+Iteration 58 / LogL: -72878.215 / Time: 0h:1m:28s (0h:1m:8s left)
+Iteration 59 / LogL: -72883.541 / Time: 0h:1m:29s (0h:1m:6s left)
+Iteration 60 / LogL: -72875.649 / Time: 0h:1m:30s (0h:1m:4s left)
+Iteration 61 / LogL: -72877.214 / Time: 0h:1m:31s (0h:1m:2s left)
+Iteration 62 / LogL: -72875.763 / Time: 0h:1m:32s (0h:1m:0s left)
+Iteration 63 / LogL: -72876.611 / Time: 0h:1m:33s (0h:0m:59s left)
+Iteration 64 / LogL: -72885.589 / Time: 0h:1m:35s (0h:0m:57s left)
+Iteration 65 / LogL: -72876.040 / Time: 0h:1m:36s (0h:0m:55s left)
+Iteration 66 / LogL: -72878.172 / Time: 0h:1m:37s (0h:0m:54s left)
+Iteration 67 / LogL: -72883.150 / Time: 0h:1m:38s (0h:0m:52s left)
+Iteration 68 / LogL: -72878.162 / Time: 0h:1m:40s (0h:0m:50s left)
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -72875.505
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.020
+Gamma shape alpha: 1.392
+Optimal log-likelihood: -72875.439
+UPDATE BEST LOG-LIKELIHOOD: -72875.439
+Iteration 69 / LogL: -72875.439 / Time: 0h:1m:41s (0h:0m:49s left)
+Best tree printed to LYK5_alignment.treefile
+Iteration 70 / LogL: -72875.471 / Time: 0h:1m:42s (0h:0m:47s left)
+Iteration 71 / LogL: -72876.637 / Time: 0h:1m:43s (0h:0m:45s left)
+Iteration 72 / LogL: -72876.177 / Time: 0h:1m:45s (0h:0m:44s left)
+Iteration 73 / LogL: -72876.399 / Time: 0h:1m:46s (0h:0m:42s left)
+Iteration 74 / LogL: -72883.878 / Time: 0h:1m:47s (0h:0m:41s left)
+Iteration 75 / LogL: -72877.724 / Time: 0h:1m:48s (0h:0m:39s left)
+Iteration 76 / LogL: -72876.278 / Time: 0h:1m:50s (0h:0m:38s left)
+Iteration 77 / LogL: -72877.063 / Time: 0h:1m:51s (0h:0m:36s left)
+Iteration 78 / LogL: -72878.018 / Time: 0h:1m:52s (0h:0m:35s left)
+Iteration 79 / LogL: -72876.286 / Time: 0h:1m:53s (0h:0m:33s left)
+Iteration 80 / LogL: -72876.620 / Time: 0h:1m:54s (0h:0m:32s left)
+Iteration 81 / LogL: -72877.294 / Time: 0h:1m:56s (0h:0m:30s left)
+Iteration 82 / LogL: -72876.635 / Time: 0h:1m:57s (0h:0m:28s left)
+Iteration 83 / LogL: -72877.122 / Time: 0h:1m:58s (0h:0m:27s left)
+Iteration 84 / LogL: -72885.005 / Time: 0h:2m:0s (0h:0m:26s left)
+Iteration 85 / LogL: -72889.563 / Time: 0h:2m:1s (0h:0m:24s left)
+Iteration 86 / LogL: -72875.513 / Time: 0h:2m:2s (0h:0m:23s left)
+Iteration 87 / LogL: -72875.702 / Time: 0h:2m:3s (0h:0m:21s left)
+Iteration 88 / LogL: -72895.807 / Time: 0h:2m:4s (0h:0m:20s left)
+Iteration 89 / LogL: -72875.551 / Time: 0h:2m:6s (0h:0m:18s left)
+Iteration 90 / LogL: -72883.922 / Time: 0h:2m:7s (0h:0m:17s left)
+Iteration 91 / LogL: -72876.756 / Time: 0h:2m:8s (0h:0m:15s left)
+Iteration 92 / LogL: -72876.609 / Time: 0h:2m:9s (0h:0m:14s left)
+Iteration 93 / LogL: -72876.288 / Time: 0h:2m:10s (0h:0m:12s left)
+Iteration 94 / LogL: -72876.242 / Time: 0h:2m:12s (0h:0m:11s left)
+Iteration 95 / LogL: -72875.718 / Time: 0h:2m:13s (0h:0m:9s left)
+Iteration 96 / LogL: -72879.643 / Time: 0h:2m:14s (0h:0m:8s left)
+Iteration 97 / LogL: -72876.340 / Time: 0h:2m:15s (0h:0m:7s left)
+Iteration 98 / LogL: -72879.915 / Time: 0h:2m:16s (0h:0m:5s left)
+Iteration 99 / LogL: -72876.082 / Time: 0h:2m:17s (0h:0m:4s left)
+Iteration 100 / LogL: -72883.465 / Time: 0h:2m:18s (0h:0m:2s left)
+1000 tree(s) converted
+Using hash_map
+Converting collection of tree(s) into split system...
+Log-likelihood cutoff on original alignment: -72973.919
+26 new splits compared to old boot_splits
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.998
+Iteration 101 / LogL: -72875.561 / Time: 0h:2m:20s (0h:2m:19s left)
+Iteration 102 / LogL: -72875.834 / Time: 0h:2m:21s (0h:2m:17s left)
+Iteration 103 / LogL: -72878.010 / Time: 0h:2m:22s (0h:2m:15s left)
+26 new splits compared to old boot_splits
+TREE SEARCH COMPLETED AFTER 103 ITERATIONS / Time: 0h:2m:22s
+
+Log-likelihoods of 5 best candidate trees: 
+-72875.439 -72875.561 -72875.747 -72876.031 -72876.177 
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -72875.439
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.020
+Gamma shape alpha: 1.394
+Optimal log-likelihood: -72875.424
+Parameters optimization took 1 rounds (0.206 sec)
+BEST SCORE FOUND : -72875.424
+Creating bootstrap support values...
+1000 tree(s) converted
+max_tree_id = 1   max_weight = 1 (0.100%)
+Using hash_map
+Converting collection of tree(s) into split system...
+423 splits found
+Split supports printed to NEXUS file LYK5_alignment.splits.nex
+Total tree length: 35.651
+
+Total number of iterations: 103
+CPU time used for tree search: 870.563 sec (0h:14m:30s)
+Wall-clock time used for tree search: 130.536 sec (0h:2m:10s)
+Total CPU time used: 960.096 sec (0h:16m:0s)
+Total wall-clock time used: 143.354 sec (0h:2m:23s)
+
+Computing bootstrap consensus tree...
+Reading input file LYK5_alignment.splits.nex...
+Reading "TAXA" block...
+Reading "SPLITS" block...
+131 taxa and 423 splits.
+Rescaling split weights by 1.000
+Consensus tree written to LYK5_alignment.contree
+Reading input trees file LYK5_alignment.contree
+Log-likelihood of consensus tree: -72875.416
+Best tree printed to LYK5_alignment.treefile
+Tree contains 131 taxa and 259 branches
+
+Analysis results written to: 
+  IQ-TREE report:                LYK5_alignment.iqtree
+  Maximum-likelihood tree:       LYK5_alignment.treefile
+  Likelihood distances:          LYK5_alignment.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          LYK5_alignment.splits.nex
+  Consensus tree:                LYK5_alignment.contree
+  Screen log file:               LYK5_alignment.log
+
+Date and Time: Sat Nov 20 22:41:08 2021

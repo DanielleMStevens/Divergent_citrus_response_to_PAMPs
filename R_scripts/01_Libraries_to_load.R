@@ -1,0 +1,60 @@
+#-----------------------------------------------------------------------------------------------
+# Coaker Lab - Plant Pathology Department UC Davis
+# Author: Danielle M. Stevens
+# Last Updated: 03/26/2022
+# Script Purpose: Loading Libraries for Processing data
+# Inputs Necessary: N/A
+# Outputs: N/A
+#-----------------------------------------------------------------------------------------------
+
+
+######################################################################
+#library packages need to load
+######################################################################
+
+# Packages for importing data and cleaning ut up
+library(readxl)
+library(stringr)
+library(reshape2)
+library(dplyr)
+library(xlsx)
+
+# General packages for plotting and athetics
+library(ggplot2)
+library(RColorBrewer)
+library(extrafont) 
+
+# R packages for plotting heatmaps
+library(ComplexHeatmap)
+library(circlize)
+
+# R packages for plotting and managing tree data
+library(treeio)
+library(phangorn)
+library(ggtree)
+library(cluster)
+
+
+# NOTE: I have had issues sometimes loading the complex heatmap package (not sure why), 
+# Try one of the many ways to download the package and if still running into troubles,
+# consult google or contact me
+
+# Method One - try installing github version via Devtools
+#--------------------------------------------------------
+
+#library(devtools)
+#install_github("jokergoo/ComplexHeatmap")
+#devtools::install_github("jokergoo/ComplexHeatmap")
+
+# Method Two - not recommended although an option, load via BioConductor
+# make sure you have a new enough version of this package otherwise it will not run properly
+#--------------------------------------------------------------------------------------------
+
+#if (!requireNamespace("BiocManager", quietly=TRUE))
+#install.packages("BiocManager")
+#BiocManager::install("ComplexHeatmap")
+
+
+
+
+

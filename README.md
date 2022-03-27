@@ -1,10 +1,14 @@
-# Assess Plant Immunne Response via ROS production in Diverse Citrus Varities
+# Assessing immune responses to microbial features across citrus and citrus relatives 
 
-Danielle M. Stevens<sup>1,2</sup>,Jessica Y. Franco<sup>1</sup>, Tania Toruno<sup>1</sup>, Gitta Coaker<sup>1</sup>.
+Jessica Trinh<sup>1$\times$</sup>, Tianrun Li<sup>1$\times$</sup>,*Danielle M. Stevens<sup>1,2$\times$</sup>*, Jessica Franco<sup>1$\times$</sup>, Tania Toruño<sup>1$\times$</sup>, Shree Thapa<sup>1</sup>, Rebeca Pineda<sup>3</sup>, Justin Wong<sup>1</sup>, Danelle Seymour<sup>3</sup>, Chandrika Ramadugu<sup>3</sup>, Gitta Coaker✝<sup>1</sup>
 
 
 <sup>1</sup>Department of Plant Pathology, University of California, Davis, USA <br />
 <sup>2</sup>Integrative Genetics and Genomics Graduate Program, University of California, Davis, USA <br />
+<sup>3</sup> Department of Botany and Plant Sciences, University of California, Riverside, CA, USA
+
+✝ Corresponding author
+* These authors contributed equally to the work. 
 
 -----------------------
 
@@ -20,9 +24,4 @@ To run scripts, in the R console, run the following command:
 source("./Master_Script.R")
 
 ```
-
-
-To assess all the plots made in the script including preliminary data analyses, visit this markdown file: [Computational_notebook.md](Computational_notebook.md).
-
-
 

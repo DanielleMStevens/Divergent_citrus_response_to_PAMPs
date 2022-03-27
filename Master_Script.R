@@ -13,38 +13,43 @@
 # Load Processed Data and Colors
 ##############################################
 
-#make sure to set path to the same place where the figure 
+# set path to location of where repository is located/downloaded
+library(rstudioapi)
 setwd(dirname(rstudioapi::getSourceEditorContext()$path))
-#getSrcDirectory(function(x) {x})
 
 
 #### Loading libraries, color codes, and processing data
 # Load libraries to run scripts
-source("./R_scripts/Libraries_to_load.R")
+source("./R_scripts/01_Libraries_to_load.R")
 
 # load processed data
-source("./R_scripts/Process_PAMP_responses.R")
+source("./R_scripts/02_Process_PAMP_responses.R")
 
 # load figure colors
-source("./R_scripts/Figure_colors.R")
+source("./R_scripts/03_Figure_colors.R")
 
 # Load custom ggplot
-source("./R_scripts/Theme_ggplot.R")
+source("./R_scripts/04_Theme_ggplot.R")
 
 
+##############################################
+# Plot data post processing
+##############################################
 
 
 #### Run to create all the figures use in these scripts
 # run complex heatmap script figures
-source("./R_scripts/Plot_Responses_ComplexHeatmap.R")
+source("./R_scripts/05_Plot_Responses_ComplexHeatmap.R")
 
-# run inital ggplot script figure
-source("./R_scripts/Plot_Responses_ggplot_only.R")
 
 # run ggplot script for assessing responses in relationship with disease
-source("./R_scripts/Assess_ROS_to_disease_assay.R")
+source("./R_scripts/06_Assess_ROS_to_disease_assay.R")
+
+# run inital ggplot script figure
+#source("./R_scripts/Plot_Responses_ggplot_only.R")
 
 
 ####################################################
 # NOTE: If you have issues loading packages, I reccomend restarting R. This fixed the issues most times in my experience
 #####################################################
+
