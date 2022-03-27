@@ -45,8 +45,12 @@ source("./R_scripts/05_Plot_Responses_ComplexHeatmap.R")
 # run ggplot script for assessing responses in relationship with disease
 source("./R_scripts/06_Assess_ROS_to_disease_assay.R")
 
-# run inital ggplot script figure
-#source("./R_scripts/Plot_Responses_ggplot_only.R")
+##############################################
+# Plot phylogenetic trees of receptors
+##############################################
+
+# parses and plots trees
+source("./R_scripts/07_Protein_tree_plots.R")
 
 
 ####################################################

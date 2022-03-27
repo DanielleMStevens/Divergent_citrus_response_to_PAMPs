@@ -1,6 +1,6 @@
 # Assessing immune responses to microbial features across citrus and citrus relatives 
 
-Jessica Trinh<sup>1$\times$</sup>, Tianrun Li<sup>1$\times$</sup>,*Danielle M. Stevens<sup>1,2$\times$</sup>*, Jessica Franco<sup>1$\times$</sup>, Tania Toruño<sup>1$\times$</sup>, Shree Thapa<sup>1</sup>, Rebeca Pineda<sup>3</sup>, Justin Wong<sup>1</sup>, Danelle Seymour<sup>3</sup>, Chandrika Ramadugu<sup>3</sup>, Gitta Coaker✝<sup>1</sup>
+Jessica Trinh<sup>1\*</sup>, Tianrun Li<sup>1\*</sup>,**Danielle M. Stevens<sup>1,2\*</sup>**, Jessica Franco<sup>1\*</sup>, Tania Toruño<sup>1\*</sup>, Shree Thapa<sup>1</sup>, Rebeca Pineda<sup>3</sup>, Justin Wong<sup>1</sup>, Danelle Seymour<sup>3</sup>, Chandrika Ramadugu<sup>3</sup>, Gitta Coaker✝<sup>1</sup>
 
 
 <sup>1</sup>Department of Plant Pathology, University of California, Davis, USA <br />
