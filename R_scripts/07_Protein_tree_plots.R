@@ -8,44 +8,42 @@
 #-----------------------------------------------------------------------------------------------
 
 ######################################################################
-#library packages need to load
+# ran the following commands on the command line 
 ######################################################################
 
 
-# mafft --reorder --thread 12 --maxiterate 1000 --localpair LYK5_homologs.fasta > "LYK5_alignment2"
-# iqtree -s LYK5_alignment2 -bb 1000 -T AUTO -st AA -v -m TEST -safe
+# mafft --reorder --thread 12 --maxiterate 1000 --localpair LYK5_homologs.fasta > "LYK5_alignment"
+# iqtree -s LYK5_alignment -bb 1000 -T AUTO -st AA -v -m MFP -safe
+
+
+# run similar command for CERK1 homologs
 
 
 ##############################################
 # LYK5 gene phylogeny
 ##############################################
 
+# load tip data
 load_LYK5_tipdata <- xlsx::read.xlsx("./Protein_Trees/Info_for_tree.xlsx", header = T, stringsAsFactors = F, sheetIndex = 1)
 load_LYK5_tipdata <- load_LYK5_tipdata[complete.cases(load_LYK5_tipdata),]
 
+# load 
 LYK5_phylo <- read.tree("./Protein_Trees/LYK5/LYK5_alignment.treefile")
-LYK5_phylo <- phangorn::midpoint(LYK5_phylo, node.labels='label')
+LYK5_phylo <- phangorn::midpoint(LYK5_phylo, node.labels = 'label')
 
 for (i in 1:length(LYK5_phylo$tip.label)){
   LYK5_phylo$tip.label[[i]] <- strsplit(LYK5_phylo$tip.label[[i]], "|", fixed = T )[[1]][1]
 }
 
-getPalette = colorRampPalette(brewer.pal(9, "Set1"))
-#
-#)
 
 #plot tree and add bootstrap values
-p <-  ggtree(LYK5_phylo, layout="fan", ladderize = T, size = 0.25, linetype = 1, open.angle = 180)  %<+% load_LYK5_tipdata 
+p <-  ggtree(LYK5_phylo, layout = "fan", ladderize = T, size = 0.25, linetype = 1, open.angle = 180) %<+% load_LYK5_tipdata 
 
-p + geom_tippoint(aes(color = Designation), size = 0.5) + 
-  #scale_color_manual(values = getPalette(8)) +
+p <- p +
+  geom_tippoint(aes(color = Designation), size = 0.5, show.legend = FALSE) + 
   geom_tiplab(aes(label = Plant_Species), size = 1, color="black", offset = 0.05) +
-  geom_treescale(x = -0.7, y = 0.2, width = 0.2, offset = 6, color='black', fontsize = 2) + 
-  geom_nodelab(data = d, aes(label = label), size = 0.8, alpha = 0.6, vjust = 2, hjust = 1.4)
+  geom_treescale(x = -0.7, y = 0.2, width = 0.2, offset = 6, color='black', fontsize = 2) 
 
-
-  
-  
 
 
 ##############################################
@@ -61,7 +59,6 @@ CERK1_phylo <- phangorn::midpoint(CERK1_phylo, node.labels='label')
 for (i in 1:length(CERK1_phylo$tip.label)){
   CERK1_phylo$tip.label[[i]] <- strsplit(CERK1_phylo$tip.label[[i]], "|", fixed = T )[[1]][1]
 }
-
 
 
 #plot tree and add bootstrap values
