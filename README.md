@@ -7,7 +7,7 @@ Jessica Trinh<sup>1\*</sup>, Tianrun Li<sup>1\*</sup>,**Danielle M. Stevens<sup>
 <sup>2</sup>Integrative Genetics and Genomics Graduate Program, University of California, Davis, USA <br />
 <sup>3</sup> Department of Botany and Plant Sciences, University of California, Riverside, CA, USA
 
-\# Corresponding author
+\# Corresponding author <br />
 \* These authors contributed equally to the work. 
 
 -----------------------
@@ -24,4 +24,10 @@ To run scripts, in the R console, run the following command:
 source("./Master_Script.R")
 
 ```
+
+### To make final figure:
+
+For the figures made here, some minor asthetic changes were made in a vector based software. These changes are noted in the scripts which make the preliminary 'final' figure and such figure can be found in the Final_Figures folder.
+
+Any questions, feel free to contact me (Danielle Stevens) at dmstev@ucdavis.edu.
 

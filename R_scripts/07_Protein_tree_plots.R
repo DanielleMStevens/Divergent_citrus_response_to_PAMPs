@@ -20,7 +20,7 @@
 
 
 ##############################################
-# LYK5 gene phylogeny
+# LYK5 gene phylogeny - Top Figure 5
 ##############################################
 
 # load tip data
@@ -39,19 +39,38 @@ for (i in 1:length(LYK5_phylo$tip.label)){
 #plot tree and add bootstrap values
 p <-  ggtree(LYK5_phylo, layout = "fan", ladderize = T, size = 0.25, linetype = 1, open.angle = 180) %<+% load_LYK5_tipdata 
 
+
+# need to make data table to map bootstrap values onto tree
+d <- p$data
+d <- d[!d$isTip,]
+d$label <- as.numeric(d$label)
+
+
 p <- p +
-  geom_tippoint(aes(color = Designation), size = 0.5, show.legend = FALSE) + 
-  geom_tiplab(aes(label = Plant_Species), size = 1, color="black", offset = 0.05) +
-  geom_treescale(x = -0.7, y = 0.2, width = 0.2, offset = 6, color='black', fontsize = 2) 
+  geom_tippoint(aes(color = Designation), size = 0.6, show.legend = FALSE) + 
+  geom_tiplab(aes(label = Plant_Species), size = 1.35, color = "black", offset = 0.03) +
+  geom_treescale(x = -0.7, y = 0.2, width = 0.2, offset = 6, color = 'black', fontsize = 2) +
+  geom_nodelab(data = d, aes(label = label), size = 1, alpha = 0.6, vjust = 2, hjust = 1.4)
+
+
+
+
+#---------- To make final figure:-----------------------------------------------------------------------------------------
+# use export button to export -> don't use pdf then dev off as issues with exporting image with font arise
+# path to save image -> /Final_Figures/LYK5_phylogenetic_tree.pdf
+# save the following image size:width = 9, height = 11
+# import pdf into vector based editing software such as inkscpae or adobe illustrator, adjust the bootstrap values
+# to allign with the right internal node. Color citrus tips Red (#), and chnage Q. obata to a dotten line and 
+# bring closer to other tip labels
 
 
 
 ##############################################
-# CERK1 gene phylogeny
+# CERK1 gene phylogeny - Bottom Figure 5
 ##############################################
 
 load_CERK1_tipdata <- xlsx::read.xlsx("./Protein_Trees/Info_for_tree.xlsx", header = T, stringsAsFactors = F, sheetIndex = 2)
-load_CERK1_tipdata <- load_CERK1_tipdata[complete.cases(load_CERK1_tipdata),]
+#load_CERK1_tipdata <- load_CERK1_tipdata[complete.cases(load_CERK1_tipdata),]
 
 CERK1_phylo <- read.tree("./Protein_Trees/CERK1/CERK1_alignment.treefile")
 CERK1_phylo <- phangorn::midpoint(CERK1_phylo, node.labels='label')
@@ -62,14 +81,32 @@ for (i in 1:length(CERK1_phylo$tip.label)){
 
 
 #plot tree and add bootstrap values
-p2 <-  ggtree(CERK1_phylo, layout="fan", ladderize = T, size = 0.25, linetype = 1, open.angle = 220) %<+% load_CERK1_tipdata 
+p2 <-  ggtree(CERK1_phylo, layout="fan", ladderize = T, size = 0.25, linetype = 1, open.angle = 180) %<+% load_CERK1_tipdata 
 
-p2 <- p2 + geom_tippoint(aes(color = Designation)) + 
-  geom_tiplab(aes(label = Plant_Species), size=3, color="black", offset = 0.05) +
-  geom_treescale(x=-0.7, y=0, width=0.2, offset = 12, color='black', fontsize = 4) + 
-  geom_nodelab(data = d, aes(label = label),size = 2, alpha = 0.6, vjust = 2, hjust = 1.4)
+
+# need to make data table to map bootstrap values onto tree
+d <- p2$data
+d <- d[!d$isTip,]
+d$label <- as.numeric(d$label)
+
+
+p2 <- p2 + geom_tippoint(aes(color = Designation), size = 1) + 
+  geom_tiplab(aes(label = Plant_Species), size = 1.2, color="black", offset = 0.03) +
+  geom_treescale(x = -0.7, y = 0, width = 0.2, offset = 12, color='black', fontsize = 4) + 
+  geom_nodelab(data = d, aes(label = label), size = 1.5, alpha = 0.6, vjust = 2, hjust = 1.4)
 
 rotate_tree(p2, 180)
+
+
+
+#---------- To make final figure:-----------------------------------------------------------------------------------------
+# use export button to export -> don't use pdf then dev off as issues with exporting image with font arise
+# path to save image -> /Final_Figures/LYK5_phylogenetic_tree.pdf
+# save the following image size:width = 9, height = 11
+# import pdf into vector based editing software such as inkscpae or adobe illustrator, adjust the bootstrap values
+# to allign with the right internal node. Color citrus tips Red (#), and chnage Q. obata to a dotten line and 
+# bring closer to other tip labels
+
 
 
 
