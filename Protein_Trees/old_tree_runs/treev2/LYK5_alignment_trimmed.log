@@ -1,0 +1,2600 @@
+IQ-TREE multicore version 2.1.2 COVID-edition for Linux 64-bit built Mar 30 2021
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    danimstevens-MS-7B93 (AVX2, FMA3, 125 GB RAM)
+Command: iqtree -s LYK5_alignment_trimmed -bb 1000 -T AUTO -st AA -v -m MFP
+Seed:    904684 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Sun Jun 19 14:29:07 2022
+Kernel:  AVX+FMA - auto-detect threads (16 CPU cores detected)
+
+Reading alignment file LYK5_alignment_trimmed ... Fasta format detected
+Name shortening took 0.000044 seconds.
+Duplicate sequence name check took 0.000052 seconds.
+Alignment most likely contains protein sequences
+Alignment has 103 sequences with 494 columns, 489 distinct patterns
+421 parsimony-informative, 40 singleton sites, 33 constant sites
+Empirical state frequencies: 0.0864990631 0.0404183911 0.0602054893 0.0468836865 0.0236992196 0.0359709268 0.0453600181 0.0606584718 0.0219078798 0.0544814380 0.1128132271 0.0379681677 0.0154425845 0.0386682315 0.0406448823 0.0829987440 0.0574875945 0.0085860770 0.0498074824 0.0794984249 
+                                                     Gap/Ambiguity  Composition  p-value
+   1  NP_180916.1|Arabidopsis_thaliana|LYK5                  4.05%    passed     91.82%
+   2  XP_010413840.1|Camelina_sativa                         3.64%    passed     99.59%
+   3  XP_010469453.1|Camelina_sativa                         3.64%    passed     98.53%
+   4  XP_010509863.1|Camelina_sativa                         3.64%    passed     98.83%
+   5  XP_006295585.1|Capsella_rubella                        4.05%    passed     99.81%
+   6  XP_013671298.1|Brassica_napus                          4.05%    passed     97.26%
+   7  XP_013662422.1|Brassica_napus                          4.05%    passed     90.15%
+   8  XP_009141328.1|Brassica_rapa                           4.05%    passed     90.15%
+   9  XP_018484364.1|Raphanus_sativus                        3.64%    passed     99.14%
+  10  XP_006410503.2|Eutrema_salsugineum                     3.85%    passed     99.26%
+  11  XP_010523260.1|Tarenaya_hassleriana                    3.85%    passed     96.75%
+  12  XP_029126859.1|Cajanus_cajan                           3.85%    passed     87.05%
+  13  TKY57014.1|Spatholobus_suberectus                      3.85%    passed     92.51%
+  14  XP_017430370.1|Vigna_angularis                         3.85%    passed     83.53%
+  15  XP_014505078.1|Vigna_radiata_var_radiata               3.85%    passed     92.23%
+  16  XP_027940256.1|Vigna_unguiculata                       4.25%    passed     80.48%
+  17  XP_003616926.2|Medicago_truncatula                     4.05%    passed     35.27%
+  18  XP_003601388.3|Medicago_truncatula                     3.64%    passed     84.54%
+  19  XP_031404507.1|Punica_granatum                         4.05%    passed     99.96%
+  20  XP_030514269.1|Rhodamnia_argentea                      3.44%    passed     99.91%
+  21  XP_042988561.1|Carya_illinoinensis                     4.05%    passed     99.99%
+  22  XP_041017675.1|Juglans_microcarpa_x_Juglans_regia      4.05%    passed    100.00%
+  23  XP_018843092.1|Juglans_regia                           4.05%    passed     99.95%
+  24  XP_030951100.1|Quercus_lobata                          4.05%    passed     97.91%
+  25  XP_023912979.1|Quercus_suber                           4.05%    passed     95.95%
+  26  XP_042991128.1|Carya_illinoinensis                     3.85%    passed     95.95%
+  27  XP_022718677.1|Durio_zibethinus                        3.85%    passed     95.96%
+  28  XP_007029832.2|Theobroma_cacao                         3.85%    passed     99.92%
+  29  XP_022718676.1|Durio_zibethinus                        3.85%    passed     66.29%
+  30  XP_017977387.1|Theobroma_cacao                         3.85%    passed     99.80%
+  31  XP_017631612.1|Gossypium_arboreum                      3.85%    passed     97.41%
+  32  XP_016727798.1|Gossypium_hirsutum                      3.85%    passed     97.82%
+  33  XP_016697670.1|Gossypium_hirsutum                      3.85%    passed     98.92%
+  34  XP_012492359.1|Gossypium_raimondii                     3.85%    passed     98.77%
+  35  XP_021671711.1|Hevea_brasiliensis                      4.05%    passed     94.57%
+  36  XP_012073533.1|Jatropha_curcas                         3.44%    passed     71.57%
+  37  XP_011041114.1|Populus_euphratica                      3.64%    passed     90.31%
+  38  XP_002307830.2|Populus_trichocarpa                     3.64%    passed     92.79%
+  39  XP_002510756.2|Ricinus_communis                        4.05%    passed     81.46%
+  40  KAH9694132.1|Citrus_sinensis                           3.85%    passed     99.25%
+  41  XP_006435494.1|Citrus_clementina                       3.85%    passed     99.25%
+  42  Tango_mandarin|LYK5                                    3.85%    passed     99.25%
+  43  Rio_red_grapefruit|LYK5                                3.85%    passed     97.84%
+  44  Lisbon_lemon|LYK5                                      3.85%    passed     98.09%
+  45  Eremolemon|LYK5                                        3.85%    passed     98.50%
+  46  Microcitrus_australasica|LYK5                          3.85%    passed     99.38%
+  47  XP_021900824.1|Carica_papaya                           4.05%    passed     99.85%
+  48  XP_038702640.1|Tripterygium_wilfordii                  3.64%    passed     94.72%
+  49  XP_034677033.1|Vitis_riparia                           3.64%    passed     99.72%
+  50  XP_002277331.3|Vitis_vinifera                          3.64%    passed     99.68%
+  51  XP_034677034.1|Vitis_riparia                           3.85%    passed     91.40%
+  52  XP_042507026.1|Macadamia_integrifolia                  4.05%    passed     99.56%
+  53  XP_043711390.1|Telopea_speciosissima                   4.05%    passed     97.59%
+  54  XP_010270638.1|Nelumbo_nucifera                        4.05%    passed     57.07%
+  55  XP_010275837.1|Nelumbo_nucifera                        3.64%    passed     86.11%
+  56  XP_021652803.1|Hevea_brasiliensis                      4.05%    passed     90.76%
+  57  XP_002522569.2|Ricinus_communis                        4.05%    passed     90.81%
+  58  XP_020109757.1|Ananas_comosus                          3.64%    passed     83.81%
+  59  XP_020109553.1|Ananas_comosus                          3.64%    passed     84.67%
+  60  KAG1326821.1|Cocos_nucifera                            4.05%    passed     99.79%
+  61  XP_010913816.1|Elaeis_guineensis                       4.05%    passed     99.54%
+  62  XP_010913817.1|Elaeis_guineensis                       4.05%    passed     99.89%
+  63  XP_038984152.1|Phoenix_dactylifera                     4.05%    passed     99.94%
+  64  XP_038984149.1|Phoenix_dactylifera                     4.05%    passed     99.78%
+  65  RWW44345.1|Ensete_ventricosum                          4.05%    passed     77.92%
+  66  XP_009395847.1|Musa_acuminata_subspmalaccensis         4.05%    passed     82.42%
+  67  PKA56570.1|Apostasia_shenzhenica                       3.64%    passed     90.48%
+  68  PKA52841.1|Apostasia_shenzhenica                       4.05%    passed     99.12%
+  69  XP_020677521.1|Dendrobium_catenatum                    4.05%    passed     85.59%
+  70  XP_020592581.1|Phalaenopsis_equestris                  4.05%    passed     97.09%
+  71  XP_039134376.1|Dioscorea_cayenensis_subsp_rotundata    3.85%    passed     84.45%
+  72  KAE8782801.1|Hordeum_vulgare                           3.64%    failed      3.87%
+  73  XP_020169341.2|Aegilops_tauschii_subsp_strangulata     3.64%    passed      5.23%
+  74  XP_037451244.1|Triticum_dicoccoides                    3.64%    passed      8.02%
+  75  KAE8782796.1|Hordeum_vulgare                           3.85%    passed     17.81%
+  76  XP_020164009.2|Aegilops_tauschii_subsp_strangulata    23.28%    passed      6.19%
+  77  XP_020150460.2|Aegilops_tauschii_subsp_strangulata     3.85%    passed      6.89%
+  78  XP_037454515.1|Triticum_dicoccoides                    3.85%    passed     12.83%
+  79  XP_040376853.1|Oryza_brachyantha                       3.64%    failed      3.98%
+  80  XP_015623069.1|Oryza_sativa_Japonica_Group             3.64%    failed      1.70%
+  81  XP_025812004.1|Panicum_hallii                          3.64%    failed      0.06%
+  82  PWZ28177.1.1|Zea_mays                                  3.44%    passed      5.53%
+  83  XP_002451701.1|Sorghum_bicolor                         3.44%    passed      5.37%
+  84  XP_040381256.1|Oryza_brachyantha                       3.64%    failed      0.02%
+  85  XP_015643312.1|Oryza_sativa_Japonica_Group             3.44%    failed      0.00%
+  86  CAD6336214.1|Miscanthus_lutarioriparius                3.64%    failed      0.03%
+  87  XP_020185086.2|Aegilops_tauschii_subsp_strangulata     4.86%    failed      0.06%
+  88  XP_037461922.1|Triticum_dicoccoides                    4.86%    failed      0.10%
+  89  XP_037419289.1|Triticum_dicoccoides                    3.64%    failed      0.00%
+  90  XP_020187858.1|Aegilops_tauschii_subsp_strangulata     3.64%    failed      1.13%
+  91  XP_037487189.1|Triticum_dicoccoides                    3.64%    failed      1.01%
+  92  XP_015642396.1|Oryza_sativa_Japonica_Group             7.69%    failed      0.16%
+  93  XP_031406608.1|Punica_granatum                         8.70%    passed     12.94%
+  94  KAH9711579.1|Citrus_sinensis                           6.28%    passed     72.19%
+  95  XP_024036693.1|Citrus_clementina                       4.25%    passed     73.00%
+  96  XP_022775263.1|Durio_zibethinus                        5.06%    passed     37.13%
+  97  XP_022768869.1|Durio_zibethinus                        4.66%    passed     46.42%
+  98  XP_022772795.1|Durio_zibethinus                        4.66%    passed     54.69%
+  99  XP_030969896.1|Quercus_lobata                         15.38%    failed      3.12%
+ 100  XP_020084255.1|Ananas_comosus                         11.34%    passed     14.42%
+ 101  XP_021912215.1|Carica_papaya                           8.30%    failed      0.11%
+ 102  XP_011025973.1|Populus_euphratica                     11.34%    passed     41.46%
+ 103  XP_012489156.1|Gossypium_raimondii                    10.12%    passed      8.25%
+****  TOTAL                                                  4.55%  15 sequences failed composition chi2 test (p-value<5%; df=19)
+Hashing sequences took 0.008 wall-clock seconds
+NOTE: XP_009141328.1|Brassica_rapa is identical to XP_013662422.1|Brassica_napus but kept for subsequent analysis
+NOTE: XP_006435494.1|Citrus_clementina is identical to KAH9694132.1|Citrus_sinensis but kept for subsequent analysis
+Checking for duplicate sequences took 0.000 wall-clock seconds
+NOTE: 1 identical sequences (see below) will be ignored for subsequent analysis
+NOTE: Tango_mandarin|LYK5 (identical to KAH9694132.1|Citrus_sinensis) is ignored but added at the end
+Alignment was printed to LYK5_alignment_trimmed.uniqueseq.phy
+
+For your convenience alignment with unique sequences printed to LYK5_alignment_trimmed.uniqueseq.phy
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.039 seconds
+Measuring multi-threading efficiency up to 16 CPU cores
+Increase to 10 rounds for branch lengths
+17 trees examined
+Threads: 1 / Time: 16.596 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -56105
+Threads: 2 / Time: 9.157 sec / Speedup: 1.812 / Efficiency: 91% / LogL: -56105
+Threads: 3 / Time: 6.538 sec / Speedup: 2.538 / Efficiency: 85% / LogL: -56105
+Threads: 4 / Time: 5.208 sec / Speedup: 3.187 / Efficiency: 80% / LogL: -56105
+Threads: 5 / Time: 4.500 sec / Speedup: 3.688 / Efficiency: 74% / LogL: -56105
+Threads: 6 / Time: 3.956 sec / Speedup: 4.195 / Efficiency: 70% / LogL: -56105
+Threads: 7 / Time: 3.514 sec / Speedup: 4.722 / Efficiency: 67% / LogL: -56105
+Threads: 8 / Time: 4.578 sec / Speedup: 3.625 / Efficiency: 45% / LogL: -56105
+BEST NUMBER OF THREADS: 7
+
+Perform fast likelihood tree search using LG+I+G model...
+Estimate model parameters (epsilon = 5.000)
+1. Initial log-likelihood: -32581.762
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.026
+Gamma shape alpha: 1.306
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.026
+Gamma shape alpha: 1.346
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.027
+Gamma shape alpha: 1.352
+Optimal log-likelihood: -32349.199
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -32318.062
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.028
+Gamma shape alpha: 1.354
+Optimal log-likelihood: -32317.964
+Parameters optimization took 1 rounds (0.107 sec)
+Time for fast ML tree search: 0.788 seconds
+
+NOTE: ModelFinder requires 82 MB RAM!
+ModelFinder will test up to 546 protein models (sample size: 494) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+Optimizing model LG
+1. Initial log-likelihood: -33714.827
+Optimal log-likelihood: -33596.833
+  1  LG            33596.833    201 67595.666    67873.762    68440.375
+Optimizing model LG+I
+1. Initial log-likelihood: -33439.234
+Proportion of invariable sites: 0.039
+Proportion of invariable sites: 0.041
+Proportion of invariable sites: 0.042
+Optimal log-likelihood: -33438.450
+  2  LG+I          33438.450    202 67280.901    67562.729    68129.813
+Optimizing model LG+G4
+1. Initial log-likelihood: -32358.795
+Gamma shape alpha: 1.172
+Gamma shape alpha: 1.190
+Gamma shape alpha: 1.192
+Gamma shape alpha: 1.193
+Optimal log-likelihood: -32326.107
+  3  LG+G4         32326.107    202 65056.213    65338.041    65905.125
+Optimizing model LG+I+G4
+1. Initial log-likelihood: -32318.078
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.028
+Gamma shape alpha: 1.354
+Optimal log-likelihood: -32317.979
+  4  LG+I+G4       32317.979    203 65041.958    65327.558    65895.072
+Optimizing model LG+R2
+1. Initial log-likelihood: -32547.167
+Optimizing +R2 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.526,0.371) (0.474,1.629)
+Optimizing +R2 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.545,0.378) (0.455,1.625)
+Optimizing +R2 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.548,0.379) (0.452,1.625)
+Optimal log-likelihood: -32513.908
+  5  LG+R2         32513.908    203 65433.817    65719.417    66286.932
+Optimizing model LG+R3
+1. Initial log-likelihood: -32380.927
+Optimizing +R3 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.297,0.203) (0.392,0.767) (0.311,2.000)
+Optimizing +R3 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.314,0.211) (0.391,0.788) (0.295,1.996)
+Optimizing +R3 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.330,0.217) (0.390,0.805) (0.280,1.995)
+Optimizing +R3 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.342,0.221) (0.389,0.821) (0.268,1.998)
+Optimizing +R3 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.352,0.225) (0.389,0.832) (0.258,2.002)
+Optimizing +R3 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.359,0.227) (0.390,0.842) (0.252,2.009)
+Optimizing +R3 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.363,0.229) (0.390,0.849) (0.247,2.015)
+Optimizing +R3 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.367,0.231) (0.390,0.854) (0.243,2.020)
+Optimal log-likelihood: -32359.441
+  6  LG+R3         32359.441    205 65128.883    65422.147    65990.403
+Optimizing model LG+R4
+1. Initial log-likelihood: -32332.179
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.199,0.140) (0.303,0.476) (0.309,1.127) (0.189,2.293)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.203,0.140) (0.320,0.486) (0.306,1.163) (0.170,2.310)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.206,0.140) (0.326,0.493) (0.304,1.182) (0.164,2.327)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.207,0.140) (0.329,0.498) (0.303,1.194) (0.161,2.338)
+Optimal log-likelihood: -32308.832
+  7  LG+R4         32308.832    207 65031.665    65332.756    65901.590
+Optimizing model LG+R5
+1. Initial log-likelihood: -32318.923
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.153,0.111) (0.220,0.369) (0.208,0.692) (0.265,1.323) (0.155,2.481)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.152,0.111) (0.222,0.369) (0.212,0.699) (0.268,1.346) (0.146,2.503)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.152,0.111) (0.225,0.369) (0.215,0.707) (0.266,1.361) (0.142,2.516)
+Optimal log-likelihood: -32302.113
+  8  LG+R5         32302.113    209 65022.226    65331.311    65900.556
+Optimizing model LG+R6
+1. Initial log-likelihood: -32317.546
+Optimizing +R6 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.128,0.093) (0.168,0.312) (0.178,0.535) (0.166,0.889) (0.228,1.465) (0.132,2.596)
+Optimizing +R6 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.128,0.093) (0.169,0.315) (0.176,0.538) (0.164,0.883) (0.234,1.472) (0.128,2.610)
+Optimizing +R6 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.129,0.093) (0.171,0.317) (0.173,0.540) (0.163,0.881) (0.237,1.472) (0.127,2.613)
+Optimal log-likelihood: -32301.689
+  9  LG+R6         32301.689    211 65025.378    65342.626    65912.113
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model LG+F+I+G4
+1. Initial log-likelihood: -32371.2982651916
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0273105277
+Gamma shape alpha: 1.3201711361
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0271154163
+Gamma shape alpha: 1.3178425862
+Optimal log-likelihood: -32369.4822573741
+ 17  LG+F+I+G4     32369.482    222 65182.965    65548.322    66115.927
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model LG+F+R4
+1. Initial log-likelihood: -32383.0606161445
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1954654048,0.1392163884) (0.3075164501,0.4723508546) (0.3081909009,1.1450179892) (0.1888272443,2.3236649447)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2007263295,0.1392163884) (0.3246969392,0.4805973275) (0.3117497352,1.1858667570) (0.1628269962,2.3597669708)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2031918445,0.1392163884) (0.3299380775,0.4867927108) (0.3122708169,1.2061726043) (0.1545992611,2.3864273891)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2042807144,0.1392163884) (0.3323247568,0.4905165362) (0.3122963020,1.2173868110) (0.1510982268,2.4025190010)
+Optimal log-likelihood: -32356.2367780800
+ 20  LG+F+R4       32356.237    226 65164.474    65548.758    66114.247
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model LG+F+R5
+1. Initial log-likelihood: -32367.6754451261
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1533891393,0.1093679672) (0.2260179068,0.3737729546) (0.1979037827,0.6842593445) (0.2742933089,1.3325417990) (0.1483958623,2.5232377404)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1535274994,0.1093679672) (0.2316922515,0.3755555100) (0.1979595204,0.6930130077) (0.2791570547,1.3537167884) (0.1376636740,2.5550647613)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1538652146,0.1093679672) (0.2360139983,0.3774962172) (0.1983480096,0.7038423945) (0.2776873885,1.3664746067) (0.1340853890,2.5696633339)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1540386767,0.1093679672) (0.2400832407,0.3795984677) (0.1981008969,0.7141095705) (0.2754373415,1.3756841097) (0.1323398443,2.5759050736)
+Optimal log-likelihood: -32349.5880096326
+ 21  LG+F+R5       32349.588    228 65155.176    65549.229    66113.354
+Optimizing model WAG+I+G4
+1. Initial log-likelihood: -32354.009
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.027
+Gamma shape alpha: 1.467
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.025
+Gamma shape alpha: 1.457
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.025
+Gamma shape alpha: 1.453
+Optimal log-likelihood: -32342.209
+ 30  WAG+I+G4      32342.209    203 65090.417    65376.017    65943.532
+Optimizing model WAG+R4
+1. Initial log-likelihood: -32373.128
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.189,0.142) (0.285,0.490) (0.318,1.093) (0.208,2.181)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.189,0.142) (0.297,0.499) (0.313,1.115) (0.201,2.184)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.191,0.142) (0.303,0.506) (0.310,1.128) (0.197,2.189)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.192,0.142) (0.306,0.510) (0.307,1.136) (0.194,2.194)
+Optimal log-likelihood: -32336.086
+ 33  WAG+R4        32336.086    207 65086.171    65387.262    65956.096
+Optimizing model WAG+R5
+1. Initial log-likelihood: -32369.662
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.150,0.115) (0.199,0.377) (0.221,0.703) (0.260,1.277) (0.170,2.299)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.148,0.115) (0.198,0.377) (0.222,0.704) (0.260,1.279) (0.172,2.296)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.148,0.115) (0.197,0.376) (0.222,0.704) (0.260,1.279) (0.173,2.296)
+Optimal log-likelihood: -32333.875
+ 34  WAG+R5        32333.875    209 65085.750    65394.835    65964.080
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model WAG+F+I+G4
+1. Initial log-likelihood: -32324.0543245999
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0269447047
+Gamma shape alpha: 1.4652998476
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0260551075
+Gamma shape alpha: 1.4598583978
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0256079647
+Gamma shape alpha: 1.4566922861
+Optimal log-likelihood: -32314.8255162309
+ 43  WAG+F+I+G4    32314.826    222 65073.651    65439.009    66006.614
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model WAG+F+R4
+1. Initial log-likelihood: -32342.2543277627
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1904484351,0.1420427853) (0.2945483903,0.4897972230) (0.3161360135,1.1056535804) (0.1988671611,2.1959868550)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1926740095,0.1420427853) (0.3105811098,0.5004753722) (0.3104515064,1.1338664388) (0.1862933742,2.1996929719)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1951847310,0.1420427853) (0.3175942898,0.5083722089) (0.3064226200,1.1506629227) (0.1807983593,2.2088926903)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1968246132,0.1420427853) (0.3217081373,0.5134555063) (0.3039315155,1.1614404385) (0.1775357341,2.2137681823)
+Optimal log-likelihood: -32306.7540633518
+ 46  WAG+F+R4      32306.754    226 65065.508    65449.793    66015.281
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model WAG+F+R5
+1. Initial log-likelihood: -32336.1764183034
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1498893124,0.1146557077) (0.2024046092,0.3794038868) (0.2217922058,0.6983576826) (0.2636427677,1.2982514222) (0.1622711048,2.3482817100)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1487928778,0.1146557077) (0.2020548078,0.3798670298) (0.2254039216,0.7024150993) (0.2641805153,1.3100392288) (0.1595678775,2.3514621399)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1488173289,0.1146557077) (0.2028205364,0.3794871627) (0.2277906959,0.7060349135) (0.2627833305,1.3156238403) (0.1577881083,2.3564248282)
+Optimal log-likelihood: -32303.5438675193
+ 47  WAG+F+R5      32303.544    228 65063.088    65457.141    66021.266
+Optimizing model JTT+I+G4
+1. Initial log-likelihood: -32215.910
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.026
+Gamma shape alpha: 1.414
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.025
+Gamma shape alpha: 1.408
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.025
+Gamma shape alpha: 1.405
+Optimal log-likelihood: -32210.373
+ 56  JTT+I+G4      32210.373    203 64826.745    65112.345    65679.860
+Optimizing model JTT+R4
+1. Initial log-likelihood: -32226.457
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.186,0.142) (0.295,0.485) (0.309,1.118) (0.210,2.260)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.189,0.142) (0.312,0.496) (0.305,1.152) (0.193,2.269)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.192,0.142) (0.320,0.505) (0.302,1.172) (0.187,2.281)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.194,0.142) (0.324,0.510) (0.299,1.184) (0.183,2.289)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.195,0.142) (0.326,0.514) (0.298,1.192) (0.181,2.295)
+Optimal log-likelihood: -32202.373
+ 59  JTT+R4        32202.373    207 64818.746    65119.836    65688.670
+Optimizing model JTT+R5
+1. Initial log-likelihood: -32218.495
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.147,0.114) (0.204,0.382) (0.214,0.695) (0.263,1.315) (0.173,2.429)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.147,0.114) (0.206,0.382) (0.217,0.700) (0.264,1.333) (0.167,2.437)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.147,0.114) (0.208,0.383) (0.219,0.707) (0.262,1.343) (0.164,2.443)
+Optimal log-likelihood: -32198.603
+ 60  JTT+R5        32198.603    209 64815.205    65124.290    65693.535
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model JTT+F+I+G4
+1. Initial log-likelihood: -32221.0404879336
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0239272929
+Gamma shape alpha: 1.3602465790
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0235903947
+Gamma shape alpha: 1.3588863323
+Optimal log-likelihood: -32219.2585837095
+ 69  JTT+F+I+G4    32219.259    222 64882.517    65247.875    65815.480
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model JTT+F+R4
+1. Initial log-likelihood: -32233.6401306703
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1870963222,0.1407494018) (0.3000255904,0.4861860713) (0.3058103839,1.1293368141) (0.2070677035,2.2876553142)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1913640763,0.1407494018) (0.3196653106,0.4973330868) (0.3020753703,1.1693534400) (0.1868952428,2.2987589868)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1942985703,0.1407494018) (0.3270750409,0.5056109633) (0.2994876577,1.1916565898) (0.1791387311,2.3144633940)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1960184878,0.1407494018) (0.3309858898,0.5105568346) (0.2982405398,1.2051180615) (0.1747550826,2.3257155174)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1968222059,0.1407494018) (0.3331308567,0.5136159267) (0.2975272408,1.2134353877) (0.1725196966,2.3336661571)
+Optimal log-likelihood: -32208.7821538990
+ 72  JTT+F+R4      32208.782    226 64869.564    65253.849    65819.337
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model JTT+F+R5
+1. Initial log-likelihood: -32224.1692424725
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1491269532,0.1128072233) (0.2037028887,0.3868963813) (0.2102384642,0.6843977123) (0.2669226721,1.3266265095) (0.1700090218,2.4694522285)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1502499783,0.1128072233) (0.2054196620,0.3895427338) (0.2125664413,0.6887316740) (0.2710624030,1.3465893503) (0.1607015154,2.4864668934)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1506324457,0.1128072233) (0.2078399580,0.3899322766) (0.2141691492,0.6953267481) (0.2703109229,1.3578255432) (0.1570475243,2.4952484659)
+Optimal log-likelihood: -32205.2571722471
+ 73  JTT+F+R5      32205.257    228 64866.514    65260.567    65824.692
+Optimizing model JTTDCMut+I+G4
+1. Initial log-likelihood: -32213.522
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.025
+Gamma shape alpha: 1.408
+Optimal log-likelihood: -32213.456
+ 82  JTTDCMut+I+G4 32213.456    203 64832.913    65118.513    65686.028
+Optimizing model JTTDCMut+R4
+1. Initial log-likelihood: -32230.040
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.186,0.142) (0.294,0.486) (0.308,1.117) (0.211,2.254)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.189,0.142) (0.311,0.496) (0.304,1.150) (0.196,2.261)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.191,0.142) (0.318,0.505) (0.301,1.169) (0.189,2.272)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.193,0.142) (0.322,0.510) (0.299,1.181) (0.186,2.280)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.194,0.142) (0.325,0.513) (0.297,1.189) (0.184,2.285)
+Optimal log-likelihood: -32205.750
+ 85  JTTDCMut+R4   32205.750    207 64825.500    65126.591    65695.425
+Optimizing model JTTDCMut+R5
+1. Initial log-likelihood: -32222.981
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.146,0.114) (0.203,0.382) (0.213,0.693) (0.262,1.313) (0.175,2.420)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.146,0.114) (0.204,0.382) (0.216,0.698) (0.264,1.329) (0.170,2.428)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.146,0.114) (0.206,0.383) (0.218,0.704) (0.263,1.339) (0.167,2.433)
+Optimal log-likelihood: -32202.273
+ 86  JTTDCMut+R5   32202.273    209 64822.547    65131.631    65700.877
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model JTTDCMut+F+I+G4
+1. Initial log-likelihood: -32225.4756963900
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0238097499
+Gamma shape alpha: 1.3636544488
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0234088864
+Gamma shape alpha: 1.3622907942
+Optimal log-likelihood: -32223.8241810539
+ 95  JTTDCMut+F+I+G4 32223.824    222 64891.648    65257.006    65824.611
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model JTTDCMut+F+R4
+1. Initial log-likelihood: -32238.3226850617
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1868798665,0.1410597213) (0.2990932296,0.4866994160) (0.3051028775,1.1280156271) (0.2089240264,2.2829937917)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1908794463,0.1410597213) (0.3185005013,0.4977625804) (0.3011406551,1.1674183697) (0.1894793974,2.2924407725)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1937830949,0.1410597213) (0.3258804882,0.5060212183) (0.2984690332,1.1895131828) (0.1818673837,2.3071715586)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1955054173,0.1410597213) (0.3297857634,0.5109534079) (0.2971176942,1.2027598570) (0.1775911251,2.3175308172)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1963294552,0.1410597213) (0.3319653336,0.5140053115) (0.2964445770,1.2111691453) (0.1752606341,2.3253075900)
+Optimal log-likelihood: -32213.7233553804
+ 98  JTTDCMut+F+R4 32213.723    226 64879.447    65263.731    65829.220
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model JTTDCMut+F+R5
+1. Initial log-likelihood: -32229.5699444843
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1484946291,0.1131844426) (0.2026431401,0.3867646140) (0.2103462666,0.6843031130) (0.2662639213,1.3254058379) (0.1722520429,2.4627760802)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1495706129,0.1131844426) (0.2039871900,0.3894503051) (0.2126983838,0.6879707011) (0.2705217709,1.3450155644) (0.1632220424,2.4789973084)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1499040108,0.1131844426) (0.2060431515,0.3898397555) (0.2144869430,0.6939184821) (0.2700482996,1.3560823559) (0.1595175952,2.4877682047)
+Optimal log-likelihood: -32210.3926996102
+ 99  JTTDCMut+F+R5 32210.393    228 64876.785    65270.838    65834.963
+Optimizing model DCMut+I+G4
+1. Initial log-likelihood: -32724.739
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.020
+Gamma shape alpha: 1.391
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.018
+Gamma shape alpha: 1.379
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.017
+Gamma shape alpha: 1.373
+Optimal log-likelihood: -32719.924
+108  DCMut+I+G4    32719.924    203 65845.848    66131.448    66698.963
+Optimizing model DCMut+R4
+1. Initial log-likelihood: -32741.191
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.176,0.143) (0.293,0.495) (0.300,1.108) (0.231,2.225)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.178,0.143) (0.312,0.506) (0.295,1.147) (0.215,2.229)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.180,0.143) (0.320,0.513) (0.294,1.171) (0.205,2.244)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.182,0.143) (0.324,0.518) (0.295,1.187) (0.199,2.256)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.183,0.143) (0.327,0.520) (0.295,1.198) (0.195,2.267)
+Optimal log-likelihood: -32711.171
+111  DCMut+R4      32711.171    207 65836.342    66137.433    66706.267
+Optimizing model DCMut+R5
+1. Initial log-likelihood: -32736.043
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.142,0.115) (0.199,0.387) (0.217,0.689) (0.267,1.318) (0.175,2.383)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.142,0.115) (0.199,0.388) (0.221,0.693) (0.273,1.338) (0.166,2.400)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.142,0.115) (0.201,0.388) (0.224,0.699) (0.274,1.354) (0.159,2.417)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.142,0.115) (0.204,0.389) (0.226,0.708) (0.274,1.370) (0.153,2.433)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.143,0.115) (0.208,0.390) (0.228,0.718) (0.273,1.386) (0.147,2.449)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.144,0.115) (0.213,0.393) (0.230,0.730) (0.272,1.404) (0.141,2.466)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.144,0.115) (0.220,0.396) (0.231,0.745) (0.271,1.424) (0.134,2.485)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.146,0.115) (0.228,0.400) (0.232,0.763) (0.268,1.447) (0.126,2.509)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.147,0.115) (0.237,0.404) (0.234,0.785) (0.265,1.476) (0.117,2.538)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.150,0.115) (0.249,0.409) (0.238,0.812) (0.259,1.511) (0.104,2.572)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.153,0.115) (0.264,0.414) (0.244,0.843) (0.251,1.551) (0.088,2.613)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.158,0.115) (0.278,0.418) (0.250,0.871) (0.243,1.592) (0.071,2.666)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.162,0.115) (0.290,0.422) (0.255,0.895) (0.236,1.628) (0.058,2.727)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.164,0.115) (0.297,0.425) (0.259,0.912) (0.231,1.657) (0.048,2.793)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.166,0.115) (0.302,0.428) (0.262,0.926) (0.228,1.682) (0.042,2.857)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.167,0.115) (0.306,0.430) (0.264,0.936) (0.226,1.699) (0.038,2.909)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.168,0.115) (0.309,0.431) (0.265,0.943) (0.224,1.712) (0.035,2.948)
+Optimal log-likelihood: -32699.395
+112  DCMut+R5      32699.395    209 65816.790    66125.875    66695.120
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model DCMut+F+I+G4
+1. Initial log-likelihood: -32593.4778519102
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0202846180
+Gamma shape alpha: 1.3662313322
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0183668997
+Gamma shape alpha: 1.3577301103
+Optimal log-likelihood: -32589.1614938094
+121  DCMut+F+I+G4  32589.161    222 65622.323    65987.681    66555.286
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model DCMut+F+R4
+1. Initial log-likelihood: -32606.5500230097
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1779295533,0.1432041236) (0.2934325320,0.4932944490) (0.2985824150,1.1164327243) (0.2300554997,2.2665710622)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1810007838,0.1432041236) (0.3124726104,0.5038677716) (0.2952444941,1.1568547905) (0.2112821117,2.2717188816)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1836361596,0.1432041236) (0.3202586944,0.5116752614) (0.2939051877,1.1808104752) (0.2021999583,2.2865379565)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1854000241,0.1432041236) (0.3246763904,0.5165209856) (0.2935668797,1.1961236476) (0.1963567059,2.2978194275)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1864060924,0.1432041236) (0.3273359847,0.5196406319) (0.2936297572,1.2063428493) (0.1926281657,2.3066543349)
+Optimal log-likelihood: -32580.3341348791
+124  DCMut+F+R4    32580.334    226 65612.668    65996.953    66562.441
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model DCMut+F+R5
+1. Initial log-likelihood: -32601.7373587535
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1421251622,0.1166875283) (0.1942154020,0.3894069051) (0.2143712237,0.6843231230) (0.2647175725,1.3242016760) (0.1845706396,2.4402611479)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1433816604,0.1170379413) (0.1933313887,0.3909936557) (0.2184931703,0.6860783477) (0.2710599447,1.3466559215) (0.1737338358,2.4589145027)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1441958576,0.1171549794) (0.1940333863,0.3909936557) (0.2222947907,0.6913832618) (0.2724702186,1.3634577063) (0.1670057468,2.4750391174)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1445797919,0.1171549794) (0.1959252358,0.3909936557) (0.2251038764,0.6978024470) (0.2727530075,1.3779510288) (0.1616380884,2.4880140815)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1448448149,0.1171549794) (0.1986321229,0.3913846495) (0.2270554881,0.7049807106) (0.2725849618,1.3913472037) (0.1568826124,2.4996844108)
+Optimal log-likelihood: -32577.5995175991
+125  DCMut+F+R5    32577.600    228 65611.199    66005.252    66569.377
+Optimizing model VT+I+G4
+1. Initial log-likelihood: -32475.263
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.028
+Gamma shape alpha: 1.485
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.028
+Gamma shape alpha: 1.492
+Optimal log-likelihood: -32470.051
+134  VT+I+G4       32470.051    203 65346.101    65631.701    66199.216
+Optimizing model VT+R4
+1. Initial log-likelihood: -32495.521
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.188,0.141) (0.286,0.489) (0.322,1.118) (0.204,2.214)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.191,0.141) (0.303,0.501) (0.318,1.149) (0.189,2.220)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.193,0.141) (0.311,0.511) (0.313,1.169) (0.182,2.232)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.195,0.141) (0.316,0.517) (0.310,1.182) (0.178,2.240)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.197,0.141) (0.320,0.522) (0.308,1.191) (0.175,2.246)
+Optimal log-likelihood: -32462.197
+137  VT+R4         32462.197    207 65338.394    65639.485    66208.319
+Optimizing model VT+R5
+1. Initial log-likelihood: -32486.660
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.148,0.113) (0.198,0.378) (0.221,0.710) (0.269,1.321) (0.164,2.376)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.148,0.113) (0.200,0.378) (0.229,0.720) (0.267,1.346) (0.156,2.385)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.148,0.113) (0.203,0.378) (0.234,0.729) (0.264,1.362) (0.152,2.394)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.148,0.113) (0.206,0.378) (0.237,0.737) (0.261,1.375) (0.148,2.400)
+Optimal log-likelihood: -32457.552
+138  VT+R5         32457.552    209 65333.103    65642.188    66211.433
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model VT+F+I+G4
+1. Initial log-likelihood: -32491.6000020279
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0273697838
+Gamma shape alpha: 1.4741538250
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0282796854
+Gamma shape alpha: 1.4802108107
+Optimal log-likelihood: -32484.6584187067
+147  VT+F+I+G4     32484.658    222 65413.317    65778.675    66346.280
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model VT+F+R4
+1. Initial log-likelihood: -32510.7502367282
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1871020123,0.1404266573) (0.2918894552,0.4895727645) (0.3191255624,1.1293200903) (0.2018829701,2.2224218694)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1915164592,0.1404266573) (0.3116907337,0.5022854683) (0.3166992832,1.1677954766) (0.1800935239,2.2382600939)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1948780616,0.1404266573) (0.3205337220,0.5121279411) (0.3140497224,1.1915505186) (0.1705384939,2.2574583284)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1971188705,0.1404266573) (0.3258011680,0.5185380240) (0.3121168438,1.2065387922) (0.1649631177,2.2697917000)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1983984798,0.1404266573) (0.3289701529,0.5226668286) (0.3109644540,1.2163707204) (0.1616669133,2.2786843799)
+Optimal log-likelihood: -32474.0684695233
+150  VT+F+R4       32474.068    226 65400.137    65784.422    66349.910
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model VT+F+R5
+1. Initial log-likelihood: -32499.7728958353
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1506300187,0.1127540588) (0.2017589354,0.3824204800) (0.2181445476,0.7023130494) (0.2746276751,1.3313594382) (0.1548388233,2.3971537165)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1512388007,0.1127540588) (0.2048104463,0.3836317507) (0.2237185576,0.7122795179) (0.2750704051,1.3556163386) (0.1451617903,2.4129982534)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1515549190,0.1127540588) (0.2083017949,0.3843993981) (0.2272873356,0.7224471567) (0.2726800404,1.3713736887) (0.1401759101,2.4244284009)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1518957266,0.1127540588) (0.2120138380,0.3859393040) (0.2288773656,0.7317122465) (0.2700533912,1.3825410954) (0.1371596787,2.4308078382)
+Optimal log-likelihood: -32469.5149448702
+151  VT+F+R5       32469.515    228 65395.030    65789.083    66353.208
+Optimizing model PMB+I+G4
+1. Initial log-likelihood: -32846.782
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.027
+Gamma shape alpha: 1.483
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.028
+Gamma shape alpha: 1.489
+Optimal log-likelihood: -32836.188
+160  PMB+I+G4      32836.188    203 66078.376    66363.976    66931.491
+Optimizing model PMB+R4
+1. Initial log-likelihood: -32866.696
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.199,0.145) (0.288,0.487) (0.331,1.117) (0.181,2.222)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.205,0.145) (0.306,0.500) (0.325,1.145) (0.164,2.230)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.209,0.145) (0.314,0.509) (0.319,1.161) (0.158,2.239)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.211,0.145) (0.318,0.515) (0.316,1.171) (0.155,2.242)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.213,0.145) (0.320,0.519) (0.314,1.177) (0.153,2.245)
+Optimal log-likelihood: -32827.170
+163  PMB+R4        32827.170    207 66068.340    66369.430    66938.264
+Optimizing model PMB+R5
+1. Initial log-likelihood: -32854.525
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.152,0.119) (0.205,0.367) (0.223,0.713) (0.273,1.311) (0.147,2.402)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.150,0.119) (0.207,0.363) (0.232,0.721) (0.270,1.331) (0.141,2.410)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.149,0.119) (0.208,0.362) (0.238,0.728) (0.266,1.343) (0.139,2.416)
+Optimal log-likelihood: -32822.378
+164  PMB+R5        32822.378    209 66062.755    66371.840    66941.085
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model PMB+F+I+G4
+1. Initial log-likelihood: -32844.0128394617
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0263630251
+Gamma shape alpha: 1.4734959810
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0269889540
+Gamma shape alpha: 1.4777528867
+Optimal log-likelihood: -32832.8752132237
+173  PMB+F+I+G4    32832.875    222 66109.750    66475.108    67042.713
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model PMB+F+R4
+1. Initial log-likelihood: -32862.4298553348
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1957831058,0.1447697252) (0.2937475627,0.4877729183) (0.3279685077,1.1265644243) (0.1825008238,2.2413533290)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2019481304,0.1447697252) (0.3130585761,0.5005454292) (0.3226233412,1.1575940367) (0.1623699523,2.2528905977)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2056560202,0.1447697252) (0.3205134367,0.5096408404) (0.3179219779,1.1749934072) (0.1559085652,2.2641758836)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2079107075,0.1447697252) (0.3244422277,0.5149118250) (0.3149492577,1.1845180165) (0.1526978071,2.2694782349)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2090935282,0.1447697252) (0.3264930378,0.5178505655) (0.3134099225,1.1899147763) (0.1510035114,2.2718442332)
+Optimal log-likelihood: -32822.1305057642
+176  PMB+F+R4      32822.131    226 66096.261    66480.546    67046.034
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model PMB+F+R5
+1. Initial log-likelihood: -32849.2128408846
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1516843354,0.1183667941) (0.2051896292,0.3732748875) (0.2212454249,0.7066328475) (0.2749332918,1.3177122270) (0.1469473188,2.4242209220)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1514148850,0.1183667941) (0.2072972652,0.3721561819) (0.2285730113,0.7152488453) (0.2728795743,1.3373949760) (0.1398352641,2.4342592769)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1514554861,0.1183667941) (0.2094234513,0.3717840257) (0.2329495930,0.7233171432) (0.2691548601,1.3490481392) (0.1370166096,2.4397308876)
+Optimal log-likelihood: -32817.9397107396
+177  PMB+F+R5      32817.940    228 66091.879    66485.932    67050.058
+Optimizing model Blosum62+I+G4
+1. Initial log-likelihood: -32857.431
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.028
+Gamma shape alpha: 1.507
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.029
+Gamma shape alpha: 1.513
+Optimal log-likelihood: -32847.680
+186  Blosum62+I+G4 32847.680    203 66101.359    66386.959    66954.474
+Optimizing model Blosum62+R4
+1. Initial log-likelihood: -32878.485
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.193,0.146) (0.284,0.480) (0.328,1.115) (0.195,2.224)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.197,0.146) (0.300,0.491) (0.328,1.145) (0.175,2.243)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.201,0.146) (0.308,0.501) (0.325,1.165) (0.166,2.260)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.204,0.146) (0.314,0.509) (0.321,1.179) (0.161,2.270)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.206,0.146) (0.318,0.514) (0.319,1.189) (0.157,2.277)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.208,0.146) (0.320,0.518) (0.317,1.195) (0.155,2.280)
+Optimal log-likelihood: -32841.020
+189  Blosum62+R4   32841.020    207 66096.041    66397.132    66965.966
+Optimizing model Blosum62+R5
+1. Initial log-likelihood: -32865.386
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.149,0.118) (0.213,0.366) (0.222,0.720) (0.270,1.326) (0.146,2.406)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.147,0.118) (0.219,0.364) (0.233,0.736) (0.265,1.358) (0.136,2.422)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.147,0.118) (0.223,0.364) (0.240,0.751) (0.259,1.381) (0.130,2.437)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.148,0.118) (0.227,0.365) (0.245,0.763) (0.255,1.399) (0.125,2.448)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.148,0.118) (0.231,0.368) (0.248,0.773) (0.251,1.412) (0.122,2.456)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.149,0.118) (0.234,0.370) (0.249,0.781) (0.248,1.423) (0.120,2.462)
+Optimal log-likelihood: -32833.435
+190  Blosum62+R5   32833.435    209 66084.870    66393.955    66963.200
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model Blosum62+F+I+G4
+1. Initial log-likelihood: -32856.1396943073
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0270889319
+Gamma shape alpha: 1.4918381380
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0279377248
+Gamma shape alpha: 1.4976622933
+Optimal log-likelihood: -32845.6373228871
+199  Blosum62+F+I+G4 32845.637    222 66135.275    66500.633    67068.238
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model Blosum62+F+R4
+1. Initial log-likelihood: -32875.4038841365
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1878691586,0.1449638050) (0.2895688025,0.4831225686) (0.3217552284,1.1222842988) (0.2008068106,2.2324568753)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1921867249,0.1449638050) (0.3067829783,0.4935527648) (0.3230365243,1.1568965912) (0.1779937725,2.2539709526)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1957431468,0.1449638050) (0.3144948490,0.5026962012) (0.3216423375,1.1785389611) (0.1681196667,2.2754561197)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1983603368,0.1449638050) (0.3193263695,0.5090881222) (0.3199816426,1.1923362188) (0.1623316512,2.2884251078)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2000102041,0.1449638050) (0.3223906752,0.5133609804) (0.3187682367,1.2014632424) (0.1588308840,2.2971577706)
+Optimal log-likelihood: -32837.3605293260
+202  Blosum62+F+R4 32837.361    226 66126.721    66511.006    67076.494
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model Blosum62+F+R5
+1. Initial log-likelihood: -32863.7174208175
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1488146735,0.1168909490) (0.2113647877,0.3748135467) (0.2171886810,0.7102795652) (0.2740167922,1.3271598206) (0.1486150657,2.4151585702)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1488072604,0.1168909490) (0.2178209021,0.3755926267) (0.2241994340,0.7263500905) (0.2716844057,1.3553773641) (0.1374879979,2.4341521695)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1494766668,0.1168909490) (0.2236072489,0.3774277808) (0.2291805936,0.7425697504) (0.2664523293,1.3771669827) (0.1312831615,2.4491275202)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1502537673,0.1168909490) (0.2293627923,0.3800715254) (0.2323917808,0.7577373688) (0.2613163390,1.3950513824) (0.1266753206,2.4598833833)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1510871207,0.1168909490) (0.2347994058,0.3831293474) (0.2343596646,0.7715577937) (0.2566264892,1.4098426091) (0.1231273197,2.4657571012)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1519752577,0.1168909490) (0.2397696917,0.3863135284) (0.2355442915,0.7839749231) (0.2523756620,1.4220852350) (0.1203350972,2.4715359236)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1528483791,0.1168909490) (0.2441800299,0.3894011132) (0.2362707796,0.7950040838) (0.2487075360,1.4325790157) (0.1179932754,2.4768614879)
+Optimal log-likelihood: -32831.0621273009
+203  Blosum62+F+R5 32831.062    228 66118.124    66512.177    67076.302
+Optimizing model Dayhoff+I+G4
+1. Initial log-likelihood: -32722.199
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.020
+Gamma shape alpha: 1.388
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.018
+Gamma shape alpha: 1.376
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.017
+Gamma shape alpha: 1.370
+Optimal log-likelihood: -32717.431
+212  Dayhoff+I+G4  32717.431    203 65840.862    66126.462    66693.976
+Optimizing model Dayhoff+R4
+1. Initial log-likelihood: -32738.429
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.176,0.143) (0.294,0.495) (0.300,1.108) (0.231,2.227)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.178,0.143) (0.312,0.506) (0.295,1.147) (0.215,2.230)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.180,0.143) (0.320,0.513) (0.294,1.171) (0.205,2.245)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.182,0.143) (0.324,0.517) (0.295,1.187) (0.199,2.258)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.183,0.143) (0.327,0.520) (0.295,1.198) (0.195,2.269)
+Optimal log-likelihood: -32708.620
+215  Dayhoff+R4    32708.620    207 65831.240    66132.331    66701.165
+Optimizing model Dayhoff+R5
+1. Initial log-likelihood: -32733.266
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.142,0.115) (0.199,0.387) (0.217,0.689) (0.267,1.318) (0.175,2.384)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.142,0.115) (0.199,0.388) (0.220,0.693) (0.273,1.338) (0.166,2.402)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.142,0.115) (0.201,0.389) (0.224,0.700) (0.274,1.355) (0.159,2.420)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.143,0.115) (0.205,0.389) (0.226,0.709) (0.274,1.371) (0.153,2.436)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.143,0.115) (0.209,0.391) (0.228,0.719) (0.273,1.388) (0.147,2.452)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.144,0.115) (0.214,0.393) (0.229,0.732) (0.272,1.406) (0.141,2.470)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.145,0.115) (0.221,0.397) (0.230,0.747) (0.270,1.426) (0.134,2.490)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.146,0.115) (0.229,0.401) (0.232,0.766) (0.268,1.451) (0.125,2.514)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.147,0.115) (0.239,0.405) (0.234,0.789) (0.264,1.481) (0.116,2.545)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.150,0.115) (0.251,0.410) (0.238,0.817) (0.258,1.517) (0.102,2.581)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.154,0.115) (0.266,0.415) (0.244,0.847) (0.250,1.558) (0.086,2.624)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.158,0.115) (0.280,0.419) (0.251,0.875) (0.242,1.599) (0.070,2.677)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.162,0.115) (0.291,0.423) (0.256,0.898) (0.235,1.633) (0.057,2.737)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.165,0.115) (0.298,0.426) (0.259,0.915) (0.230,1.662) (0.048,2.802)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.166,0.115) (0.303,0.428) (0.262,0.928) (0.227,1.685) (0.042,2.864)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.167,0.115) (0.307,0.430) (0.264,0.937) (0.225,1.702) (0.038,2.913)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.168,0.115) (0.309,0.432) (0.265,0.944) (0.223,1.714) (0.035,2.950)
+Optimal log-likelihood: -32696.810
+216  Dayhoff+R5    32696.810    209 65811.619    66120.704    66689.949
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model Dayhoff+F+I+G4
+1. Initial log-likelihood: -32591.4795181789
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0202232194
+Gamma shape alpha: 1.3635738607
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0182806393
+Gamma shape alpha: 1.3549902065
+Optimal log-likelihood: -32587.1222002337
+225  Dayhoff+F+I+G4 32587.122    222 65618.244    65983.602    66551.207
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model Dayhoff+F+R4
+1. Initial log-likelihood: -32604.3503318367
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1778370836,0.1430508423) (0.2934917366,0.4933573966) (0.2982632782,1.1163701988) (0.2304079017,2.2676726073)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1808947825,0.1430508423) (0.3125934237,0.5039064648) (0.2949400942,1.1570449917) (0.2115716996,2.2729920422)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1835156531,0.1430508423) (0.3204054976,0.5116935245) (0.2936565900,1.1811752252) (0.2024222593,2.2880310648)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1852683643,0.1430508423) (0.3248332234,0.5165235675) (0.2933727170,1.1966114024) (0.1965256952,2.2995197260)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1862661976,0.1430508423) (0.3274974891,0.5196367683) (0.2934766564,1.2069227929) (0.1927596569,2.3085326555)
+Optimal log-likelihood: -32578.2357170646
+228  Dayhoff+F+R4  32578.236    226 65608.471    65992.756    66558.244
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model Dayhoff+F+R5
+1. Initial log-likelihood: -32599.5469330225
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1423132152,0.1165587270) (0.1939256536,0.3897733346) (0.2142909762,0.6838069630) (0.2647193005,1.3241974956) (0.1847508545,2.4415678150)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1436915179,0.1170256621) (0.1932044960,0.3918183055) (0.2183183843,0.6860049923) (0.2709816401,1.3469259669) (0.1738039616,2.4603594844)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1446036183,0.1172598306) (0.1940358912,0.3918183055) (0.2218951291,0.6913785364) (0.2724788818,1.3638682191) (0.1669864795,2.4767715824)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1450443851,0.1172598306) (0.1959577251,0.3918183055) (0.2246703601,0.6979364161) (0.2727805893,1.3785032651) (0.1615469404,2.4899467536)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1453359080,0.1172598306) (0.1987667290,0.3926023341) (0.2265749909,0.7053133938) (0.2726113490,1.3920913066) (0.1567110230,2.5018173996)
+Optimal log-likelihood: -32575.4901983362
+229  Dayhoff+F+R5  32575.490    228 65606.980    66001.033    66565.158
+Optimizing model mtREV+I+G4
+1. Initial log-likelihood: -33922.923
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.020
+Gamma shape alpha: 1.043
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.019
+Gamma shape alpha: 1.034
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.018
+Gamma shape alpha: 1.032
+Optimal log-likelihood: -33795.988
+238  mtREV+I+G4    33795.988    203 67997.977    68283.577    68851.091
+Optimizing model mtREV+R4
+1. Initial log-likelihood: -33903.237
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.223,0.144) (0.291,0.448) (0.300,1.131) (0.185,2.653)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.227,0.144) (0.298,0.450) (0.303,1.151) (0.172,2.677)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.228,0.144) (0.299,0.452) (0.303,1.157) (0.170,2.690)
+Optimal log-likelihood: -33784.511
+241  mtREV+R4      33784.511    207 67983.021    68284.112    68852.946
+Optimizing model mtREV+R5
+1. Initial log-likelihood: -33862.839
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.161,0.115) (0.241,0.356) (0.162,0.668) (0.268,1.295) (0.168,2.887)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.161,0.115) (0.244,0.356) (0.157,0.662) (0.275,1.298) (0.162,2.904)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.161,0.115) (0.244,0.356) (0.157,0.660) (0.276,1.298) (0.162,2.910)
+Optimal log-likelihood: -33779.210
+242  mtREV+R5      33779.210    209 67976.420    68285.505    68854.750
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model mtREV+F+I+G4
+1. Initial log-likelihood: -32982.4881858174
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0206371665
+Gamma shape alpha: 1.1205084172
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0192832770
+Gamma shape alpha: 1.1116473330
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0186163985
+Gamma shape alpha: 1.1083169638
+Optimal log-likelihood: -32943.2268856063
+251  mtREV+F+I+G4  32943.227    222 66330.454    66695.812    67263.417
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model mtREV+F+R4
+1. Initial log-likelihood: -32976.1755861827
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1975282126,0.1385632055) (0.2975076156,0.4531888293) (0.3124606710,1.1304482538) (0.1925035007,2.4706198206)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1988297789,0.1385632055) (0.3079885622,0.4556658724) (0.3185482595,1.1592893045) (0.1746333994,2.5144553826)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1995549305,0.1385632055) (0.3107270441,0.4591863139) (0.3195029615,1.1728239545) (0.1702150639,2.5386430744)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1995423293,0.1385632055) (0.3119564917,0.4617954225) (0.3197623627,1.1813935953) (0.1687388163,2.5553803910)
+Optimal log-likelihood: -32929.5971485773
+254  mtREV+F+R4    32929.597    226 66311.194    66695.479    67260.967
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model mtREV+F+R5
+1. Initial log-likelihood: -32955.0448038873
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1544259249,0.1112892092) (0.2346216497,0.3736139316) (0.1695217580,0.6838999479) (0.2767407176,1.3037502624) (0.1646899498,2.6887738631)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1561128246,0.1112892092) (0.2458374835,0.3783066481) (0.1597534350,0.6953066435) (0.2841853001,1.3164472781) (0.1541109568,2.7229130516)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1570806298,0.1112892092) (0.2535179947,0.3827335581) (0.1557026426,0.7130492037) (0.2821245005,1.3254644491) (0.1515742324,2.7333568437)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1578729554,0.1112892092) (0.2604975396,0.3865567819) (0.1538817458,0.7333569919) (0.2778832108,1.3348114407) (0.1498645484,2.7395730993)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1586340057,0.1112892092) (0.2668884472,0.3900166790) (0.1538110642,0.7549722018) (0.2725915901,1.3456421674) (0.1480748928,2.7457009105)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1594236399,0.1112892092) (0.2726194227,0.3931485006) (0.1554775025,0.7772145567) (0.2664196895,1.3582076917) (0.1460597454,2.7523799628)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1602442754,0.1112892092) (0.2776557353,0.3959319256) (0.1589024959,0.7995276489) (0.2594306693,1.3727576730) (0.1437668241,2.7599252668)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1610873745,0.1112892092) (0.2820212925,0.3983524844) (0.1640683425,0.8215058789) (0.2517938795,1.3898657114) (0.1410291110,2.7695987532)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1619011539,0.1112892092) (0.2857392965,0.4003346984) (0.1710569077,0.8427959349) (0.2434057032,1.4099853436) (0.1378969386,2.7809057264)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1627483295,0.1112892092) (0.2889709559,0.4020364991) (0.1796045014,0.8635270463) (0.2342330314,1.4331913939) (0.1344431817,2.7935015292)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1635451332,0.1112892092) (0.2918384288,0.4033432717) (0.1896085633,0.8835896980) (0.2244438274,1.4600733204) (0.1305640473,2.8079566080)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1644549828,0.1112892092) (0.2943902094,0.4046348314) (0.2007522301,0.9029595273) (0.2141773290,1.4911884853) (0.1262252487,2.8244065841)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1653180906,0.1112892092) (0.2968191054,0.4055328331) (0.2127510145,0.9217960076) (0.2036806462,1.5267591758) (0.1214311432,2.8428965439)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1663842110,0.1112892092) (0.2991344357,0.4063605624) (0.2250001165,0.9400716554) (0.1932718809,1.5669033957) (0.1162093559,2.8632188692)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1673841502,0.1112892092) (0.3014112270,0.4076299450) (0.2372070823,0.9574509691) (0.1833909757,1.6111788035) (0.1106065648,2.8851874836)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1685288216,0.1112892092) (0.3036781263,0.4084456127) (0.2485947913,0.9740253213) (0.1745290991,1.6589031279) (0.1046691617,2.9090165327)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1695720827,0.1112892092) (0.3057794143,0.4097031896) (0.2590029809,0.9887926597) (0.1672826435,1.7088271994) (0.0983628786,2.9353412967)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1706095023,0.1112892092) (0.3077091507,0.4105558403) (0.2680526172,1.0011063829) (0.1620060150,1.7600255437) (0.0916227148,2.9657335492)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1716474131,0.1112892092) (0.3096452094,0.4114789949) (0.2757620706,1.0135317375) (0.1587809357,1.8126040761) (0.0841643712,3.0036359683)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1726928201,0.1112892092) (0.3113509985,0.4123451845) (0.2823774053,1.0236763776) (0.1578897991,1.8671663343) (0.0756889770,3.0548107127)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1737354170,0.1112892092) (0.3128473735,0.4127575298) (0.2881172699,1.0322709317) (0.1597408023,1.9238426439) (0.0655591373,3.1290892620)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1746826796,0.1112892092) (0.3141147761,0.4131781568) (0.2932939668,1.0388790804) (0.1646242475,1.9860163464) (0.0532843300,3.2582961349)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1758485376,0.1112892092) (0.3153696266,0.4131777437) (0.2985073373,1.0450222976) (0.1736388596,2.0600248203) (0.0366356389,3.5728879472)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1782646504,0.1112892092) (0.3167309444,0.4113364808) (0.3041790576,1.0472401958) (0.1823711442,2.1340209815) (0.0184542034,4.4894889459)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1799166161,0.1112892092) (0.3179272781,0.4102181635) (0.3085854063,1.0506111070) (0.1812976827,2.1713505195) (0.0122730168,5.1567655934)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1802180943,0.1112892092) (0.3184901128,0.4106283818) (0.3097413919,1.0532155505) (0.1799998010,2.1815679427) (0.0115506000,5.2639485064)
+Optimal log-likelihood: -32909.6095625321
+255  mtREV+F+R5    32909.610    228 66275.219    66669.272    67233.397
+Optimizing model mtART+I+G4
+1. Initial log-likelihood: -34916.838
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.020
+Gamma shape alpha: 0.814
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.021
+Gamma shape alpha: 0.836
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.022
+Gamma shape alpha: 0.846
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.023
+Gamma shape alpha: 0.849
+Optimal log-likelihood: -34448.018
+264  mtART+I+G4    34448.018    203 69302.036    69587.636    70155.150
+Optimizing model mtART+R4
+1. Initial log-likelihood: -34849.842
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.267,0.137) (0.274,0.423) (0.268,1.089) (0.191,3.068)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.266,0.137) (0.282,0.427) (0.271,1.120) (0.182,3.141)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.264,0.137) (0.285,0.432) (0.271,1.141) (0.181,3.198)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.261,0.137) (0.287,0.437) (0.271,1.159) (0.181,3.250)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.258,0.137) (0.289,0.441) (0.272,1.175) (0.181,3.299)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.256,0.137) (0.291,0.445) (0.273,1.190) (0.181,3.345)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.253,0.137) (0.292,0.448) (0.273,1.204) (0.181,3.389)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.251,0.137) (0.294,0.452) (0.274,1.217) (0.181,3.430)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.249,0.137) (0.295,0.455) (0.274,1.229) (0.181,3.469)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.248,0.137) (0.296,0.457) (0.274,1.239) (0.181,3.492)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.246,0.137) (0.297,0.460) (0.275,1.249) (0.181,3.525)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.246,0.137) (0.298,0.462) (0.275,1.257) (0.181,3.549)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.245,0.137) (0.299,0.464) (0.275,1.264) (0.181,3.572)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.244,0.137) (0.299,0.466) (0.276,1.270) (0.181,3.593)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.243,0.137) (0.300,0.467) (0.276,1.276) (0.181,3.613)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.242,0.137) (0.301,0.469) (0.276,1.282) (0.181,3.632)
+Optimal log-likelihood: -34439.932
+267  mtART+R4      34439.932    207 69293.864    69594.955    70163.789
+Optimizing model mtART+R5
+1. Initial log-likelihood: -34768.955
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.200,0.107) (0.248,0.329) (0.186,0.713) (0.199,1.377) (0.168,3.357)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.206,0.107) (0.253,0.325) (0.210,0.744) (0.182,1.493) (0.149,3.423)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.207,0.107) (0.257,0.328) (0.223,0.772) (0.174,1.581) (0.139,3.507)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.208,0.107) (0.261,0.331) (0.230,0.795) (0.168,1.649) (0.132,3.574)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.209,0.107) (0.265,0.335) (0.234,0.814) (0.164,1.703) (0.127,3.630)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.210,0.107) (0.268,0.338) (0.237,0.830) (0.161,1.748) (0.123,3.677)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.210,0.107) (0.270,0.341) (0.240,0.844) (0.159,1.787) (0.120,3.721)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.210,0.107) (0.272,0.343) (0.242,0.855) (0.158,1.820) (0.118,3.760)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.210,0.107) (0.274,0.346) (0.243,0.865) (0.156,1.849) (0.116,3.797)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.210,0.107) (0.275,0.348) (0.245,0.874) (0.156,1.876) (0.114,3.832)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.209,0.107) (0.277,0.350) (0.246,0.882) (0.155,1.899) (0.113,3.865)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.209,0.107) (0.278,0.351) (0.247,0.890) (0.154,1.921) (0.112,3.896)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.208,0.107) (0.279,0.353) (0.248,0.897) (0.154,1.941) (0.111,3.925)
+Optimal log-likelihood: -34406.732
+268  mtART+R5      34406.732    209 69231.464    69540.548    70109.794
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model mtART+F+I+G4
+1. Initial log-likelihood: -33994.5944970468
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0197187925
+Gamma shape alpha: 0.9341529176
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0189250135
+Gamma shape alpha: 0.9231279121
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0187033340
+Gamma shape alpha: 0.9222047841
+Optimal log-likelihood: -33805.5072074237
+277  mtART+F+I+G4  33805.507    222 68055.014    68420.372    68987.977
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model mtART+F+R4
+1. Initial log-likelihood: -33965.1953927261
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2270715363,0.1378148940) (0.2953071329,0.4268891824) (0.2951047465,1.0962966405) (0.1825165843,2.8210040329)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2300874671,0.1378148940) (0.3047821358,0.4265934593) (0.3024411571,1.1273683011) (0.1626892400,2.9123835213)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2302561471,0.1378148940) (0.3076346832,0.4305805018) (0.3027516204,1.1431712108) (0.1593575494,2.9553751709)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2286340595,0.1378148940) (0.3093722716,0.4344972732) (0.3030863635,1.1572233188) (0.1589073053,2.9927289005)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2269208317,0.1378148940) (0.3108585423,0.4380956865) (0.3033936720,1.1700898545) (0.1588269540,3.0272733932)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2261793312,0.1378148940) (0.3120856518,0.4408673453) (0.3034361512,1.1797444558) (0.1582988659,3.0522151697)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2242288762,0.1378148940) (0.3131677461,0.4439006649) (0.3038750201,1.1908095130) (0.1587283576,3.0829214610)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2234805921,0.1378148940) (0.3142013283,0.4463281918) (0.3039715193,1.1994256601) (0.1583465603,3.1055587571)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2225519763,0.1378148940) (0.3150381335,0.4485540032) (0.3041325885,1.2071819507) (0.1582773017,3.1235173616)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2216275219,0.1378148940) (0.3157754837,0.4501758132) (0.3042924823,1.2143229729) (0.1583045121,3.1427623114)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2206851283,0.1378148940) (0.3164551311,0.4519796271) (0.3045130344,1.2210428064) (0.1583467063,3.1612578870)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2198020166,0.1378148940) (0.3171028141,0.4537777437) (0.3047059618,1.2275885615) (0.1583892075,3.1791030292)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2189610232,0.1378148940) (0.3177257892,0.4555420277) (0.3048871403,1.2339572717) (0.1584260473,3.1965000143)
+Optimal log-likelihood: -33793.4991011818
+280  mtART+F+R4    33793.499    226 68038.998    68423.283    68988.771
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model mtART+F+R5
+1. Initial log-likelihood: -33911.8330728705
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1661852070,0.1093679672) (0.2560571008,0.3459793674) (0.1745892732,0.6931137330) (0.2472630926,1.3204514730) (0.1559053264,3.1746337998)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1717605323,0.1093679672) (0.2693824320,0.3463446514) (0.1883182707,0.7380306429) (0.2317637900,1.3843936954) (0.1387749750,3.2447984880)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1786545394,0.1093679672) (0.2838929398,0.3515926696) (0.2137828553,0.8048122958) (0.1978606675,1.4901467627) (0.1258089980,3.2848390824)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1897607099,0.1093679672) (0.2945688862,0.3535934002) (0.2464513465,0.8554757001) (0.1662284180,1.6650312330) (0.1029906394,3.3790068197)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1972112299,0.1093679672) (0.2985908529,0.3529773086) (0.2622883082,0.8745214234) (0.1602169241,1.7914457651) (0.0816926850,3.5377835991)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1988555972,0.1093679672) (0.3007766713,0.3541855518) (0.2684175631,0.8874879246) (0.1627481586,1.8729041619) (0.0692020097,3.7135333994)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2000006975,0.1093679672) (0.3024608215,0.3553167385) (0.2730951818,0.8982506718) (0.1670882149,1.9503484635) (0.0573550843,3.9440063143)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2012368229,0.1093679672) (0.3041332431,0.3564201116) (0.2780024113,0.9093655129) (0.1734732465,2.0375413485) (0.0431542762,4.3800182654)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2026646926,0.1093679672) (0.3058963168,0.3575074372) (0.2822971915,0.9200849417) (0.1759822443,2.1055997298) (0.0331595547,4.8321694812)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2033651192,0.1093679672) (0.3073465313,0.3586444120) (0.2845667849,0.9291636920) (0.1749326148,2.1446365037) (0.0297889499,5.0354457270)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2032090979,0.1093679672) (0.3084088535,0.3603048808) (0.2855115673,0.9358672995) (0.1742544884,2.1660222022) (0.0286159929,5.1311349512)
+Optimal log-likelihood: -33755.6089538170
+281  mtART+F+R5    33755.609    228 67967.218    68361.271    68925.396
+Optimizing model mtZOA+I+G4
+1. Initial log-likelihood: -33700.693
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.020
+Gamma shape alpha: 0.949
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.020
+Gamma shape alpha: 0.943
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.021
+Gamma shape alpha: 0.943
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.021
+Gamma shape alpha: 0.943
+Optimal log-likelihood: -33484.820
+290  mtZOA+I+G4    33484.820    203 67375.640    67661.240    68228.754
+Optimizing model mtZOA+R4
+1. Initial log-likelihood: -33662.633
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.238,0.139) (0.295,0.436) (0.273,1.138) (0.194,2.830)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.246,0.139) (0.304,0.438) (0.281,1.180) (0.169,2.900)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.247,0.139) (0.306,0.443) (0.282,1.198) (0.164,2.937)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.247,0.139) (0.308,0.445) (0.283,1.209) (0.163,2.961)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.246,0.139) (0.308,0.448) (0.283,1.217) (0.163,2.978)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.245,0.139) (0.309,0.449) (0.283,1.223) (0.162,2.996)
+Optimal log-likelihood: -33475.815
+293  mtZOA+R4      33475.815    207 67365.631    67666.722    68235.556
+Optimizing model mtZOA+R5
+1. Initial log-likelihood: -33612.399
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.175,0.112) (0.254,0.344) (0.171,0.691) (0.236,1.375) (0.164,3.142)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.182,0.112) (0.266,0.343) (0.183,0.732) (0.228,1.446) (0.142,3.201)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.185,0.112) (0.274,0.347) (0.192,0.770) (0.215,1.502) (0.133,3.234)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.188,0.112) (0.281,0.352) (0.199,0.801) (0.205,1.551) (0.128,3.267)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.190,0.112) (0.286,0.356) (0.205,0.827) (0.196,1.594) (0.123,3.295)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.192,0.112) (0.290,0.359) (0.210,0.848) (0.190,1.631) (0.119,3.320)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.193,0.112) (0.292,0.362) (0.214,0.864) (0.184,1.661) (0.117,3.340)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.194,0.112) (0.295,0.365) (0.217,0.877) (0.181,1.686) (0.114,3.358)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.194,0.112) (0.296,0.367) (0.219,0.887) (0.178,1.705) (0.113,3.370)
+Optimal log-likelihood: -33455.165
+294  mtZOA+R5      33455.165    209 67328.330    67637.415    68206.660
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model mtZOA+F+I+G4
+1. Initial log-likelihood: -33159.5910065547
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0210277848
+Gamma shape alpha: 1.0878793762
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0205151580
+Gamma shape alpha: 1.0756432630
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0203863094
+Gamma shape alpha: 1.0745676196
+Optimal log-likelihood: -33081.2250486454
+303  mtZOA+F+I+G4  33081.225    222 66606.450    66971.808    67539.413
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model mtZOA+F+R4
+1. Initial log-likelihood: -33148.6803947654
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2111869299,0.1406011049) (0.3048213489,0.4550133820) (0.2913287162,1.1415683041) (0.1926630050,2.5986587796)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2181491024,0.1406011049) (0.3177612538,0.4578955405) (0.2973528620,1.1820059901) (0.1667367817,2.6510000425)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2197529762,0.1406011049) (0.3209576349,0.4619223801) (0.2991752978,1.2005558164) (0.1601140911,2.6883880017)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2201171843,0.1406011049) (0.3224541262,0.4646464830) (0.2998709018,1.2112638475) (0.1575577878,2.7101296887)
+Optimal log-likelihood: -33073.2350202054
+306  mtZOA+F+R4    33073.235    226 66598.470    66982.755    67548.243
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model mtZOA+F+R5
+1. Initial log-likelihood: -33116.9972493106
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1500658621,0.1102588500) (0.2365007181,0.3508100965) (0.1844223455,0.6608577947) (0.2656683920,1.3325915069) (0.1633426824,2.8712403844)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1494069098,0.1102588500) (0.2362588129,0.3450778635) (0.1915742578,0.6586271232) (0.2746797398,1.3628772154) (0.1480802797,2.9447839489)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1483321276,0.1102588500) (0.2339830569,0.3422892670) (0.1986208664,0.6621201087) (0.2754907586,1.3816286131) (0.1435731906,2.9811153350)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1474830243,0.1102588500) (0.2328831048,0.3412634254) (0.2028395717,0.6657266898) (0.2751956424,1.3945081699) (0.1415986567,3.0047281674)
+Optimal log-likelihood: -33063.6322988239
+307  mtZOA+F+R5    33063.632    228 66583.265    66977.317    67541.443
+Optimizing model mtMet+I+G4
+1. Initial log-likelihood: -33673.415
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.021
+Gamma shape alpha: 1.048
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.021
+Gamma shape alpha: 1.041
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.022
+Gamma shape alpha: 1.041
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.022
+Gamma shape alpha: 1.041
+Optimal log-likelihood: -33555.103
+316  mtMet+I+G4    33555.103    203 67516.205    67801.805    68369.320
+Optimizing model mtMet+R4
+1. Initial log-likelihood: -33648.245
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.227,0.142) (0.293,0.457) (0.286,1.154) (0.194,2.693)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.241,0.142) (0.309,0.467) (0.286,1.203) (0.163,2.727)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.245,0.142) (0.313,0.473) (0.284,1.223) (0.158,2.747)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.246,0.142) (0.314,0.477) (0.283,1.231) (0.156,2.757)
+Optimal log-likelihood: -33544.614
+319  mtMet+R4      33544.614    207 67503.227    67804.318    68373.152
+Optimizing model mtMet+R5
+1. Initial log-likelihood: -33613.956
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.167,0.114) (0.233,0.351) (0.190,0.685) (0.249,1.388) (0.160,2.974)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.171,0.114) (0.241,0.349) (0.201,0.708) (0.244,1.436) (0.143,3.003)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.172,0.114) (0.248,0.352) (0.205,0.731) (0.238,1.468) (0.137,3.025)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.174,0.114) (0.255,0.357) (0.205,0.753) (0.232,1.492) (0.134,3.039)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.176,0.114) (0.262,0.362) (0.205,0.774) (0.227,1.514) (0.131,3.050)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.178,0.114) (0.268,0.367) (0.205,0.793) (0.221,1.533) (0.128,3.058)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.179,0.114) (0.273,0.372) (0.205,0.811) (0.217,1.551) (0.126,3.067)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.181,0.114) (0.277,0.375) (0.205,0.825) (0.213,1.567) (0.124,3.074)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.182,0.114) (0.280,0.378) (0.206,0.837) (0.209,1.581) (0.122,3.081)
+Optimal log-likelihood: -33531.048
+320  mtMet+R5      33531.048    209 67480.096    67789.180    68358.426
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model mtMet+F+I+G4
+1. Initial log-likelihood: -32832.8092993469
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0219122497
+Gamma shape alpha: 1.1614651591
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0217314592
+Gamma shape alpha: 1.1542989639
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0217393867
+Gamma shape alpha: 1.1542989639
+Optimal log-likelihood: -32788.9037270797
+329  mtMet+F+I+G4  32788.904    222 66021.807    66387.165    66954.770
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model mtMet+F+R4
+1. Initial log-likelihood: -32828.3957672973
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2084769660,0.1418623352) (0.3025069383,0.4693782313) (0.2936426215,1.1479470663) (0.1953734742,2.5045966252)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2189289628,0.1418623352) (0.3207431245,0.4798142605) (0.2914647112,1.1957355772) (0.1688632015,2.5251268406)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2224620191,0.1418623352) (0.3254125480,0.4865399211) (0.2904374593,1.2168145731) (0.1616879736,2.5451201663)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2240296002,0.1418623352) (0.3272401764,0.4898962775) (0.2901514009,1.2271064315) (0.1585788225,2.5571656032)
+Optimal log-likelihood: -32779.6491145053
+332  mtMet+F+R4    32779.649    226 66011.298    66395.583    66961.071
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model mtMet+F+R5
+1. Initial log-likelihood: -32803.7645717285
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1514888348,0.1109798829) (0.2255120442,0.3562580432) (0.1987828919,0.6728802641) (0.2604348002,1.3482767194) (0.1637814289,2.7242215963)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1508788019,0.1109798829) (0.2255279208,0.3510069348) (0.2070965548,0.6749009245) (0.2664462664,1.3782442910) (0.1500504561,2.7708410021)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1500613558,0.1109798829) (0.2239633793,0.3485769528) (0.2130163204,0.6776879401) (0.2670708145,1.3945307396) (0.1458881300,2.7948949051)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1494748354,0.1109798829) (0.2229175047,0.3475322670) (0.2162747711,0.6791046079) (0.2671479655,1.4043281773) (0.1441849234,2.8100625670)
+Optimal log-likelihood: -32770.8029996112
+333  mtMet+F+R5    32770.803    228 65997.606    66391.659    66955.784
+Optimizing model mtVer+I+G4
+1. Initial log-likelihood: -33958.209
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.018
+Gamma shape alpha: 0.960
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.016
+Gamma shape alpha: 0.961
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.015
+Gamma shape alpha: 0.959
+Optimal log-likelihood: -33796.225
+342  mtVer+I+G4    33796.225    203 67998.451    68284.051    68851.566
+Optimizing model mtVer+R4
+1. Initial log-likelihood: -33920.234
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.222,0.140) (0.298,0.443) (0.272,1.109) (0.208,2.707)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.226,0.140) (0.310,0.447) (0.273,1.147) (0.190,2.743)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.228,0.140) (0.314,0.452) (0.272,1.165) (0.187,2.764)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.228,0.140) (0.316,0.455) (0.271,1.175) (0.185,2.779)
+Optimal log-likelihood: -33786.996
+345  mtVer+R4      33786.996    207 67987.993    68289.084    68857.918
+Optimizing model mtVer+R5
+1. Initial log-likelihood: -33880.764
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.171,0.113) (0.241,0.357) (0.186,0.692) (0.222,1.345) (0.180,2.943)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.176,0.113) (0.254,0.356) (0.199,0.731) (0.211,1.427) (0.160,2.976)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.181,0.113) (0.266,0.358) (0.215,0.773) (0.197,1.533) (0.140,3.018)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.187,0.113) (0.276,0.358) (0.228,0.804) (0.194,1.643) (0.115,3.106)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.192,0.113) (0.283,0.359) (0.234,0.823) (0.196,1.713) (0.096,3.205)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.193,0.113) (0.286,0.361) (0.237,0.837) (0.197,1.759) (0.086,3.287)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.194,0.113) (0.289,0.363) (0.239,0.849) (0.197,1.791) (0.081,3.341)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.195,0.113) (0.292,0.365) (0.240,0.859) (0.197,1.816) (0.077,3.382)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.195,0.113) (0.294,0.367) (0.241,0.868) (0.196,1.838) (0.074,3.416)
+Optimal log-likelihood: -33762.063
+346  mtVer+R5      33762.063    209 67942.125    68251.210    68820.455
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model mtVer+F+I+G4
+1. Initial log-likelihood: -33097.8694268922
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0228234711
+Gamma shape alpha: 1.1116194877
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0229607693
+Gamma shape alpha: 1.1077954286
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0230740950
+Gamma shape alpha: 1.1077954286
+Optimal log-likelihood: -33027.0898829307
+355  mtVer+F+I+G4  33027.090    222 66498.180    66863.538    67431.143
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model mtVer+F+R4
+1. Initial log-likelihood: -33085.0260356498
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2105340694,0.1370907366) (0.3034555610,0.4701797134) (0.2714171237,1.1226305959) (0.2145932459,2.5096777638)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2189904485,0.1370907366) (0.3209649108,0.4803501922) (0.2678274503,1.1750172099) (0.1922171905,2.5333364721)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2226113860,0.1370907366) (0.3268698112,0.4883253864) (0.2660122499,1.2022380752) (0.1845065529,2.5564042260)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2245695976,0.1370907366) (0.3296276656,0.4930260349) (0.2652129243,1.2175660409) (0.1805898125,2.5718593578)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2252373259,0.1370907366) (0.3310994339,0.4957817228) (0.2650038658,1.2268583927) (0.1786593744,2.5817542987)
+Optimal log-likelihood: -33023.7925528264
+358  mtVer+F+R4    33023.793    226 66499.585    66883.870    67449.358
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model mtVer+F+R5
+1. Initial log-likelihood: -33057.9079066167
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1531902900,0.1074257947) (0.2167494240,0.3545332547) (0.2080819017,0.6669746530) (0.2370454083,1.3423009168) (0.1849329761,2.7481585023)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1521148184,0.1074257947) (0.2119236973,0.3455900672) (0.2220559149,0.6657832518) (0.2424484988,1.3808890592) (0.1714570707,2.7991445710)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1505655250,0.1074257947) (0.2066133392,0.3396626213) (0.2323903241,0.6657832518) (0.2435488244,1.4023995971) (0.1668819874,2.8289238348)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1491569921,0.1074257947) (0.2026464561,0.3357239140) (0.2390945747,0.6657832518) (0.2442278054,1.4159532305) (0.1648741717,2.8481761655)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1479446341,0.1074257947) (0.1997410158,0.3332156231) (0.2434357591,0.6657832518) (0.2447187088,1.4249834790) (0.1641598823,2.8654756231)
+Optimal log-likelihood: -33013.0822043649
+359  mtVer+F+R5    33013.082    228 66482.164    66876.217    67440.343
+Optimizing model mtInv+I+G4
+1. Initial log-likelihood: -33805.545
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.023
+Gamma shape alpha: 1.108
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.024
+Gamma shape alpha: 1.100
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.025
+Gamma shape alpha: 1.100
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.025
+Gamma shape alpha: 1.100
+Optimal log-likelihood: -33708.234
+368  mtInv+I+G4    33708.234    203 67822.468    68108.068    68675.582
+Optimizing model mtInv+R4
+1. Initial log-likelihood: -33788.622
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.223,0.142) (0.293,0.465) (0.300,1.170) (0.184,2.664)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.237,0.142) (0.305,0.474) (0.301,1.203) (0.157,2.690)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.240,0.142) (0.308,0.480) (0.298,1.214) (0.154,2.697)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.241,0.142) (0.309,0.483) (0.296,1.218) (0.154,2.700)
+Optimal log-likelihood: -33699.597
+371  mtInv+R4      33699.597    207 67813.193    68114.284    68683.118
+Optimizing model mtInv+R5
+1. Initial log-likelihood: -33755.866
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.161,0.112) (0.229,0.351) (0.192,0.680) (0.263,1.368) (0.155,2.912)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.161,0.112) (0.232,0.347) (0.200,0.691) (0.260,1.393) (0.146,2.931)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.161,0.112) (0.234,0.347) (0.204,0.700) (0.257,1.407) (0.144,2.941)
+Optimal log-likelihood: -33690.724
+372  mtInv+R5      33690.724    209 67799.448    68108.533    68677.778
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model mtInv+F+I+G4
+1. Initial log-likelihood: -32714.7787120730
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0233645069
+Gamma shape alpha: 1.2380469438
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0235874284
+Gamma shape alpha: 1.2349540199
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0237775324
+Gamma shape alpha: 1.2364483680
+Optimal log-likelihood: -32694.1314892119
+381  mtInv+F+I+G4  32694.131    222 65832.263    66197.621    66765.226
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model mtInv+F+R4
+1. Initial log-likelihood: -32718.6891499034
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1979008523,0.1419169118) (0.3062265226,0.4706240850) (0.3046306805,1.1483384733) (0.1912419446,2.4329530402)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2066655822,0.1419169118) (0.3253166383,0.4804748040) (0.3057435808,1.1948018889) (0.1622741987,2.4681661384)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2105270503,0.1419169118) (0.3311469606,0.4882815262) (0.3049202504,1.2187356194) (0.1534057387,2.4952583568)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2124855901,0.1419169118) (0.3338157226,0.4922515360) (0.3045612596,1.2316196422) (0.1491374277,2.5115708657)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2132749292,0.1419169118) (0.3351627799,0.4951069071) (0.3044576087,1.2393111086) (0.1471046823,2.5206108119)
+Optimal log-likelihood: -32682.6451396737
+384  mtInv+F+R4    32682.645    226 65817.290    66201.575    66767.063
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model mtInv+F+R5
+1. Initial log-likelihood: -32698.1640956259
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1477726643,0.1108142580) (0.2264324105,0.3660313849) (0.2000419305,0.6777509719) (0.2721128761,1.3508000293) (0.1536401186,2.6617416597)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1479274521,0.1108142580) (0.2301888462,0.3636645026) (0.2054306953,0.6846750942) (0.2785196510,1.3817612912) (0.1379333554,2.7138476867)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1478696943,0.1108142580) (0.2320954063,0.3636645026) (0.2089692243,0.6928004083) (0.2784506440,1.3996977253) (0.1326150311,2.7401039969)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1476593318,0.1108142580) (0.2340701728,0.3640281672) (0.2106408504,0.6997485876) (0.2776677174,1.4113999603) (0.1299619276,2.7567407850)
+Optimal log-likelihood: -32674.2505933431
+385  mtInv+F+R5    32674.251    228 65804.501    66198.554    66762.679
+Optimizing model mtMAM+I+G4
+1. Initial log-likelihood: -34785.859
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.016
+Gamma shape alpha: 0.815
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.017
+Gamma shape alpha: 0.863
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.018
+Gamma shape alpha: 0.870
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.019
+Gamma shape alpha: 0.873
+Optimal log-likelihood: -34385.375
+394  mtMAM+I+G4    34385.375    203 69176.749    69462.349    70029.864
+Optimizing model mtMAM+R4
+1. Initial log-likelihood: -34718.416
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.261,0.141) (0.267,0.414) (0.283,1.147) (0.188,3.135)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.265,0.141) (0.273,0.416) (0.287,1.169) (0.176,3.197)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.264,0.141) (0.275,0.419) (0.287,1.181) (0.175,3.222)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.262,0.141) (0.276,0.421) (0.287,1.192) (0.175,3.259)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.260,0.141) (0.278,0.423) (0.287,1.200) (0.175,3.281)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.258,0.141) (0.279,0.425) (0.288,1.211) (0.175,3.312)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.257,0.141) (0.280,0.427) (0.288,1.217) (0.175,3.334)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.255,0.141) (0.281,0.428) (0.288,1.223) (0.175,3.355)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.254,0.141) (0.282,0.429) (0.289,1.230) (0.175,3.374)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.253,0.141) (0.283,0.430) (0.289,1.236) (0.175,3.393)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.251,0.141) (0.284,0.432) (0.289,1.242) (0.175,3.411)
+Optimal log-likelihood: -34365.116
+397  mtMAM+R4      34365.116    207 69144.232    69445.322    70014.156
+Optimizing model mtMAM+R5
+1. Initial log-likelihood: -34650.872
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.192,0.111) (0.254,0.322) (0.178,0.723) (0.213,1.444) (0.163,3.421)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.198,0.111) (0.258,0.316) (0.200,0.746) (0.203,1.543) (0.142,3.499)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.198,0.111) (0.260,0.317) (0.206,0.760) (0.200,1.588) (0.135,3.557)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.199,0.111) (0.262,0.319) (0.208,0.771) (0.199,1.612) (0.133,3.593)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.198,0.111) (0.263,0.321) (0.209,0.778) (0.198,1.628) (0.132,3.617)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.198,0.111) (0.264,0.323) (0.209,0.784) (0.198,1.641) (0.131,3.643)
+Optimal log-likelihood: -34332.670
+398  mtMAM+R5      34332.670    209 69083.340    69392.424    69961.669
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model mtMAM+F+I+G4
+1. Initial log-likelihood: -33699.7254496531
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0208340397
+Gamma shape alpha: 0.9981373213
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0210796061
+Gamma shape alpha: 0.9829775351
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0214189817
+Gamma shape alpha: 0.9806008402
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0216135031
+Gamma shape alpha: 0.9806008402
+Optimal log-likelihood: -33506.9257656761
+407  mtMAM+F+I+G4  33506.926    222 67457.852    67823.209    68390.814
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model mtMAM+F+R4
+1. Initial log-likelihood: -33667.4912562718
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2386413228,0.1404929340) (0.2836683065,0.4454230512) (0.2873685068,1.1584625022) (0.1903218639,2.7907969466)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2498738531,0.1404929340) (0.2937585692,0.4503277464) (0.2898289889,1.1918195073) (0.1665385888,2.8408297535)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2514607737,0.1404929340) (0.2962633068,0.4549050576) (0.2886245674,1.2052682158) (0.1636513521,2.8616204104)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2515933274,0.1404929340) (0.2974275411,0.4574994291) (0.2880219523,1.2128620609) (0.1629571792,2.8753627394)
+Optimal log-likelihood: -33497.4516917629
+410  mtMAM+F+R4    33497.452    226 67446.903    67831.188    68396.676
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model mtMAM+F+R5
+1. Initial log-likelihood: -33623.3948614207
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1753387327,0.1133909285) (0.2347469066,0.3397733180) (0.1788773200,0.6804978398) (0.2472436101,1.3712129060) (0.1637934307,3.0677494597)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1795424697,0.1133909285) (0.2385614080,0.3356222274) (0.1917055182,0.6981462257) (0.2431436229,1.4210662030) (0.1470469812,3.1261982956)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1803055930,0.1133909285) (0.2425989500,0.3371186686) (0.1998666263,0.7193918299) (0.2374867538,1.4638063840) (0.1397420768,3.1745020670)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1820790934,0.1133909285) (0.2483659196,0.3411225175) (0.2048381719,0.7436554348) (0.2316495827,1.5044699245) (0.1330672324,3.2195207896)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1845377002,0.1133909285) (0.2548576926,0.3465059590) (0.2082968340,0.7699099429) (0.2254001102,1.5436948796) (0.1269076630,3.2604985941)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1873607330,0.1133909285) (0.2612955800,0.3524165280) (0.2110120349,0.7966022223) (0.2187947272,1.5802058426) (0.1215369248,3.2946176122)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1902268450,0.1133909285) (0.2671581876,0.3581904830) (0.2135214722,0.8222839908) (0.2120634109,1.6135122592) (0.1170300842,3.3213719078)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1929310019,0.1133909285) (0.2722186578,0.3634200906) (0.2162633631,0.8460976101) (0.2054984197,1.6447323904) (0.1130885576,3.3435919958)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1953855560,0.1133909285) (0.2764780901,0.3679537448) (0.2193742058,0.8676841661) (0.1992636579,1.6746527268) (0.1094984902,3.3632738994)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1975833095,0.1133909285) (0.2800436599,0.3718042892) (0.2228081606,0.8870465339) (0.1934790782,1.7038781573) (0.1060857918,3.3819971758)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1995584329,0.1133909285) (0.2830545616,0.3750621044) (0.2264794968,0.9044355404) (0.1881894836,1.7329621938) (0.1027180251,3.4009366072)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2013639568,0.1133909285) (0.2856451815,0.3778400504) (0.2303343248,0.9202281676) (0.1833842766,1.7625634813) (0.0992722602,3.4211514032)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2030598839,0.1133909285) (0.2879316666,0.3802463977) (0.2343679282,0.9348432075) (0.1790310468,1.7935455102) (0.0956094744,3.4438911063)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2046669836,0.1133909285) (0.2899895145,0.3822998825) (0.2386629052,0.9485637478) (0.1751296638,1.8270161178) (0.0915509329,3.4709434292)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2063278744,0.1133909285) (0.2919315135,0.3842051130) (0.2432190440,0.9620028042) (0.1716774747,1.8646505644) (0.0868440934,3.5052146546)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2083064599,0.1137314419) (0.2935692329,0.3860847861) (0.2481910177,0.9753690744) (0.1689047350,1.9090341028) (0.0810285545,3.5530010355)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2107728352,0.1141870509) (0.2951215788,0.3882118406) (0.2537272890,0.9891478494) (0.1668687048,1.9644511001) (0.0735095922,3.6253846768)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2147598726,0.1144155394) (0.2968088483,0.3894863511) (0.2602810687,1.0029839788) (0.1660278538,2.0316204904) (0.0621223567,3.7409701226)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2204123337,0.1144155394) (0.2983263884,0.3889651018) (0.2677780422,1.0126391898) (0.1679771378,2.1171787407) (0.0455060979,4.0091150547)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2259076920,0.1144155394) (0.2996156047,0.3879549682) (0.2746498945,1.0186978258) (0.1710029425,2.2019591597) (0.0288238663,4.5280311202)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2306567028,0.1144155394) (0.3007018363,0.3870254862) (0.2794671528,1.0236526668) (0.1718942458,2.2702580905) (0.0172800623,5.3497183957)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2329112935,0.1144155394) (0.3017255391,0.3870343238) (0.2826171253,1.0285808225) (0.1705064203,2.3128779541) (0.0122396217,6.1079275969)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2335040338,0.1144155394) (0.3022666773,0.3874213582) (0.2832590820,1.0310140775) (0.1694007736,2.3225046122) (0.0115694334,6.2433393563)
+Optimal log-likelihood: -33469.4788390848
+411  mtMAM+F+R5    33469.479    228 67394.958    67789.011    68353.136
+Optimizing model HIVb+I+G4
+1. Initial log-likelihood: -32884.898
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.023
+Gamma shape alpha: 1.213
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.022
+Gamma shape alpha: 1.208
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.022
+Gamma shape alpha: 1.208
+Optimal log-likelihood: -32863.423
+420  HIVb+I+G4     32863.423    203 66132.846    66418.446    66985.961
+Optimizing model HIVb+R4
+1. Initial log-likelihood: -32887.818
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.195,0.137) (0.313,0.484) (0.294,1.130) (0.198,2.395)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.202,0.137) (0.333,0.494) (0.290,1.173) (0.175,2.416)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.205,0.137) (0.339,0.501) (0.288,1.195) (0.168,2.436)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.206,0.137) (0.342,0.506) (0.287,1.207) (0.165,2.449)
+Optimal log-likelihood: -32853.102
+423  HIVb+R4       32853.102    207 66120.203    66421.294    66990.128
+Optimizing model HIVb+R5
+1. Initial log-likelihood: -32870.473
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.150,0.109) (0.212,0.382) (0.213,0.673) (0.259,1.327) (0.166,2.617)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.151,0.109) (0.212,0.381) (0.218,0.677) (0.263,1.350) (0.155,2.644)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.152,0.109) (0.213,0.381) (0.222,0.683) (0.262,1.364) (0.152,2.656)
+Optimal log-likelihood: -32848.255
+424  HIVb+R5       32848.255    209 66114.511    66423.595    66992.841
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model HIVb+F+I+G4
+1. Initial log-likelihood: -32751.0822507796
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0217465412
+Gamma shape alpha: 1.1191625631
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0210344241
+Gamma shape alpha: 1.1114105042
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0207550869
+Gamma shape alpha: 1.1102990936
+Optimal log-likelihood: -32708.7091115893
+433  HIVb+F+I+G4   32708.709    222 65861.418    66226.776    66794.381
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model HIVb+F+R4
+1. Initial log-likelihood: -32743.9118581075
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2005897087,0.1369537827) (0.3038627467,0.4797111666) (0.3042534204,1.1361240057) (0.1912941242,2.4753287868)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2071515946,0.1369537827) (0.3250148631,0.4885669522) (0.3037430640,1.1827355472) (0.1640904783,2.5220265318)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2090830274,0.1369537827) (0.3311656397,0.4956915158) (0.3021428145,1.2042565064) (0.1576085184,2.5520168931)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2095820583,0.1369537827) (0.3336739627,0.5001031078) (0.3012185372,1.2164053114) (0.1555254419,2.5712995647)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2093334297,0.1369537827) (0.3348380854,0.5032316372) (0.3009631444,1.2251886261) (0.1548653405,2.5857093095)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2088589952,0.1369537827) (0.3355204018,0.5058559313) (0.3009502470,1.2325025063) (0.1546703560,2.6010236717)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2083234540,0.1369537827) (0.3360360496,0.5077837297) (0.3009085900,1.2380920477) (0.1547319064,2.6166928250)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2077325981,0.1369537827) (0.3363817358,0.5097980528) (0.3011023770,1.2441763220) (0.1547832890,2.6303429212)
+Optimal log-likelihood: -32693.6850513490
+436  HIVb+F+R4     32693.685    226 65839.370    66223.655    66789.143
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model HIVb+F+R5
+1. Initial log-likelihood: -32721.8203348704
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1625906590,0.1074257947) (0.2118752175,0.3881647467) (0.2016103480,0.6808749670) (0.2671978239,1.3308717841) (0.1567259515,2.7147606634)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1656188715,0.1074257947) (0.2196928224,0.3920167377) (0.2007781152,0.6935731323) (0.2675843011,1.3505131429) (0.1463258898,2.7387429440)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1662172750,0.1074257947) (0.2273069759,0.3954636188) (0.1991174951,0.7101228879) (0.2632028614,1.3622295281) (0.1441553927,2.7454096186)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1666884018,0.1074257947) (0.2354679393,0.3992555165) (0.1968025077,0.7279340091) (0.2583890512,1.3727080350) (0.1426521000,2.7481745762)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1672548963,0.1074257947) (0.2438397861,0.4033690299) (0.1944686330,0.7469238237) (0.2531058763,1.3830831629) (0.1413308081,2.7509682903)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1679286394,0.1074257947) (0.2521439568,0.4076103941) (0.1926461830,0.7670378231) (0.2473516274,1.3942569143) (0.1399295934,2.7537192587)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1686859749,0.1074257947) (0.2601208210,0.4117959174) (0.1917341513,0.7879948216) (0.2409268824,1.4063284800) (0.1385321705,2.7569310652)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1694931169,0.1074257947) (0.2675271989,0.4157751954) (0.1919334630,0.8092269452) (0.2341433190,1.4198579615) (0.1369029022,2.7598334901)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1703243259,0.1074257947) (0.2741891091,0.4194208292) (0.1934164939,0.8301633803) (0.2269213917,1.4348260446) (0.1351486794,2.7627572878)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1711495233,0.1074257947) (0.2800253650,0.4226442657) (0.1961273136,0.8502481917) (0.2194342598,1.4512088025) (0.1332635384,2.7661072904)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1719434478,0.1074257947) (0.2850407624,0.4254170700) (0.1999018889,0.8690823557) (0.2118763911,1.4690122538) (0.1312375098,2.7700424288)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1726960170,0.1074257947) (0.2893213980,0.4277730795) (0.2045135739,0.8865150994) (0.2045080843,1.4884833510) (0.1289609268,2.7732513608)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1733797899,0.1074257947) (0.2929372411,0.4296430105) (0.2098197053,0.9023772960) (0.1972221996,1.5090437140) (0.1266410640,2.7804166854)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1740468203,0.1074257947) (0.2960645649,0.4309611129) (0.2153838192,0.9169825169) (0.1904648605,1.5312358896) (0.1240399351,2.7878208010)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1745315879,0.1074257947) (0.2987371779,0.4324157400) (0.2213295004,0.9301359122) (0.1841413104,1.5548986055) (0.1212604234,2.7956759660)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1751464250,0.1074257947) (0.3011779983,0.4337572452) (0.2270875342,0.9424968252) (0.1784417277,1.5801633471) (0.1181463148,2.8059182709)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1756573173,0.1074257947) (0.3034321704,0.4346791535) (0.2328429738,0.9539984422) (0.1733513540,1.6072525094) (0.1147161844,2.8179659170)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1761982052,0.1074257947) (0.3055106327,0.4356232238) (0.2384477620,0.9647546753) (0.1688770382,1.6359732980) (0.1109663619,2.8318971504)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1767646136,0.1074257947) (0.3075165937,0.4365446842) (0.2438025077,0.9749553384) (0.1651293056,1.6665266777) (0.1067869794,2.8484890069)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1773657366,0.1074257947) (0.3093761521,0.4374182103) (0.2488966063,0.9837359851) (0.1622883795,1.6989632304) (0.1020731255,2.8686474940)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1779864888,0.1074257947) (0.3113075334,0.4378934218) (0.2537427074,0.9936127791) (0.1602559337,1.7337964007) (0.0967073367,2.8934749391)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1786818368,0.1074257947) (0.3131990098,0.4387696467) (0.2584347237,1.0025117048) (0.1593090110,1.7721063263) (0.0903754186,2.9260284709)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1793149066,0.1074257947) (0.3152277477,0.4396762204) (0.2631715027,1.0114855050) (0.1593958107,1.8147491976) (0.0828900322,2.9696551017)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1801557504,0.1074257947) (0.3173509348,0.4401551758) (0.2677236550,1.0206105506) (0.1608989712,1.8625486518) (0.0738706886,3.0318482380)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1810350571,0.1074257947) (0.3196219059,0.4410951190) (0.2723941706,1.0298226669) (0.1637717387,1.9157541004) (0.0631771277,3.1203482534)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1822030496,0.1074257947) (0.3221936362,0.4415487561) (0.2767621044,1.0394241527) (0.1681943543,1.9739278827) (0.0506468555,3.2702854655)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1841744508,0.1074257947) (0.3254896935,0.4413308496) (0.2818006679,1.0475013389) (0.1728136228,2.0362507863) (0.0357215650,3.5527091656)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1861831762,0.1074257947) (0.3289377968,0.4410162925) (0.2866024819,1.0564584976) (0.1734575534,2.0906468044) (0.0248189918,3.9129584302)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1872858742,0.1074257947) (0.3315286914,0.4423731452) (0.2898002255,1.0666862862) (0.1710884280,2.1284531083) (0.0202967809,4.1201485255)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1880177151,0.1074257947) (0.3336135480,0.4433435546) (0.2914878736,1.0746796097) (0.1685612216,2.1511785572) (0.0183196416,4.2224767203)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1883827197,0.1074257947) (0.3349881182,0.4446749160) (0.2924468253,1.0792111568) (0.1669645206,2.1658471467) (0.0172178162,4.2903435145)
+Optimal log-likelihood: -32677.9246294845
+437  HIVb+F+R5     32677.925    228 65811.849    66205.902    66770.027
+Optimizing model HIVw+I+G4
+1. Initial log-likelihood: -33909.595
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.023
+Gamma shape alpha: 1.301
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.023
+Gamma shape alpha: 1.307
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.023
+Gamma shape alpha: 1.309
+Optimal log-likelihood: -33886.993
+446  HIVw+I+G4     33886.993    203 68179.985    68465.585    69033.100
+Optimizing model HIVw+R4
+1. Initial log-likelihood: -33918.454
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.175,0.140) (0.301,0.495) (0.290,1.081) (0.234,2.369)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.180,0.140) (0.326,0.510) (0.278,1.128) (0.216,2.376)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.185,0.140) (0.343,0.525) (0.267,1.167) (0.204,2.386)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.190,0.140) (0.356,0.536) (0.260,1.203) (0.194,2.397)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.194,0.140) (0.366,0.544) (0.256,1.234) (0.185,2.415)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.196,0.140) (0.373,0.551) (0.254,1.260) (0.177,2.433)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.199,0.140) (0.379,0.556) (0.253,1.282) (0.170,2.449)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.200,0.140) (0.383,0.560) (0.253,1.300) (0.164,2.464)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.202,0.140) (0.386,0.563) (0.253,1.314) (0.159,2.476)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.203,0.140) (0.388,0.565) (0.253,1.324) (0.156,2.486)
+Optimal log-likelihood: -33882.773
+449  HIVw+R4       33882.773    207 68179.545    68480.636    69049.470
+Optimizing model HIVw+R5
+1. Initial log-likelihood: -33906.578
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.134,0.111) (0.203,0.378) (0.251,0.710) (0.227,1.361) (0.186,2.576)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.136,0.111) (0.210,0.371) (0.274,0.729) (0.223,1.453) (0.157,2.622)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.138,0.111) (0.218,0.369) (0.285,0.745) (0.225,1.517) (0.135,2.670)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.138,0.111) (0.225,0.372) (0.288,0.758) (0.227,1.560) (0.122,2.721)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.139,0.111) (0.231,0.376) (0.288,0.770) (0.228,1.590) (0.114,2.760)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.140,0.111) (0.236,0.379) (0.286,0.779) (0.229,1.612) (0.108,2.790)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.141,0.111) (0.241,0.383) (0.285,0.788) (0.229,1.629) (0.104,2.813)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.142,0.111) (0.245,0.386) (0.283,0.795) (0.230,1.643) (0.101,2.832)
+Optimal log-likelihood: -33868.749
+450  HIVw+R5       33868.749    209 68155.498    68464.582    69033.827
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model HIVw+F+I+G4
+1. Initial log-likelihood: -33412.8689466165
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0231988389
+Gamma shape alpha: 1.2511172696
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0235926115
+Gamma shape alpha: 1.2530482098
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0237966887
+Gamma shape alpha: 1.2530482098
+Optimal log-likelihood: -33377.7251148454
+459  HIVw+F+I+G4   33377.725    222 67199.450    67564.808    68132.413
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model HIVw+F+R4
+1. Initial log-likelihood: -33415.6152994995
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1834542302,0.1369537827) (0.3193507431,0.4970465889) (0.2949530885,1.1221131193) (0.2022419383,2.4456256531)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1933818008,0.1369537827) (0.3530007859,0.5148692455) (0.2754367314,1.1812972323) (0.1781806820,2.4518525588)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1992774381,0.1369537827) (0.3657475711,0.5265011167) (0.2646591545,1.2123490069) (0.1703158363,2.4554348785)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2016927055,0.1369537827) (0.3707895473,0.5325071407) (0.2605223309,1.2287040981) (0.1669954163,2.4633818950)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2026464017,0.1369537827) (0.3730040508,0.5355700251) (0.2587981602,1.2372059737) (0.1655513873,2.4692880711)
+Optimal log-likelihood: -33369.7334980029
+462  HIVw+F+R4     33369.733    226 67191.467    67575.752    68141.240
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model HIVw+F+R5
+1. Initial log-likelihood: -33394.2565328894
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1442811436,0.1074257947) (0.2041755685,0.3802169860) (0.2454363153,0.6908637652) (0.2370779295,1.3450298349) (0.1690290432,2.6338251511)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1443738120,0.1074257947) (0.2031908836,0.3739051735) (0.2601251594,0.6984373888) (0.2329898798,1.3803063998) (0.1593202652,2.6492296822)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1435154417,0.1074257947) (0.2020283286,0.3702071271) (0.2672192337,0.7029178694) (0.2307582602,1.3965372741) (0.1564787358,2.6608188887)
+Optimal log-likelihood: -33361.1429297773
+463  HIVw+F+R5     33361.143    228 67178.286    67572.339    68136.464
+Optimizing model FLU+I+G4
+1. Initial log-likelihood: -32665.366
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.020
+Gamma shape alpha: 1.356
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.020
+Gamma shape alpha: 1.360
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.020
+Gamma shape alpha: 1.360
+Optimal log-likelihood: -32644.498
+472  FLU+I+G4      32644.498    203 65694.997    65980.597    66548.111
+Optimizing model FLU+R4
+1. Initial log-likelihood: -32673.832
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.174,0.150) (0.311,0.484) (0.290,1.117) (0.225,2.384)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.183,0.150) (0.338,0.498) (0.282,1.175) (0.197,2.399)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.192,0.150) (0.352,0.512) (0.274,1.212) (0.182,2.401)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.198,0.150) (0.360,0.522) (0.268,1.238) (0.174,2.405)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.202,0.150) (0.365,0.528) (0.265,1.256) (0.168,2.412)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.206,0.152) (0.367,0.533) (0.263,1.268) (0.165,2.415)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.209,0.154) (0.367,0.537) (0.261,1.276) (0.162,2.418)
+Optimal log-likelihood: -32639.834
+475  FLU+R4        32639.834    207 65693.667    65994.758    66563.592
+Optimizing model FLU+R5
+1. Initial log-likelihood: -32658.350
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.126,0.118) (0.221,0.366) (0.239,0.701) (0.237,1.381) (0.177,2.588)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.124,0.118) (0.226,0.357) (0.258,0.715) (0.235,1.444) (0.157,2.624)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.123,0.118) (0.227,0.354) (0.267,0.723) (0.235,1.480) (0.147,2.655)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.123,0.118) (0.228,0.354) (0.270,0.728) (0.236,1.499) (0.142,2.676)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.123,0.118) (0.229,0.354) (0.272,0.731) (0.237,1.511) (0.140,2.689)
+Optimal log-likelihood: -32628.763
+476  FLU+R5        32628.763    209 65675.525    65984.610    66553.855
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model FLU+F+I+G4
+1. Initial log-likelihood: -32436.1162650927
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0206009083
+Gamma shape alpha: 1.3433278976
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0199238596
+Gamma shape alpha: 1.3481853250
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0197224029
+Gamma shape alpha: 1.3468371395
+Optimal log-likelihood: -32415.9828968110
+485  FLU+F+I+G4    32415.983    222 65275.966    65641.324    66208.929
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model FLU+F+R4
+1. Initial log-likelihood: -32441.5884317730
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1795438572,0.1516787867) (0.3120422824,0.4769862492) (0.2927847184,1.1127590668) (0.2156291419,2.3993500861)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1877733265,0.1516787867) (0.3350674291,0.4877149377) (0.2882345715,1.1625323922) (0.1889246729,2.4180970998)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1942927816,0.1516787867) (0.3442115066,0.4978490832) (0.2830712972,1.1886723070) (0.1784244146,2.4273759208)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1979090726,0.1516787867) (0.3488010822,0.5045845485) (0.2796662553,1.2046685646) (0.1736235898,2.4355985245)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2002522864,0.1516787867) (0.3515595207,0.5087833849) (0.2773870194,1.2144294163) (0.1708011734,2.4398080186)
+Optimal log-likelihood: -32411.2724763352
+488  FLU+F+R4      32411.272    226 65274.545    65658.830    66224.318
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model FLU+F+R5
+1. Initial log-likelihood: -32425.4775529230
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1299743626,0.1191520891) (0.2255997656,0.3622415251) (0.2320968586,0.6971335675) (0.2407031064,1.3547222119) (0.1716259069,2.6074483458)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1283296664,0.1191520891) (0.2293382913,0.3547981083) (0.2491876766,0.7105836129) (0.2375472724,1.4064282210) (0.1555970932,2.6378100083)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1274107202,0.1191520891) (0.2309382025,0.3517808417) (0.2586082332,0.7201878092) (0.2349128286,1.4382297875) (0.1481300156,2.6619285886)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1271275245,0.1191520891) (0.2326228493,0.3514290608) (0.2629213846,0.7270057945) (0.2336045276,1.4580002674) (0.1437237139,2.6788647719)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1269594358,0.1191520891) (0.2341686875,0.3517804899) (0.2648356293,0.7321700859) (0.2327986864,1.4707595762) (0.1412375610,2.6908493299)
+Optimal log-likelihood: -32400.3987251050
+489  FLU+F+R5      32400.399    228 65256.797    65650.850    66214.976
+Optimizing model rtREV+I+G4
+1. Initial log-likelihood: -32916.323
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.028
+Gamma shape alpha: 1.380
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.029
+Gamma shape alpha: 1.384
+Optimal log-likelihood: -32910.442
+498  rtREV+I+G4    32910.442    203 66226.884    66512.484    67079.999
+Optimizing model rtREV+R4
+1. Initial log-likelihood: -32931.244
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.186,0.138) (0.305,0.478) (0.316,1.133) (0.193,2.302)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.190,0.138) (0.325,0.488) (0.317,1.175) (0.168,2.332)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.193,0.138) (0.332,0.496) (0.316,1.199) (0.159,2.359)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.194,0.138) (0.336,0.501) (0.316,1.213) (0.155,2.377)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.195,0.138) (0.338,0.504) (0.315,1.222) (0.152,2.390)
+Optimal log-likelihood: -32900.176
+501  rtREV+R4      32900.176    207 66214.353    66515.443    67084.277
+Optimizing model rtREV+R5
+1. Initial log-likelihood: -32915.059
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.144,0.108) (0.221,0.373) (0.212,0.698) (0.274,1.336) (0.149,2.503)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.144,0.108) (0.227,0.373) (0.218,0.711) (0.276,1.368) (0.136,2.539)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.144,0.108) (0.231,0.374) (0.222,0.725) (0.273,1.390) (0.130,2.563)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.144,0.108) (0.235,0.376) (0.224,0.737) (0.271,1.407) (0.126,2.581)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.144,0.108) (0.239,0.378) (0.226,0.748) (0.269,1.421) (0.123,2.595)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.144,0.108) (0.242,0.380) (0.226,0.757) (0.267,1.433) (0.120,2.606)
+Optimal log-likelihood: -32891.098
+502  rtREV+R5      32891.098    209 66200.197    66509.281    67078.527
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model rtREV+F+I+G4
+1. Initial log-likelihood: -32729.1446158758
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0260556338
+Gamma shape alpha: 1.2867224228
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0272890285
+Gamma shape alpha: 1.2898850720
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0278222839
+Gamma shape alpha: 1.2921696549
+Optimal log-likelihood: -32715.6790346550
+511  rtREV+F+I+G4  32715.679    222 65875.358    66240.716    66808.321
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model rtREV+F+R4
+1. Initial log-likelihood: -32737.7263589341
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1882080275,0.1369537827) (0.3017161657,0.4726919346) (0.3200011494,1.1627080513) (0.1900746573,2.3985000369)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1956475328,0.1369537827) (0.3211257231,0.4810885220) (0.3284923488,1.2076628442) (0.1547343953,2.4620989738)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1986746511,0.1369537827) (0.3272405701,0.4886560194) (0.3291169193,1.2305566621) (0.1449678595,2.4997480555)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2000608710,0.1369537827) (0.3301468471,0.4934254327) (0.3285964054,1.2432813145) (0.1411958766,2.5199546526)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.2003649798,0.1369537827) (0.3316298556,0.4965081589) (0.3282996071,1.2517009231) (0.1397055575,2.5346085263)
+Optimal log-likelihood: -32700.6452135701
+514  rtREV+F+R4    32700.645    226 65853.290    66237.575    66803.063
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model rtREV+F+R5
+1. Initial log-likelihood: -32718.3678075655
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1500387602,0.1074257947) (0.2244075914,0.3748960959) (0.1983191703,0.6937488805) (0.2852689775,1.3551757002) (0.1419655006,2.6228628037)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1511852961,0.1074257947) (0.2342776759,0.3764685013) (0.2011502139,0.7127819463) (0.2866595336,1.3863586530) (0.1267272804,2.6706299973)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1516926857,0.1074257947) (0.2417832750,0.3794364750) (0.2033301405,0.7332660626) (0.2816932415,1.4082064015) (0.1215006572,2.6928766606)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1521730295,0.1074257947) (0.2487432090,0.3829337515) (0.2042756020,0.7522952459) (0.2765821678,1.4255701641) (0.1182259917,2.7079875738)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1526538027,0.1074257947) (0.2549183734,0.3865701352) (0.2045829945,0.7694428751) (0.2720136650,1.4402248691) (0.1158311645,2.7205514402)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1531054083,0.1074257947) (0.2602001821,0.3900394064) (0.2047632491,0.7847010396) (0.2679564443,1.4530862067) (0.1139747163,2.7311213436)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1534969543,0.1074257947) (0.2646157295,0.3931855665) (0.2050188251,0.7981403503) (0.2644826566,1.4647212709) (0.1123858346,2.7416665153)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1538091116,0.1074257947) (0.2682520892,0.3959728586) (0.2054191233,0.8099006562) (0.2615163335,1.4754381552) (0.1110033424,2.7521087453)
+Optimal log-likelihood: -32690.8457172142
+515  rtREV+F+R5    32690.846    228 65837.691    66231.744    66795.870
+Optimizing model cpREV+I+G4
+1. Initial log-likelihood: -32505.293
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.026
+Gamma shape alpha: 1.380
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.027
+Gamma shape alpha: 1.382
+Optimal log-likelihood: -32500.109
+524  cpREV+I+G4    32500.109    203 65406.218    65691.818    66259.332
+Optimizing model cpREV+R4
+1. Initial log-likelihood: -32521.654
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.184,0.137) (0.301,0.487) (0.309,1.118) (0.206,2.258)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.185,0.137) (0.318,0.497) (0.304,1.152) (0.193,2.270)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.187,0.137) (0.325,0.504) (0.301,1.170) (0.187,2.282)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.188,0.137) (0.328,0.509) (0.299,1.181) (0.185,2.291)
+Optimal log-likelihood: -32493.469
+527  cpREV+R4      32493.469    207 65400.938    65702.029    66270.863
+Optimizing model cpREV+R5
+1. Initial log-likelihood: -32513.164
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.142,0.109) (0.204,0.380) (0.212,0.686) (0.266,1.304) (0.176,2.430)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.140,0.109) (0.202,0.381) (0.215,0.685) (0.270,1.316) (0.173,2.441)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.140,0.109) (0.201,0.379) (0.218,0.685) (0.270,1.320) (0.172,2.448)
+Optimal log-likelihood: -32489.169
+528  cpREV+R5      32489.169    209 65396.337    65705.422    66274.667
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model cpREV+F+I+G4
+1. Initial log-likelihood: -32569.5878476865
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0258656415
+Gamma shape alpha: 1.3548733855
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0262434047
+Gamma shape alpha: 1.3568423250
+Optimal log-likelihood: -32563.3655258306
+537  cpREV+F+I+G4  32563.366    222 65570.731    65936.089    66503.694
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model cpREV+F+R4
+1. Initial log-likelihood: -32584.2348380197
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1827674529,0.1369537827) (0.3050157389,0.4910958749) (0.3025729118,1.1354829016) (0.2096438964,2.2649730005)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1844999040,0.1369537827) (0.3223080192,0.5007565867) (0.2990722660,1.1735907636) (0.1941198108,2.2779748121)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1861137629,0.1369537827) (0.3274209279,0.5064973192) (0.2980498180,1.1912493984) (0.1884154912,2.2925614423)
+Optimizing +R4 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1865846091,0.1369537827) (0.3295054795,0.5097613090) (0.2978660175,1.2011652503) (0.1860438939,2.3024766376)
+Optimal log-likelihood: -32554.2392909844
+540  cpREV+F+R4    32554.239    226 65560.479    65944.763    66510.252
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Optimizing model cpREV+F+R5
+1. Initial log-likelihood: -32575.8884702948
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1422828557,0.1078489337) (0.1966314156,0.3906354633) (0.2057376755,0.6657688868) (0.2735266793,1.3093701615) (0.1818213738,2.4474264738)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1423054910,0.1078489337) (0.1912136184,0.3938018313) (0.2063535605,0.6548182649) (0.2814052597,1.3154415575) (0.1787220704,2.4613437406)
+Optimizing +R5 model parameters by 2-BFGS,EM algorithm...
+Site proportion and rates:  (0.1425803343,0.1078489337) (0.1867504467,0.3934080293) (0.2085315011,0.6487614123) (0.2836614370,1.3154415575) (0.1784762809,2.4649725434)
+Optimal log-likelihood: -32551.5080464654
+541  cpREV+F+R5    32551.508    228 65559.016    65953.069    66517.194
+Akaike Information Criterion:           JTT+R5
+Corrected Akaike Information Criterion: JTT+I+G4
+Bayesian Information Criterion:         JTT+I+G4
+Best-fit model: JTT+I+G4 chosen according to BIC
+
+All model information printed to LYK5_alignment_trimmed.model.gz
+CPU time for ModelFinder: 1379.823 seconds (0h:22m:59s)
+Wall-clock time for ModelFinder: 226.946 seconds (0h:3m:46s)
+Empirical state frequencies: 0.0866256342 0.0404225235 0.0601347417 0.0468269151 0.0237253597 0.0359311320 0.0454961324 0.0606961657 0.0219163270 0.0544373285 0.1128670049 0.0379480995 0.0154703485 0.0385926973 0.0406720452 0.0829036014 0.0573900025 0.0085669134 0.0498211761 0.0795558513 
+Generating 1000 samples for ultrafast bootstrap (seed: 904684)...
+
+ML-TREE SEARCH START WITH THE FOLLOWING PARAMETERS:
+Model of evolution: JTT+I+G4 with user-defined frequencies (203 free parameters)
+Fixed branch lengths: No
+Tree search algorithm: Stochastic nearest neighbor interchange
+Termination condition: min 0.9900000000 correlation coefficient
+NNI assessed on: 5 branches
+Phylogenetic likelihood library: No
+Branch length optimization method: Newton
+Number of Newton-Raphson steps in NNI evaluation and branch length optimization: 10 / 10
+SSE instructions: Yes
+
+NOTE: 34 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.1000000000)
+Thoroughly optimizing +I+G parameters from 10 start values...
+1. Initial log-likelihood: -32218.5953404117
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0000025570
+Gamma shape alpha: 1.2610921018
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0000064116
+Gamma shape alpha: 1.2567349264
+Optimal log-likelihood: -32216.3156285910
+Init pinv, alpha: 0.0000010000, 1.4050986910 / Estimate: 0.0000064116, 1.2567349264 / LogL: -32216.3156285910
+1. Initial log-likelihood: -32213.0765710400
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0123675641
+Gamma shape alpha: 1.3367275201
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0169758228
+Gamma shape alpha: 1.3591520548
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0202509825
+Gamma shape alpha: 1.3774714867
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0221795286
+Gamma shape alpha: 1.3884018395
+Optimal log-likelihood: -32210.4061119032
+Init pinv, alpha: 0.0074231799, 1.4050986910 / Estimate: 0.0221795286, 1.3884018395 / LogL: -32210.4061119032
+1. Initial log-likelihood: -32211.0679210230
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0190023522
+Gamma shape alpha: 1.3737060640
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0215578517
+Gamma shape alpha: 1.3854525022
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0229281636
+Gamma shape alpha: 1.3929848602
+Optimal log-likelihood: -32210.3827161101
+Init pinv, alpha: 0.0148453599, 1.4050986910 / Estimate: 0.0229281636, 1.3929848602 / LogL: -32210.3827161101
+1. Initial log-likelihood: -32210.3991549358
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0233867777
+Gamma shape alpha: 1.3967769237
+Optimal log-likelihood: -32210.3725824248
+Init pinv, alpha: 0.0222675398, 1.4050986910 / Estimate: 0.0233867777, 1.3967769237 / LogL: -32210.3725824248
+1. Initial log-likelihood: -32210.5426887846
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0265583865
+Gamma shape alpha: 1.4132786240
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0253542007
+Gamma shape alpha: 1.4074174447
+Optimal log-likelihood: -32210.3753590951
+Init pinv, alpha: 0.0296897197, 1.4050986910 / Estimate: 0.0253542007, 1.4074174447 / LogL: -32210.3753590951
+1. Initial log-likelihood: -32211.2630483451
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0289834748
+Gamma shape alpha: 1.4258071343
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0263775640
+Gamma shape alpha: 1.4137378391
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0253147533
+Gamma shape alpha: 1.4074473657
+Optimal log-likelihood: -32210.3767624888
+Init pinv, alpha: 0.0371118997, 1.4050986910 / Estimate: 0.0253147533, 1.4074473657 / LogL: -32210.3767624888
+1. Initial log-likelihood: -32212.4303786467
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0308217491
+Gamma shape alpha: 1.4356639930
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0270419190
+Gamma shape alpha: 1.4176026139
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0255968880
+Gamma shape alpha: 1.4091741114
+Optimal log-likelihood: -32210.3819659271
+Init pinv, alpha: 0.0445340796, 1.4050986910 / Estimate: 0.0255968880, 1.4091741114 / LogL: -32210.3819659271
+1. Initial log-likelihood: -32213.9644359715
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0323682019
+Gamma shape alpha: 1.4427043510
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0276087373
+Gamma shape alpha: 1.4209986085
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0258554344
+Gamma shape alpha: 1.4108627472
+Optimal log-likelihood: -32210.3897195252
+Init pinv, alpha: 0.0519562596, 1.4050986910 / Estimate: 0.0258554344, 1.4108627472 / LogL: -32210.3897195252
+1. Initial log-likelihood: -32215.8119365623
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0336661135
+Gamma shape alpha: 1.4481546865
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0280674451
+Gamma shape alpha: 1.4237336920
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0260648195
+Gamma shape alpha: 1.4122411954
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0251994802
+Gamma shape alpha: 1.4068558285
+Optimal log-likelihood: -32210.3763184407
+Init pinv, alpha: 0.0593784395, 1.4050986910 / Estimate: 0.0251994802, 1.4068558285 / LogL: -32210.3763184407
+1. Initial log-likelihood: -32217.9356970057
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0347950302
+Gamma shape alpha: 1.4538822142
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0283456824
+Gamma shape alpha: 1.4246894199
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.0261398414
+Gamma shape alpha: 1.4124945189
+Optimal log-likelihood: -32210.3962762305
+Init pinv, alpha: 0.0668006194, 1.4050986910 / Estimate: 0.0261398414, 1.4124945189 / LogL: -32210.3962762305
+Optimal pinv,alpha: 0.0233867777, 1.3967769237 / LogL: -32210.3725824248
+
+Parameters optimization took 2.2322089672 sec
+Best tree printed to LYK5_alignment_trimmed.treefile
+Computing ML distances based on estimated model parameters...
+0.000012s Decided on visit order
+0.096058s Longest distance was 2.702797
+Distance calculation time: 0.096141 seconds
+Computing ML distances took 0.096167 sec (of wall-clock time) 0.672838 sec(of CPU time)
+Computing RapidNJ tree took 0.002973 sec (of wall-clock time) 0.018228 sec (of CPU time)
+Computing RapidNJ tree (from in-memory) distance matrix took 0.003 sec.
+Time taken to write distance file: 0.003 seconds 
+Loading tree (from file LYK5_alignment_trimmed.bionj) took 0.000 sec.
+Wall-clock time spent creating initial tree was 0.004 seconds
+Log-likelihood of RapidNJ tree: -32286.242
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 2.734 second
+Computing log-likelihood of 98 initial trees ... 2.485 seconds
+Current best score: -32209.167
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -32178.172
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.024
+Gamma shape alpha: 1.418
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.024
+Gamma shape alpha: 1.421
+Optimal log-likelihood: -32177.412
+BETTER TREE FOUND at iteration 1: -32177.412
+Iteration 1 / LogL: -32177.412 / Time: 0h:0m:8s
+Iteration 2 / LogL: -32179.189 / Time: 0h:0m:8s
+Iteration 3 / LogL: -32206.235 / Time: 0h:0m:8s
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -32175.618
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.024
+Gamma shape alpha: 1.427
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.025
+Gamma shape alpha: 1.429
+Optimal log-likelihood: -32175.415
+BETTER TREE FOUND at iteration 4: -32175.415
+Iteration 4 / LogL: -32175.415 / Time: 0h:0m:9s
+Iteration 5 / LogL: -32184.647 / Time: 0h:0m:9s
+Iteration 6 / LogL: -32179.177 / Time: 0h:0m:9s
+Iteration 7 / LogL: -32193.118 / Time: 0h:0m:9s
+Iteration 8 / LogL: -32179.169 / Time: 0h:0m:10s
+Iteration 9 / LogL: -32191.430 / Time: 0h:0m:10s
+Iteration 10 / LogL: -32176.627 / Time: 0h:0m:10s
+Iteration 11 / LogL: -32188.291 / Time: 0h:0m:10s
+Iteration 12 / LogL: -32190.787 / Time: 0h:0m:11s
+Iteration 13 / LogL: -32175.576 / Time: 0h:0m:11s
+Iteration 14 / LogL: -32183.540 / Time: 0h:0m:11s
+Iteration 15 / LogL: -32191.514 / Time: 0h:0m:12s
+Iteration 16 / LogL: -32190.023 / Time: 0h:0m:12s
+Iteration 17 / LogL: -32191.168 / Time: 0h:0m:12s
+Iteration 18 / LogL: -32184.624 / Time: 0h:0m:12s
+Iteration 19 / LogL: -32184.071 / Time: 0h:0m:13s
+Iteration 20 / LogL: -32197.268 / Time: 0h:0m:13s
+Best tree printed to LYK5_alignment_trimmed.treefile
+Finish initializing candidate tree set (16)
+Current best tree score: -32175.415 / CPU time: 11.000
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -32173.870
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.025
+Gamma shape alpha: 1.433
+Optimal log-likelihood: -32173.854
+BETTER TREE FOUND at iteration 21: -32173.854
+Iteration 21 / LogL: -32173.854 / Time: 0h:0m:14s (0h:1m:10s left)
+Best tree printed to LYK5_alignment_trimmed.treefile
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -32173.699
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.025
+Gamma shape alpha: 1.433
+Optimal log-likelihood: -32173.653
+BETTER TREE FOUND at iteration 22: -32173.653
+Iteration 22 / LogL: -32173.653 / Time: 0h:0m:14s (0h:1m:9s left)
+Best tree printed to LYK5_alignment_trimmed.treefile
+Iteration 23 / LogL: -32175.427 / Time: 0h:0m:15s (0h:1m:8s left)
+Iteration 24 / LogL: -32195.618 / Time: 0h:0m:15s (0h:1m:6s left)
+Iteration 25 / LogL: -32173.881 / Time: 0h:0m:16s (0h:1m:5s left)
+Iteration 26 / LogL: -32180.273 / Time: 0h:0m:16s (0h:1m:3s left)
+Iteration 27 / LogL: -32177.476 / Time: 0h:0m:17s (0h:1m:2s left)
+Iteration 28 / LogL: -32175.508 / Time: 0h:0m:17s (0h:1m:1s left)
+Iteration 29 / LogL: -32175.494 / Time: 0h:0m:18s (0h:1m:0s left)
+Iteration 30 / LogL: -32179.321 / Time: 0h:0m:18s (0h:0m:59s left)
+Iteration 31 / LogL: -32177.718 / Time: 0h:0m:19s (0h:0m:58s left)
+Iteration 32 / LogL: -32176.304 / Time: 0h:0m:19s (0h:0m:56s left)
+Iteration 33 / LogL: -32288.241 / Time: 0h:0m:20s (0h:0m:55s left)
+Iteration 34 / LogL: -32173.693 / Time: 0h:0m:20s (0h:0m:54s left)
+Iteration 35 / LogL: -32187.019 / Time: 0h:0m:20s (0h:0m:53s left)
+Iteration 36 / LogL: -32175.443 / Time: 0h:0m:21s (0h:0m:52s left)
+Iteration 37 / LogL: -32174.137 / Time: 0h:0m:21s (0h:0m:51s left)
+Iteration 38 / LogL: -32283.511 / Time: 0h:0m:22s (0h:0m:50s left)
+Iteration 39 / LogL: -32181.382 / Time: 0h:0m:22s (0h:0m:50s left)
+Iteration 40 / LogL: -32177.437 / Time: 0h:0m:23s (0h:0m:49s left)
+Iteration 41 / LogL: -32173.669 / Time: 0h:0m:23s (0h:0m:48s left)
+Iteration 42 / LogL: -32177.542 / Time: 0h:0m:24s (0h:0m:47s left)
+Iteration 43 / LogL: -32181.388 / Time: 0h:0m:24s (0h:0m:46s left)
+Iteration 44 / LogL: -32177.665 / Time: 0h:0m:25s (0h:0m:45s left)
+Iteration 45 / LogL: -32221.618 / Time: 0h:0m:25s (0h:0m:44s left)
+Iteration 46 / LogL: -32175.508 / Time: 0h:0m:26s (0h:0m:44s left)
+Iteration 47 / LogL: -32180.859 / Time: 0h:0m:26s (0h:0m:43s left)
+Iteration 48 / LogL: -32181.556 / Time: 0h:0m:27s (0h:0m:43s left)
+Iteration 49 / LogL: -32173.872 / Time: 0h:0m:28s (0h:0m:43s left)
+Iteration 50 / LogL: -32173.870 / Time: 0h:0m:28s (0h:0m:42s left)
+1000 tree(s) converted
+Using hash_map
+Converting collection of tree(s) into split system...
+Log-likelihood cutoff on original alignment: -32233.420
+Iteration 51 / LogL: -32173.949 / Time: 0h:0m:29s (0h:0m:42s left)
+Iteration 52 / LogL: -32173.922 / Time: 0h:0m:30s (0h:0m:41s left)
+Iteration 53 / LogL: -32175.441 / Time: 0h:0m:30s (0h:0m:40s left)
+Iteration 54 / LogL: -32176.041 / Time: 0h:0m:31s (0h:0m:39s left)
+Iteration 55 / LogL: -32180.302 / Time: 0h:0m:31s (0h:0m:39s left)
+Iteration 56 / LogL: -32180.024 / Time: 0h:0m:32s (0h:0m:38s left)
+Iteration 57 / LogL: -32177.438 / Time: 0h:0m:32s (0h:0m:37s left)
+Iteration 58 / LogL: -32177.793 / Time: 0h:0m:33s (0h:0m:37s left)
+Iteration 59 / LogL: -32173.862 / Time: 0h:0m:33s (0h:0m:36s left)
+Iteration 60 / LogL: -32173.992 / Time: 0h:0m:34s (0h:0m:35s left)
+Iteration 61 / LogL: -32173.755 / Time: 0h:0m:34s (0h:0m:35s left)
+Iteration 62 / LogL: -32281.857 / Time: 0h:0m:35s (0h:0m:34s left)
+Iteration 63 / LogL: -32176.910 / Time: 0h:0m:35s (0h:0m:33s left)
+Iteration 64 / LogL: -32176.095 / Time: 0h:0m:36s (0h:0m:33s left)
+Iteration 65 / LogL: -32173.910 / Time: 0h:0m:36s (0h:0m:32s left)
+Iteration 66 / LogL: -32175.748 / Time: 0h:0m:37s (0h:0m:31s left)
+Iteration 67 / LogL: -32175.528 / Time: 0h:0m:37s (0h:0m:31s left)
+Iteration 68 / LogL: -32175.489 / Time: 0h:0m:38s (0h:0m:30s left)
+Iteration 69 / LogL: -32175.461 / Time: 0h:0m:38s (0h:0m:30s left)
+Iteration 70 / LogL: -32173.874 / Time: 0h:0m:39s (0h:0m:29s left)
+Iteration 71 / LogL: -32173.877 / Time: 0h:0m:39s (0h:0m:28s left)
+Iteration 72 / LogL: -32175.430 / Time: 0h:0m:40s (0h:0m:28s left)
+Iteration 73 / LogL: -32174.375 / Time: 0h:0m:40s (0h:0m:27s left)
+Iteration 74 / LogL: -32283.609 / Time: 0h:0m:41s (0h:0m:27s left)
+Iteration 75 / LogL: -32175.637 / Time: 0h:0m:42s (0h:0m:26s left)
+Iteration 76 / LogL: -32175.655 / Time: 0h:0m:42s (0h:0m:26s left)
+Iteration 77 / LogL: -32179.901 / Time: 0h:0m:43s (0h:0m:25s left)
+Iteration 78 / LogL: -32173.760 / Time: 0h:0m:43s (0h:0m:24s left)
+Iteration 79 / LogL: -32178.208 / Time: 0h:0m:43s (0h:0m:24s left)
+Iteration 80 / LogL: -32173.807 / Time: 0h:0m:44s (0h:0m:23s left)
+Iteration 81 / LogL: -32174.067 / Time: 0h:0m:44s (0h:0m:22s left)
+Iteration 82 / LogL: -32178.693 / Time: 0h:0m:45s (0h:0m:22s left)
+Iteration 83 / LogL: -32174.256 / Time: 0h:0m:45s (0h:0m:21s left)
+Iteration 84 / LogL: -32173.914 / Time: 0h:0m:46s (0h:0m:21s left)
+Iteration 85 / LogL: -32296.891 / Time: 0h:0m:46s (0h:0m:20s left)
+Iteration 86 / LogL: -32176.079 / Time: 0h:0m:47s (0h:0m:20s left)
+Iteration 87 / LogL: -32173.706 / Time: 0h:0m:48s (0h:0m:19s left)
+Iteration 88 / LogL: -32173.909 / Time: 0h:0m:48s (0h:0m:18s left)
+Iteration 89 / LogL: -32175.468 / Time: 0h:0m:48s (0h:0m:18s left)
+Iteration 90 / LogL: -32173.940 / Time: 0h:0m:49s (0h:0m:17s left)
+Iteration 91 / LogL: -32180.229 / Time: 0h:0m:49s (0h:0m:17s left)
+Iteration 92 / LogL: -32173.753 / Time: 0h:0m:50s (0h:0m:16s left)
+Iteration 93 / LogL: -32189.722 / Time: 0h:0m:50s (0h:0m:16s left)
+Iteration 94 / LogL: -32173.984 / Time: 0h:0m:51s (0h:0m:15s left)
+Iteration 95 / LogL: -32173.902 / Time: 0h:0m:51s (0h:0m:14s left)
+Iteration 96 / LogL: -32173.930 / Time: 0h:0m:52s (0h:0m:14s left)
+Iteration 97 / LogL: -32176.028 / Time: 0h:0m:53s (0h:0m:13s left)
+Iteration 98 / LogL: -32187.067 / Time: 0h:0m:54s (0h:0m:13s left)
+Iteration 99 / LogL: -32173.914 / Time: 0h:0m:56s (0h:0m:13s left)
+Iteration 100 / LogL: -32173.659 / Time: 0h:0m:57s (0h:0m:12s left)
+1000 tree(s) converted
+Using hash_map
+Converting collection of tree(s) into split system...
+Log-likelihood cutoff on original alignment: -32233.420
+20 new splits compared to old boot_splits
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.999
+Iteration 101 / LogL: -32173.926 / Time: 0h:0m:57s (0h:0m:57s left)
+Iteration 102 / LogL: -32187.074 / Time: 0h:0m:58s (0h:0m:56s left)
+Iteration 103 / LogL: -32180.107 / Time: 0h:0m:58s (0h:0m:55s left)
+Iteration 104 / LogL: -32176.261 / Time: 0h:0m:59s (0h:0m:55s left)
+Iteration 105 / LogL: -32199.135 / Time: 0h:0m:59s (0h:0m:54s left)
+Iteration 106 / LogL: -32173.883 / Time: 0h:1m:0s (0h:0m:53s left)
+Iteration 107 / LogL: -32173.919 / Time: 0h:1m:0s (0h:0m:53s left)
+Iteration 108 / LogL: -32174.945 / Time: 0h:1m:1s (0h:0m:52s left)
+Iteration 109 / LogL: -32177.532 / Time: 0h:1m:1s (0h:0m:51s left)
+Iteration 110 / LogL: -32173.789 / Time: 0h:1m:2s (0h:0m:51s left)
+Iteration 111 / LogL: -32173.995 / Time: 0h:1m:2s (0h:0m:50s left)
+Iteration 112 / LogL: -32174.118 / Time: 0h:1m:3s (0h:0m:50s left)
+Iteration 113 / LogL: -32173.898 / Time: 0h:1m:3s (0h:0m:49s left)
+Iteration 114 / LogL: -32175.131 / Time: 0h:1m:4s (0h:0m:48s left)
+Iteration 115 / LogL: -32173.895 / Time: 0h:1m:4s (0h:0m:48s left)
+Iteration 116 / LogL: -32174.243 / Time: 0h:1m:4s (0h:0m:47s left)
+UPDATE BEST LOG-LIKELIHOOD: -32173.652
+Iteration 117 / LogL: -32173.652 / Time: 0h:1m:5s (0h:0m:46s left)
+Best tree printed to LYK5_alignment_trimmed.treefile
+Iteration 118 / LogL: -32175.006 / Time: 0h:1m:6s (0h:0m:46s left)
+Iteration 119 / LogL: -32175.448 / Time: 0h:1m:6s (0h:0m:45s left)
+Iteration 120 / LogL: -32173.770 / Time: 0h:1m:7s (0h:0m:45s left)
+Iteration 121 / LogL: -32178.019 / Time: 0h:1m:7s (0h:0m:44s left)
+Iteration 122 / LogL: -32173.696 / Time: 0h:1m:8s (0h:0m:43s left)
+Iteration 123 / LogL: -32175.892 / Time: 0h:1m:8s (0h:0m:43s left)
+20 new splits compared to old boot_splits
+TREE SEARCH COMPLETED AFTER 123 ITERATIONS / Time: 0h:1m:8s
+
+Log-likelihoods of 5 best candidate trees: 
+-32173.652 -32173.807 -32173.854 -32174.118 -32175.006 
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -32173.652
+Optimizing +I+G4 model parameters by EM algorithm...
+Proportion of invariable sites: 0.025
+Gamma shape alpha: 1.432
+Optimal log-likelihood: -32173.649
+Parameters optimization took 1 rounds (0.082 sec)
+BEST SCORE FOUND : -32173.649
+Creating bootstrap support values...
+1000 tree(s) converted
+max_tree_id = 1   max_weight = 1 (0.100%)
+Using hash_map
+Converting collection of tree(s) into split system...
+394 splits found
+Split supports printed to NEXUS file LYK5_alignment_trimmed.splits.nex
+Total tree length: 17.476
+
+Total number of iterations: 123
+CPU time used for tree search: 443.572 sec (0h:7m:23s)
+Wall-clock time used for tree search: 66.224 sec (0h:1m:6s)
+Total CPU time used: 463.003 sec (0h:7m:43s)
+Total wall-clock time used: 68.989 sec (0h:1m:8s)
+
+Computing bootstrap consensus tree...
+Reading input file LYK5_alignment_trimmed.splits.nex...
+Reading "TAXA" block...
+Reading "SPLITS" block...
+102 taxa and 394 splits.
+Rescaling split weights by 1.000
+Consensus tree written to LYK5_alignment_trimmed.contree
+Reading input trees file LYK5_alignment_trimmed.contree
+Log-likelihood of consensus tree: -32173.859
+Best tree printed to LYK5_alignment_trimmed.treefile
+Tree contains 103 taxa and 203 branches
+
+Analysis results written to: 
+  IQ-TREE report:                LYK5_alignment_trimmed.iqtree
+  Maximum-likelihood tree:       LYK5_alignment_trimmed.treefile
+  Likelihood distances:          LYK5_alignment_trimmed.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          LYK5_alignment_trimmed.splits.nex
+  Consensus tree:                LYK5_alignment_trimmed.contree
+  Screen log file:               LYK5_alignment_trimmed.log
+
+Best tree printed to LYK5_alignment_trimmed.treefile
+Date and Time: Sun Jun 19 14:34:04 2022

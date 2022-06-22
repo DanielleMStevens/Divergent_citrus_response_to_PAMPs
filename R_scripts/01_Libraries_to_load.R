@@ -23,6 +23,10 @@ library(xlsx)
 library(ggplot2)
 library(RColorBrewer)
 library(extrafont) 
+library(ggrepel)
+library(scales)
+library(forcats)
+library(ggbeeswarm)
 
 # R packages for plotting heatmaps
 library(ComplexHeatmap)
@@ -33,6 +37,21 @@ library(treeio)
 library(phangorn)
 library(ggtree)
 library(cluster)
+
+
+#########################################################
+# funciton - convert AAstringset attribute to dataframe
+#########################################################
+
+# turning AAmultiplesequence alignment into dataframe
+aa2df <- function(dss){
+  return(data.frame(names = rownames(dss), seq = as.character(dss), stringsAsFactors = FALSE))
+}
+
+# turning AAsequences (fasta) into dataframe
+dss2df <- function(dss){
+  return(data.frame(width = BiocGenerics::width(dss), names = names(dss), seq = as.character(dss), stringsAsFactors = FALSE))
+}
 
 
 # NOTE: I have had issues sometimes loading the complex heatmap package (not sure why), 
@@ -53,6 +72,9 @@ library(cluster)
 #if (!requireNamespace("BiocManager", quietly=TRUE))
 #install.packages("BiocManager")
 #BiocManager::install("ComplexHeatmap")
+
+
+
 
 
 
