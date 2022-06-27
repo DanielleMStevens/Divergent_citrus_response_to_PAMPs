@@ -48,7 +48,7 @@ colnames(LYK5_lysM_domains_reshaped) <- c("LysM1","LysM2","LysM3")
 #########################################################
 
 # load lysM hits
-CERK1_lysM_domains <- read.table(file = file.choose(), sep = '\t', header = FALSE)
+CERK1_lysM_domains <- read.table(file = "./Protein_Trees/02_LysM_Comparison/blastp/CERK1_lysM_hits.tsv", sep = '\t', header = FALSE)
 colnames(CERK1_lysM_domains) <- c("Subject","Query","Similarity")
 CERK1_lysM_domains <- CERK1_lysM_domains[!grepl("LYK5", CERK1_lysM_domains$Query),]
 CERK1_lysM_domains <- CERK1_lysM_domains[,1:3] %>% group_by(Subject, Query) %>% filter(Similarity == max(Similarity))
@@ -116,20 +116,27 @@ CERK1_lysM_domains_reshaped$Occurance <- as.character(CERK1_lysM_domains_reshape
 
 
 # Import blastp hits of eco domain
-EcoDomain_Blast_LYK5 <- xlsx::read.xlsx(file = "./Protein_Trees/Ectodomain_Comparison/LYK5_eco_all_hits.xlsx", sheetIndex = 1, header = TRUE)
-EcoDomain_Blast_CERK1 <- xlsx::read.xlsx(file = "./Protein_Trees/Ectodomain_Comparison/CERK1_eco_all_hits.xlsx", sheetIndex = 1, header = TRUE)
+EcoDomain_Blast_LYK5 <- xlsx::read.xlsx(file = "./Protein_Trees/03_Ectodomain_Comparison/LYK5_eco_all_hits-2.xlsx", sheetIndex = 1, header = TRUE)
+EcoDomain_Blast_CERK1 <- xlsx::read.xlsx(file = "./Protein_Trees/03_Ectodomain_Comparison/CERK1_eco_all_hits-2.xlsx", sheetIndex = 1, header = TRUE)
+
+# weird issue need to remove NAs
+EcoDomain_Blast_LYK5 <- EcoDomain_Blast_LYK5[1:138,1:3]
+EcoDomain_Blast_CERK1 <- EcoDomain_Blast_CERK1[1:155,1:3]
 
 
 # arabidopsis against all eco domain hits
-Blast_arabidopsis_eco <- rbind(EcoDomain_Blast_LYK5[1:97,], EcoDomain_Blast_CERK1[1:155,])
-colnames(Blast_arabidopsis_eco) <- c('Query',"Hit","Identity", "Length", "Evalue", "Query Cover")
+Blast_arabidopsis_eco <- rbind(EcoDomain_Blast_LYK5[1:102,], EcoDomain_Blast_CERK1[1:119,])
+colnames(Blast_arabidopsis_eco) <- c('Query',"Hit","Identity")
 
 
 # citrus against citris eco domain hits
-Blast_citrus_eco <-  rbind(cbind(EcoDomain_Blast_LYK5[98:124,],"Gene" = rep("LYK5",nrow(EcoDomain_Blast_LYK5[98:124,]))), 
-                           cbind(EcoDomain_Blast_CERK1[156:232,],"Gene" = rep("CERK1",nrow(EcoDomain_Blast_CERK1[156:232,]))) 
+Blast_citrus_eco <-  rbind(cbind(EcoDomain_Blast_LYK5[103:138,],
+                                 "Gene" = rep("LYK5", nrow(EcoDomain_Blast_LYK5[103:138,]))
+                                 ), 
+                           cbind(EcoDomain_Blast_CERK1[120:155,],
+                                 "Gene" = rep("CERK1",nrow(EcoDomain_Blast_CERK1[120:155,]))) 
 )
-colnames(Blast_citrus_eco) <- c('Query',"Hit","Identity", "Length", "Evalue", "Query Cover","Gene")
+colnames(Blast_citrus_eco) <- c('Query',"Hit","Identity","Gene")
 
 
 ######################################################################
@@ -138,13 +145,44 @@ colnames(Blast_citrus_eco) <- c('Query',"Hit","Identity", "Length", "Evalue", "Q
 
 level_order <- c('LYK5', 'CERK1') #this vector might be useful for other plots/analyses
 
+
+(ggplot(Blast_citrus_eco,aes(x = factor(Gene, level = level_order), y = Identity)) +   
+  
+  geom_half_boxplot(side = "r", errorbar.draw = FALSE, outlier.color = NA, fill = "grey", center = TRUE) +
+  geom_half_point(side = "l", size = 0.5, alpha = 0.9) +
+  coord_flip() + my_ggplot_theme +
+  ylim(20, 100) +
+  xlab("") +
+  ylab("Percent Identity") +
+  theme(axis.text.y = element_text(color = "black", size = 14),
+        axis.text.x = element_text(color = "black", size = 14))
+  
+)/
+  
+  ggplot(Blast_arabidopsis_eco) + 
+  geom_half_boxplot(aes(x = Query, y = Identity), side = "r", errorbar.draw = FALSE,outlier.color = NA, fill = "grey", center = TRUE) +
+  coord_flip() +
+  xlab("") +
+  ylab("Percent Identity") +
+  ylim(20, 100) +
+  scale_x_discrete(labels= c("At LYK5","At CERK1"))+
+  my_ggplot_theme +
+  geom_half_point(aes(x = Query, y = Identity), side = "l", size = 0.5, alpha = 0.9) +
+    theme(axis.text.y = element_text(color = "black", size = 14),
+        axis.text.x = element_text(color = "black", size = 14))
+
+
+
+
+
+
+############# old version ?
 (ggplot(Blast_citrus_eco,aes(x = factor(Gene, level = level_order), y = Identity)) + 
-    geom_boxplot(fill = "grey", outlier.shape = NA) + 
+    #geom_violin(fill = "grey", scale = "width")+
+    geom_boxplot(color = "grey14", fill = "grey 80", outlier.shape = NA) + 
     geom_quasirandom(method = "pseudorandom", fill = "black", color = "black", size = 0.5, pch = 21, dodge.width = 0.8) +
-    #geom_beeswarm(cex = 3, alpha = 0.5, priority = "density") +
-    #geom_jitter(alpha = 0.2) + 
     coord_flip() + my_ggplot_theme +
-    ylim(30, 100) +
+    ylim(20, 120) +
     xlab("") +
     ylab("") +
     theme(axis.text.y = element_text(color = "black", size = 14),
@@ -156,26 +194,15 @@ level_order <- c('LYK5', 'CERK1') #this vector might be useful for other plots/a
   geom_boxplot(aes(x = Query, y = Identity), inherit.aes = F, fill = "grey", outlier.shape = NA) +
   coord_flip() +
   xlab("") +
-  ylab("Percent Similarity") +
-  ylim(30, 100) +
+  ylab("Percent Identity") +
+  ylim(20, 120) +
   scale_x_discrete(labels= c("At LYK5","At CERK1"))+
   my_ggplot_theme +
   geom_quasirandom(aes(x = Query, y = Identity),
                    method = "pseudorandom", fill = "black", color = "black", size = 0.5, pch = 21, dodge.width = 0.8) +
-  #geom_jitter(aes(x = Query, y = Identity), inherit.aes = F, alpha = 0.2) +
   theme(axis.text.y = element_text(color = "black", size = 14),
         axis.text.x = element_text(color = "black", size = 14),
         axis.title.x = element_text(color = "black", size = 16))
-
-
-
-
-
-
-
-
-
-
 
 
 

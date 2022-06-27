@@ -31,6 +31,7 @@ library(ggbeeswarm)
 # R packages for plotting heatmaps
 library(ComplexHeatmap)
 library(circlize)
+library(magick)
 
 # R packages for plotting and managing tree data
 library(treeio)

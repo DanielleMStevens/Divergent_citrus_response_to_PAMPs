@@ -122,16 +122,19 @@ source("./R_scripts/09_Ecodomain_comparison.R")
 
 
 ##############################################
-# Building and plotting lyk5 and cerk1 phylogenetic trees
+# Building and plotting lyk5, cerk1,CORE phylogenetic trees
 ##############################################
 
-# ran the following commands on the command line 
+# ran the following commands on the command line for LYK5 and CERK1
 # mafft --reorder --thread 12 --maxiterate 1000 --localpair cleaned_LYK5_homologs.fasta  > "LYK5_alignment"
 # trimal -in LYK5_alignment_cleaned_up -out LYK5_alignment_cleaned_up_trimmed -automated1
 # iqtree -s LYK5_alignment -bb 1000 -T AUTO -st AA -v -m MFP -safe
 # run similar command for CERK1 homologs
 
 
+# ran the following commands on the command line for CORE
+#❯ mafft --reorder --maxiterate 1000 CORE_citrus_sequences.fasta > CORE_citrus_sequences_aligned
+#❯ iqtree -s CORE_citrus_sequences_aligned -bb 1000 -T AUTO -st AA -v -m MFP
 
 # parses and plots trees
 source("./R_scripts/10_Protein_tree_plots.R")

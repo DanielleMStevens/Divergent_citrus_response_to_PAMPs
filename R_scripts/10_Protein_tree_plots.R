@@ -75,7 +75,7 @@ p
 #---------- To make final figure:-----------------------------------------------------------------------------------------
 # use export button to export -> don't use pdf then dev off as issues with exporting image with font arise
 # path to save image -> /Final_Figures/LYK5_phylogenetic_tree.pdf
-# save the following image size:width = 5.88, height = 6.4
+# save the following image size:width = 5.88, height = 7.4
 # import pdf into vector based editing software such as inkscpae or adobe illustrator, adjust the bootstrap values
 # to allign with the right internal node. Color citrus tips Red (#), and chnage Q. obata to a dotten line and 
 # bring closer to other tip labels
@@ -98,12 +98,12 @@ for (i in 1:length(CERK1_phylo$tip.label)){
 #plot tree and add bootstrap values
 p2 <-  ggtree(CERK1_phylo, layout = "rectangular", ladderize = T, size = 0.25, linetype = 1, open.angle = 182) %<+% load_CERK1_tipdata +
   geom_treescale(x = 0.7, y = -5, linesize = 1, family = "Arial", offset = 0.9) +
-  xlim(0,2.9) 
+  xlim(0,2.1) 
   #geom_tiplab(size =1) +
   #geom_tiplab(aes(label = Plant_Species), size = 1.2, color = "black", offset = 0.27, linesize = 0.1, align = T, family = "Arial", fontface = 'italic') 
   
 
-p2 <- flip(p2, 180, 179)  %>% flip(216, 181)
+#p2 <- flip(p2, 180, 179)  %>% flip(216, 181)
 
 # need to make data table to map bootstrap values onto tree
 d <- p2$data
@@ -114,7 +114,7 @@ d <- d[d$label > 90,]
 p2 <- p2 +
   geom_nodepoint(data=d, aes(label=label), shape = 21, size = 1, color = "black", fill = "grey35") +
   geom_tippoint(aes(color = Designation), size = 1.2,  show.legend = FALSE) + 
-  geom_tiplab(aes(label = Plant_Species), size = 1.2, color = "black", offset = 0.27, linesize = 0.1, align = T, family = "Arial", fontface = 'italic') +
+  geom_tiplab(aes(label = Plant_Species), size = 1.5, color = "black", offset = 0.24, linesize = 0.1, align = T, family = "Arial", fontface = 'italic') +
   scale_color_manual(values = c("#7570B3","#66A61E")) 
 
 p2 <- p2 + new_scale_fill() 
@@ -134,11 +134,37 @@ p2 <-gheatmap(p2, CERK1_lysM_domains_reshaped[,2:4], width = 0.15, colnames_angl
 
 p2
 
+##############################################
+# CORE gene phylogeny - Bottom Figure 5
+##############################################
 
 
+CORE_Citrus_phylo <- read.tree("./Protein_Trees/CORE_citrus_tree/CORE_citrus_sequences_aligned.treefile")
+CORE_Citrus_phylo <- phangorn::midpoint(CORE_Citrus_phylo, node.labels='label')
+
+for (i in 1:length(CORE_Citrus_phylo$tip.label)){
+  CORE_Citrus_phylo$tip.label[[i]] <- strsplit(CORE_Citrus_phylo$tip.label[[i]], "|", fixed = T )[[1]][1]
+}
 
 
+#plot tree and add bootstrap values
+p3 <- ggtree(CORE_Citrus_phylo, layout = "rectangular", ladderize = T, size = 0.35, linetype = 1) +
+  geom_treescale(x = 0.7, y = -3, linesize = 1, family = "Arial", offset = 0.3) +
+  geom_tiplab(size = 3, color = "black",  align = F, family = "Arial", fontface = 'italic') +
+  xlim(0,2) 
 
+
+# need to make data table to map bootstrap values onto tree
+d <- p3$data
+d <- d[!d$isTip,]
+d$label <- as.numeric(d$label)
+d <- d[d$label > 99,]
+
+p3 <- p3 +
+  geom_nodepoint(data=d, aes(label=label), shape = 21, size = 1, color = "black", fill = "grey35") 
+
+
+p3
 
 
 
