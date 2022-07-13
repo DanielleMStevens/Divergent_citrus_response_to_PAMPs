@@ -1,7 +1,7 @@
 #-----------------------------------------------------------------------------------------------
 # Coaker Lab - Plant Pathology Department UC Davis
 # Author: Danielle M. Stevens
-# Last Updated: 4/15/2020
+# Last Updated: 07/13/2022
 # Script Purpose: Master Script Controlling all Subscripts
 # Inputs Necessary: n/a
 # Outputs: n/a
@@ -141,9 +141,6 @@ source("./R_scripts/10_Protein_tree_plots.R")
 
 
 
-
-
-####################################################
+# --------------------------------------------------------------------------------------------------------------------
 # NOTE: If you have issues loading packages, I reccomend restarting R. This fixed the issues most times in my experience
-#####################################################
 

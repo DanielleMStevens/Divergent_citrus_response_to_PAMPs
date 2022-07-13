@@ -1,7 +1,7 @@
 #-----------------------------------------------------------------------------------------------
 # Coaker Lab - Plant Pathology Department UC Davis
 # Author: Danielle M. Stevens
-# Last Updated: 03/26/2022
+# Last Updated: 07/13/2022
 # Script Purpose: Plotting ROS data from divergent cirtus responding to different PAMPS
 # Inputs Necessary: Summary_of_PAMP_response.xlsx file from Raw_ROS_files folder
 # Outputs: N/A, Leads to cleaned up data for plotting 
@@ -42,17 +42,17 @@ disease_index[is.na(disease_index)] <- 'N/A'
 
 #organize raw data
 filtered_avg_PAMP_response$`Sub-family` <- as.factor(filtered_avg_PAMP_response$`Sub-family`)
-filtered_avg_PAMP_response$Tribe <- as.factor(filtered_avg_PAMP_response$Tribe)
+filtered_avg_PAMP_response$`Sub-tribe` <- as.factor(filtered_avg_PAMP_response$`Sub-tribe`)
 filtered_avg_PAMP_response <- filtered_avg_PAMP_response[order(filtered_avg_PAMP_response$`Sub-family`,
-                                                               filtered_avg_PAMP_response$Tribe, 
+                                                               filtered_avg_PAMP_response$`Sub-tribe`, 
                                                                decreasing = T),]
 
 
 #organize alterante data
 alternate_maping_data$`Sub-family` <- as.factor(alternate_maping_data$`Sub-family`)
-alternate_maping_data$Tribe <- as.factor(alternate_maping_data$Tribe)
+alternate_maping_data$`Sub-tribe` <- as.factor(alternate_maping_data$`Sub-tribe`)
 alternate_maping_data <- alternate_maping_data[order(alternate_maping_data$`Sub-family`,
-                                                     alternate_maping_data$Tribe,
+                                                     alternate_maping_data$`Sub-tribe`,
                                                      decreasing = T),]
 
 ######################################################################
@@ -61,18 +61,32 @@ alternate_maping_data <- alternate_maping_data[order(alternate_maping_data$`Sub-
 
 ########## subset raw data
 # Break up by sub-family
-Toddalioideae <- subset(filtered_avg_PAMP_response, `Sub-family` == "Toddalioideae")
+Zanthoxyloideae <- subset(filtered_avg_PAMP_response, `Sub-family` == "Zanthoxyloideae")
 Aurantioideae <- subset(filtered_avg_PAMP_response, `Sub-family` == "Aurantioideae")
 
 
 # Break up by tribe for Aurantioideae Subfamily
-Triphasiinae<- subset(filtered_avg_PAMP_response, Tribe == "Triphasiinae")
-Micromelinae <- subset(filtered_avg_PAMP_response, Tribe == "Micromelinae")
-Merrilliinae <- subset(filtered_avg_PAMP_response, Tribe == "Merrilliinae")
-Clauseninae <- subset(filtered_avg_PAMP_response, Tribe == "Clauseninae")
-Citrinae <- subset(filtered_avg_PAMP_response, Tribe == "Citrinae")
-Balsamocitrinae <- subset(filtered_avg_PAMP_response, Tribe == "Balsamocitrinae")
+Triphasiinae<- subset(filtered_avg_PAMP_response, `Sub-tribe` == "Triphasiinae")
+Micromelinae <- subset(filtered_avg_PAMP_response, `Sub-tribe` == "Micromelinae")
+Merrilliinae <- subset(filtered_avg_PAMP_response, `Sub-tribe` == "Merrilliinae")
+Clauseninae <- subset(filtered_avg_PAMP_response, `Sub-tribe` == "Clauseninae")
+Citrinae <- subset(filtered_avg_PAMP_response, `Sub-tribe` == "Citrinae")
+Balsamocitrinae <- subset(filtered_avg_PAMP_response, `Sub-tribe` == "Balsamocitrinae")
 
+
+########## subset raw data
+# Break up by sub-family
+Zanthoxyloideae_alt <- subset(alternate_maping_data, `Sub-family` == "Zanthoxyloideae")
+Aurantioideae_alt <- subset(alternate_maping_data, `Sub-family` == "Aurantioideae")
+
+
+# Break up by tribe for Aurantioideae Subfamily
+Triphasiinae_alt<- subset(alternate_maping_data, `Sub-tribe` == "Triphasiinae")
+Micromelinae_alt <- subset(alternate_maping_data, `Sub-tribe` == "Micromelinae")
+Merrilliinae_alt <- subset(alternate_maping_data, `Sub-tribe` == "Merrilliinae")
+Clauseninae_alt <- subset(alternate_maping_data, `Sub-tribe` == "Clauseninae")
+Citrinae_alt <- subset(alternate_maping_data, `Sub-tribe` == "Citrinae")
+Balsamocitrinae_alt <- subset(alternate_maping_data, `Sub-tribe` == "Balsamocitrinae")
 
 
 ######################################################################
@@ -80,7 +94,7 @@ Balsamocitrinae <- subset(filtered_avg_PAMP_response, Tribe == "Balsamocitrinae"
 ######################################################################
 
 #reorder raw data
-Toddalioideae <- Toddalioideae[str_order(Toddalioideae$`Botanical name`),]
+Zanthoxyloideae <- Zanthoxyloideae[str_order(Zanthoxyloideae$`Botanical name`),]
 Triphasiinae <- Triphasiinae[str_order(Triphasiinae$`Botanical name`),]
 Micromelinae <- Micromelinae[str_order(Micromelinae$`Botanical name`),]
 Merrilliinae <- Merrilliinae[str_order(Merrilliinae$`Botanical name`),]
@@ -89,7 +103,7 @@ Citrinae <- Citrinae[str_order(Citrinae$`Botanical name`),]
 Balsamocitrinae <- Balsamocitrinae[str_order(Balsamocitrinae$`Botanical name`),]
 
 #reorder alternate data
-Toddalioideae_alt <- Toddalioideae_alt[str_order(Toddalioideae_alt$`Botanical name`),]
+Zanthoxyloideae_alt <- Zanthoxyloideae_alt[str_order(Zanthoxyloideae_alt$`Botanical name`),]
 Triphasiinae_alt <- Triphasiinae_alt[str_order(Triphasiinae_alt$`Botanical name`),]
 Micromelinae_alt <- Micromelinae_alt[str_order(Micromelinae_alt$`Botanical name`),]
 Merrilliinae_alt <- Merrilliinae_alt[str_order(Merrilliinae_alt$`Botanical name`),]
@@ -102,14 +116,14 @@ Balsamocitrinae_alt <- Balsamocitrinae_alt[str_order(Balsamocitrinae_alt$`Botani
 ######################################################################
 
 #push back together raw data
-filtered_avg_PAMP_response <- rbind(Toddalioideae, Balsamocitrinae, Citrinae,
+filtered_avg_PAMP_response <- rbind(Zanthoxyloideae, Balsamocitrinae, Citrinae,
                                     Clauseninae, Merrilliinae, Micromelinae, Triphasiinae)
 
 melted_filtered_avg_PAMP_responses <- as.matrix(filtered_avg_PAMP_response[,5:8])
 
 
 #push back together alternate data
-alternate_maping_data <- rbind(Toddalioideae_alt, Balsamocitrinae_alt, Citrinae_alt, 
+alternate_maping_data <- rbind(Zanthoxyloideae_alt, Balsamocitrinae_alt, Citrinae_alt, 
                                Clauseninae_alt, Merrilliinae_alt, Micromelinae_alt, Triphasiinae_alt)
 
 

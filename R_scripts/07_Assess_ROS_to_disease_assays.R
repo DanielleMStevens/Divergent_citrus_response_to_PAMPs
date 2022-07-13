@@ -1,7 +1,7 @@
 #-----------------------------------------------------------------------------------------------
 # Coaker Lab - Plant Pathology Department UC Davis
 # Author: Danielle M. Stevens
-# Last Updated: 4/15/2020
+# Last Updated: 07/13/2022
 # Script Purpose: Plotting ROS data from divergent cirtus responding to different PAMPS
 # Inputs Necessary: 
 # Outputs: 
@@ -87,6 +87,12 @@ correlation_curves <- function(df_in){
 
 
 
+
+
+
+
+
+
 ############################################################
 #Plot figures (old ignore)
 ############################################################
@@ -114,20 +120,3 @@ dev.off()
 correlation_curves(disease_subset_RLUs) + facet_wrap(Botanical_Name ~ .)
 
 
-
-
-
-
-
-
-
-#############
-# Ensure reproducibility by setting random number seed
-set.seed(123) 
-# 
-x <- rnorm(50,mean=100,sd=20)
-# y = 0.8 * x + noise
-y <- 0.8 * x + rnorm(50,mean=0,sd=10)
-
-#combine x and y into a single data frame for easy use:
-data <- data.frame(x,y)

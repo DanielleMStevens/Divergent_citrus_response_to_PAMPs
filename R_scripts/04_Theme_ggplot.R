@@ -1,7 +1,7 @@
 #-----------------------------------------------------------------------------------------------
 # Coaker Lab - Plant Pathology Department UC Davis
 # Author: Danielle M. Stevens
-# Last Updated: 4/20/2020
+# Last Updated: 07/13/2022
 # Script Purpose: Hold information of style of ggplots 
 # Inputs Necessary: n/a
 # Outputs: n/a

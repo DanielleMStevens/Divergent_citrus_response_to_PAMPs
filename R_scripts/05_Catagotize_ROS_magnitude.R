@@ -1,22 +1,22 @@
 #-----------------------------------------------------------------------------------------------
 # Coaker Lab - Plant Pathology Department UC Davis
 # Author: Danielle M. Stevens
-# Last Updated: 4/15/2020
-# Script Purpose: Plotting ROS data from divergent cirtus responding to different PAMPS
-# Inputs Necessary: 
-# Outputs: 
+# Last Updated: 07/13/2022
+# Script Purpose: Plotting ROS data from diverse cirtus to catagotize immune response to different MAMPs
+# Inputs Necessary: Processed data from 02_Process_PAMP_responses.R
+# Outputs: Figure 2A
 #-----------------------------------------------------------------------------------------------
 
 
 ############################################################
-# Plot figures - Figure 2A?
+# Plot figures - Figure 2A
 ############################################################
 
-colnames(filtered_avg_PAMP_response) <- c("Botanical name (CRC numbers in parenthesis)","Sub-family","Tribe","Common name",
+colnames(filtered_avg_PAMP_response) <- c("Botanical name (CRC numbers in parenthesis)","Sub-family","Sub-tribe","Common name",
                                           "Chitin","flg22","csp22","CLas csp22")
 
 # reshape data for plotting ros to restablish high, medium, and low
-ros_strength_cutoff <- reshape2::melt(filtered_avg_PAMP_response, idvar = c("Botanical name (CRC numbers in parenthesis)","Tribe"))
+ros_strength_cutoff <- reshape2::melt(filtered_avg_PAMP_response, idvar = c("Botanical name (CRC numbers in parenthesis)","Sub-tribe"))
 
 #remove clas csp22 data from this analysis
 ros_strength_cutoff <- subset(ros_strength_cutoff, ros_strength_cutoff$variable != "CLas csp22")
@@ -31,12 +31,6 @@ quartile_comparisons <- cbind(quartile_comparisons,
                               data.frame("csp22" = quantile(subset(ros_strength_cutoff, ros_strength_cutoff$variable == "csp22")[[6]]))
                               )
 
-# weird error can't fix
-#quartile_comparisons <- ros_strength_cutoff %>% group_by(variable) %>% summarize("0%" = quantile(value, 0),
-#                                                                                 "25%" = quantile(value, 0.25),
-#                                                                                "50%" = quantile(value, 0.5),
-#                                                                                 "75%" = quantile(value, 0.75),
-#                                                                                 "100%" = quantile(value, 1))
 
 
 # labeled examples for cuttoffs - chitin
@@ -44,7 +38,7 @@ examples_chitin <- subset(ros_strength_cutoff, ros_strength_cutoff$variable == "
 examples_chitin <- examples_chitin[grepl(paste("Trifoliate","Chevalier",sep="|"), examples_chitin$`Common name`),]
 
 examples_flg22 <- subset(ros_strength_cutoff, ros_strength_cutoff$variable == "flg22") 
-examples_flg22 <- examples_flg22[examples_flg22$`Common name` %in% c("Tango mandarin", "Swamp orange","King tangor"),]
+examples_flg22 <- examples_flg22[examples_flg22$`Common name` %in% c("'Tango' mandarin", "Swamp orange","'King' tangor"),]
 
 examples_csp22 <- subset(ros_strength_cutoff, ros_strength_cutoff$variable == "csp22") 
 examples_csp22 <- examples_csp22[examples_csp22$`Common name` %in% c("Sydney hybrid","Horsewood"),]
@@ -62,9 +56,9 @@ ros_strength_cutoff$variable <- factor(ros_strength_cutoff$variable, levels = c(
 # Plot cut-off plot for Figure 2
 ggplot(ros_strength_cutoff, aes(x = variable, y = value)) +
   
-  geom_quasirandom(aes(fill = Tribe), size = 2.2, shape = 21, width = 0.2, stroke = 0.5, colour = "grey18") +
+  geom_quasirandom(aes(fill = `Sub-tribe`), size = 2.2, shape = 21, width = 0.2, stroke = 0.5, colour = "grey18") +
   
-  geom_label_repel(data = examples, aes(label = `Common name`, color = Tribe),
+  geom_label_repel(data = examples, aes(label = `Common name`, color = `Sub-tribe`),
                    hjust=0, box.padding = unit(0.25, "lines"), segment.color="grey18",
                    size=4, segment.size=0.6, nudge_x=0.4, nudge_y = 0.15, direction="y") +
   
@@ -110,6 +104,14 @@ ggplot(ros_strength_cutoff, aes(x = variable, y = value)) +
 
 
 
+
+
+# weird error can't fix
+#quartile_comparisons <- ros_strength_cutoff %>% group_by(variable) %>% summarize("0%" = quantile(value, 0),
+#                                                                                 "25%" = quantile(value, 0.25),
+#                                                                                "50%" = quantile(value, 0.5),
+#                                                                                 "75%" = quantile(value, 0.75),
+#                                                                                 "100%" = quantile(value, 1))
 
 
 

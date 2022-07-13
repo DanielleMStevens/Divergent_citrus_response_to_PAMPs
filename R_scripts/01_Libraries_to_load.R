@@ -1,8 +1,8 @@
 #-----------------------------------------------------------------------------------------------
 # Coaker Lab - Plant Pathology Department UC Davis
 # Author: Danielle M. Stevens
-# Last Updated: 03/26/2022
-# Script Purpose: Loading Libraries for Processing data
+# Last Updated: 07/13/2022
+# Script Purpose: Loading Libraries for Processing data + general functions used
 # Inputs Necessary: N/A
 # Outputs: N/A
 #-----------------------------------------------------------------------------------------------
@@ -31,7 +31,7 @@ library(ggbeeswarm)
 # R packages for plotting heatmaps
 library(ComplexHeatmap)
 library(circlize)
-library(magick)
+#library(magick) broken?
 
 # R packages for plotting and managing tree data
 library(treeio)
