@@ -4,7 +4,7 @@ Jessica Trinh<sup>1\*</sup>, Tianrun Li<sup>1\*</sup>, Jessica Franco<sup>1\*</s
 
 
 <sup>1</sup>Department of Plant Pathology, University of California, Davis, USA <br />
-<sup>2</sup> Department of Botany and Plant Sciences, University of California, Riverside, CA, USA
+<sup>2</sup> Department of Botany and Plant Sciences, University of California, Riverside, CA, US A<br />
 <sup>3</sup>Integrative Genetics and Genomics Graduate Program, University of California, Davis, USA <br />
 
 \# Corresponding author <br />
@@ -13,7 +13,9 @@ Jessica Trinh<sup>1\*</sup>, Tianrun Li<sup>1\*</sup>, Jessica Franco<sup>1\*</s
 
 -----------------------
 
-### Purpose: The scripts in this repository are for processing and ploting ROS data collected from diverse citrus species and relative after treatment with different MAMPs and mining, analyzing, and plotting chitin perceving LYK5 and CERK1 homologs. 
+### Purpose: 
+
+The scripts in this repository are for processing and ploting ROS data collected from diverse citrus species and relative after treatment with different MAMPs and mining, analyzing, and plotting chitin perceving LYK5 and CERK1 homologs. 
 
 
 There is one main script that controls several scripts in this repository. To run each script, open Master_Script.R and run through each script (numbered 01 through 10) as well as the command line operations. 
