@@ -1,10 +1,10 @@
 #-----------------------------------------------------------------------------------------------
 # Coaker Lab - Plant Pathology Department UC Davis
 # Author: Danielle M. Stevens
-# Last Updated: 06/21/2022
-# Script Purpose: Loading Libraries for Processing data
-# Inputs Necessary: tree files from iqtree run
-# Outputs: phylogenetic trees of receptors LYK5 and CERK1
+# Last Updated: 07/13/2022
+# Script Purpose: Determing if LYK5, CERK1 homologs are closest to At LYK5, CERK1 or another LYK
+# Inputs Necessary: All-by-all blast data
+# Outputs: Filtered receptor list for LYK5 and CERK1 to run downstream analyses
 #-----------------------------------------------------------------------------------------------
 
 

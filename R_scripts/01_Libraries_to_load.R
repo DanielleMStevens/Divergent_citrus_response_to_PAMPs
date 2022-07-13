@@ -54,6 +54,18 @@ dss2df <- function(dss){
   return(data.frame(width = BiocGenerics::width(dss), names = names(dss), seq = as.character(dss), stringsAsFactors = FALSE))
 }
 
+######################################################################
+#function to adjust size - adjust size in plot plane 
+######################################################################
+
+plot_adjust_size <- function(desired_dpi){
+  orginal_width <- dev.size('px')[1]
+  orginal_height <- dev.size('px')[2]
+  
+  adjusted_width <- (orginal_width*desired_dpi)/72
+  adjusted_height <- (orginal_height*desired_dpi)/72
+  return(list(adjusted_width, adjusted_height))
+}
 
 # NOTE: I have had issues sometimes loading the complex heatmap package (not sure why), 
 # Try one of the many ways to download the package and if still running into troubles,

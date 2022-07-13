@@ -1,10 +1,10 @@
 #-----------------------------------------------------------------------------------------------
 # Coaker Lab - Plant Pathology Department UC Davis
 # Author: Danielle M. Stevens
-# Last Updated: 06/21/2022
-# Script Purpose: Loading Libraries for Processing data
+# Last Updated: 07/13/2022
+# Script Purpose: Loading processed receptor homolog sequences and comparing their LysM domains
 # Inputs Necessary: tree files from iqtree run
-# Outputs: phylogenetic trees of receptors LYK5 and CERK1
+# Outputs: Plots for ectodomain/LysM comparisons
 #-----------------------------------------------------------------------------------------------
 
 

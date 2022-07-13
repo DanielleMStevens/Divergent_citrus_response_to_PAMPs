@@ -3,7 +3,7 @@
 # Author: Danielle M. Stevens
 # Last Updated: 07/13/2022
 # Script Purpose: Plotting ROS data from divergent cirtus responding to different PAMPS
-# Inputs Necessary: 
+# Inputs Necessary: need to fix
 # Outputs: 
 #-----------------------------------------------------------------------------------------------
 
@@ -26,18 +26,6 @@
 #row.names(melted_filtered_avg_PAMP_responses) <- row_names_to_apply
 
 
-######################################################################
-#function to adjust size 
-######################################################################
-# adjust size in plot plane 
-plot_adjust_size <- function(desired_dpi){
-  orginal_width <- dev.size('px')[1]
-  orginal_height <- dev.size('px')[2]
-  
-  adjusted_width <- (orginal_width*desired_dpi)/72
-  adjusted_height <- (orginal_height*desired_dpi)/72
-  return(list(adjusted_width, adjusted_height))
-}
 
 ######################################################################
 #subset CLas data 
@@ -49,18 +37,32 @@ disease_index <- disease_index[order(disease_index$`Disease category`, decreasin
 disease_index$`Disease category` <- as.numeric(disease_index$`Disease category`)
 
 
-disease_subset_RLUs <- melted_filtered_avg_PAMP_responses[row.names(melted_filtered_avg_PAMP_responses) %in% disease_index$`Botanical name`,]
-disease_subset_RLUs <- disease_subset_RLUs[disease_index$`Botanical name`,]
+disease_subset_RLUs <- melted_filtered_avg_PAMP_responses[rownames(melted_filtered_avg_PAMP_responses) %in% disease_index$`Common name`,]
+disease_subset_RLUs <- disease_subset_RLUs[disease_index$`Common name`,]
 disease_subset_RLUs <- as.data.frame(disease_subset_RLUs, stringsAsFactors = F)
 disease_subset_RLUs <- cbind(disease_subset_RLUs, as.character(rownames(disease_subset_RLUs)))
 
-rownames(disease_subset_RLUs) <- NULL
-disease_subset_RLUs <- cbind(disease_subset_RLUs, disease_index$`Disease category`, disease_index$Tribe)
-colnames(disease_subset_RLUs) <- c("Chitin","Flg22","Csp22","CLas csp22","Botanical_Name","Disease_category","Tribe")
-disease_subset_RLUs <- disease_subset_RLUs[,c(5,1,2,3,4,6,7)]
+#rownames(disease_subset_RLUs) <- NULL
+disease_subset_RLUs <- cbind(disease_subset_RLUs, disease_index$`Disease category`, disease_index$`Sub-tribe`)
+colnames(disease_subset_RLUs) <- c("Chitin","Flg22","Csp22","CLas csp22","Common Name","Disease_category","Sub-tribe`")
+#disease_subset_RLUs <- disease_subset_RLUs[,c(5,1,2,3,4,6,7)]
+#disease_subset_RLUs <- reshape2::melt(disease_subset_RLUs, id = c("Common Name","Sub-tribe`","Disease_category"))
 
 
-disease_subset_RLUs <- reshape2::melt(disease_subset_RLUs, id = c("Botanical_Name","Tribe","Disease_category"))
+
+
+
+
+
+ComplexHeatmap::Heatmap(as.matrix(disease_subset_RLUs[,c(1,2,3,4)]))
+
+
+
+
+
+
+
+
 
 
 ############################################################
