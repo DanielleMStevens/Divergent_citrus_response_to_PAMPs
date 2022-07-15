@@ -121,23 +121,24 @@ EcoDomain_Blast_LYK5 <- xlsx::read.xlsx(file = "./Protein_Trees/03_Ectodomain_Co
 EcoDomain_Blast_CERK1 <- xlsx::read.xlsx(file = "./Protein_Trees/03_Ectodomain_Comparison/CERK1_eco_all_hits-2.xlsx", sheetIndex = 1, header = TRUE)
 
 # weird issue need to remove NAs
-EcoDomain_Blast_LYK5 <- EcoDomain_Blast_LYK5[1:139,1:3]
+EcoDomain_Blast_LYK5 <- EcoDomain_Blast_LYK5[1:148,1:3]
 EcoDomain_Blast_CERK1 <- EcoDomain_Blast_CERK1[1:155,1:3]
 
 
 # arabidopsis against all eco domain hits
 Blast_arabidopsis_eco <- rbind(EcoDomain_Blast_LYK5[1:103,], EcoDomain_Blast_CERK1[1:119,])
-colnames(Blast_arabidopsis_eco) <- c('Query',"Hit","Identity")
+colnames(Blast_arabidopsis_eco) <- c('Query',"Hit","Similarity")
 
 
 # citrus against citris eco domain hits
-Blast_citrus_eco <-  rbind(cbind(EcoDomain_Blast_LYK5[104:139,],
-                                 "Gene" = rep("LYK5", nrow(EcoDomain_Blast_LYK5[103:138,]))
+Blast_citrus_eco <-  rbind(cbind(EcoDomain_Blast_LYK5[104:148,],
+                                 "Gene" = rep("LYK5", nrow(EcoDomain_Blast_LYK5[104:148,]))
                                  ), 
                            cbind(EcoDomain_Blast_CERK1[120:155,],
                                  "Gene" = rep("CERK1",nrow(EcoDomain_Blast_CERK1[120:155,]))) 
 )
-colnames(Blast_citrus_eco) <- c('Query',"Hit","Identity","Gene")
+colnames(Blast_citrus_eco) <- c('Query',"Hit","Similarity","Gene")
+Blast_citrus_eco$Gene <- as.factor(Blast_citrus_eco$Gene)
 
 
 ######################################################################
@@ -147,7 +148,7 @@ colnames(Blast_citrus_eco) <- c('Query',"Hit","Identity","Gene")
 level_order <- c('LYK5', 'CERK1') #this vector might be useful for other plots/analyses
 
 
-(ggplot(Blast_citrus_eco,aes(x = factor(Gene, level = level_order), y = Identity)) +   
+(ggplot(Blast_citrus_eco, aes(x = factor(Gene, level = level_order), y = Similarity)) +   
   
   geom_half_boxplot(side = "r", errorbar.draw = FALSE, outlier.color = NA, fill = "grey", center = TRUE) +
   geom_half_point(side = "l", size = 0.5, alpha = 0.9) +
@@ -161,14 +162,14 @@ level_order <- c('LYK5', 'CERK1') #this vector might be useful for other plots/a
 )/
   
   ggplot(Blast_arabidopsis_eco) + 
-  geom_half_boxplot(aes(x = Query, y = Identity), side = "r", errorbar.draw = FALSE,outlier.color = NA, fill = "grey", center = TRUE) +
+  geom_half_boxplot(aes(x = Query, y = Similarity), side = "r", errorbar.draw = FALSE,outlier.color = NA, fill = "grey", center = TRUE) +
   coord_flip() +
   xlab("") +
   ylab("Percent Identity") +
   ylim(20, 100) +
   scale_x_discrete(labels= c("At LYK5","At CERK1"))+
   my_ggplot_theme +
-  geom_half_point(aes(x = Query, y = Identity), side = "l", size = 0.5, alpha = 0.9) +
+  geom_half_point(aes(x = Query, y = Similarity), side = "l", size = 0.5, alpha = 0.9) +
     theme(axis.text.y = element_text(color = "black", size = 14),
         axis.text.x = element_text(color = "black", size = 14))
 
