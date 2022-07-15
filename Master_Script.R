@@ -122,7 +122,7 @@ source("./R_scripts/09_Ecodomain_comparison.R")
 
 
 ##############################################
-# Building and plotting lyk5, cerk1,CORE phylogenetic trees
+# Building and plotting lyk5, cerk1, and CORE phylogenetic trees
 ##############################################
 
 # ran the following commands on the command line for LYK5 and CERK1

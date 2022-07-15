@@ -49,78 +49,65 @@ colnames(disease_subset_RLUs) <- c("Chitin","Flg22","Csp22","CLas csp22","Common
 #disease_subset_RLUs <- reshape2::melt(disease_subset_RLUs, id = c("Common Name","Sub-tribe`","Disease_category"))
 
 
+#determine coloring - row annotation
+
+colors_tribe <- c("Zanthoxyloideae" = "#E3DECA", "Citreae" = "#273253", "Clauseneae" = "#F7D57C")
+
+colors_subtribe <- c("Balsamocitrinae" = "#1F6768", "Citrinae" = "#A8C653", "Clauseninae" = "#E45D50",
+                     "Merrilliinae" = "#544275", "Micromelinae" = "#CAA2DD", "Triphasiinae" = "#4EAEDF",
+                     "Citreae" = "#273253", "Clauseneae" = "#F7D57C", "Zanthoxyloideae" = "#E3DECA")
 
 
-function(matrix_in, df_in){
-  
-  
-  #determine coloring - row annotation
-  
-  colors_subfamily <- c("Toddalioideae" = "#FBBE4E", "Rutoideae" = "#E3DECA", "Aurantioideae" = "#273253")
-  
-  colors_tribe <- c("Balsamocitrinae" = "#1F6768", "Citrinae" = "#A8C653", "Clauseninae" = "#E45D50",
-                    "Merrilliinae" = "#544275", "Micromelinae" = "#CAA2DD", "Triphasiinae" = "#4EAEDF",
-                    "Toddalioideae" = "#FBBE4E", "Rutoideae" = "#E3DECA", "Aurantioideae" = "#273253")
-  
-  
-  colors_subfamily_filtered <- colors_subfamily[names(colors_subfamily) %in% as.character(unique(df_in$`Sub-family`))]
-  colors_tribe_filtered <- colors_tribe[names(colors_tribe) %in% as.character(unique(df_in$Tribe))]
-  
-  Taxon_df <- df_in[,2:3]
-  Taxon_df$`Sub-family` <- as.character(Taxon_df$`Sub-family`)
-  Taxon_df$Tribe <- as.character(Taxon_df$Tribe)
-  
-  row_anno <- rowAnnotation(df = Taxon_df,
-                            border = TRUE,
-                            show_legend =c(FALSE,FALSE),
-                            col = list(`Sub-family` = colors_subfamily_filtered,
-                                       Tribe = colors_tribe_filtered))
-  
-  #determine height of image
-  number_of_samples <- nrow(matrix_in)
-  height_of_heatmap <- number_of_samples*0.2
-  if (number_of_samples > 20){
-    height_of_heatmap <- number_of_samples*0.14
-  }
-  
-  #determine width of image
-  max_char_length <<- (max(nchar(row.names(matrix_in)))*0.25)
-  
-  # top annotation based on matrix info of RLUs in
-  ha = HeatmapAnnotation('Avg. Max RLUs' = anno_boxplot(matrix_in), height = unit(3, "cm"))
-  
-  #right annotation 
-  ra = rowAnnotation('Disease Index' = as.numeric(df_in$Disease_category))
-  
-  
-  ht = ComplexHeatmap::Heatmap(matrix_in,
-                               #cluster color modificaiton
-                               col = my_color_scale_breaks,
-                               show_heatmap_legend = c(col = FALSE),
-                               
-                               #column modifications
-                               cluster_columns = F,
-                               cluster_rows = F,
-                               #row_km = 4,
-                               
-                               #row modifications + dendrogram
-                               show_row_names = T,
-                               row_names_gp = gpar(fontsize = 10),
-                               
-                               #annotate Taxnonomy Info
-                               left_annotation = row_anno,
-                               top_annotation = ha,
-                               right_annotation = ra,
-                               
-                               #sizing and border
-                               border = T,
-                               width = unit(1.5, "in"),
-                               height = unit(height_of_heatmap, "in"),
-                               use_raster = TRUE, raster_quality = 2)
-  
-  draw(ht, heatmap_legend_side = "left")
-  
-}
+colors_tribe_filtered <- colors_tribe[names(colors_tribe) %in% as.character(unique(disease_subset_RLUs$Tribe))]
+colors_subtribe_filtered <- colors_subtribe[names(colors_subtribe) %in% as.character(unique(disease_subset_RLUs$`Sub-tribe`))]
+
+Taxon_df <- df_in[,2:3]
+Taxon_df$Tribe <- as.character(Taxon_df$`Sub-family`)
+Taxon_df$Tribe <- as.character(Taxon_df$Tribe)
+
+row_anno <- rowAnnotation(df = Taxon_df,
+                          border = TRUE,
+                          show_legend =c(FALSE,FALSE),
+                          col = list(`Sub-family` = colors_subfamily_filtered,
+                                     Tribe = colors_tribe_filtered))
+
+
+
+# top annotation based on matrix info of RLUs in
+ha = HeatmapAnnotation('Avg. Max RLUs' = anno_boxplot(as.matrix(disease_subset_RLUs[,1:4]), height = unit(3, "cm")))
+
+#right annotation 
+ra = rowAnnotation('Disease Index' = as.numeric(disease_subset_RLUs$Disease_category))
+
+
+ht_d = ComplexHeatmap::Heatmap(as.matrix(disease_subset_RLUs[,1:4]),
+                             #cluster color modificaiton
+                             col = my_color_scale_breaks,
+                             show_heatmap_legend = c(col = FALSE),
+                             
+                             #column modifications
+                             cluster_columns = F,
+                             cluster_rows = F,
+                             #row_km = 4,
+                             
+                             #row modifications + dendrogram
+                             show_row_names = T,
+                             row_names_gp = gpar(fontsize = 10),
+                             
+                             #annotate Taxnonomy Info
+                             #left_annotation = row_anno,
+                             top_annotation = ha,
+                             right_annotation = ra,
+                             
+                             #sizing and border
+                             border = T,
+                             width = unit(1.5, "in"),
+                             height = unit(height_of_heatmap, "in"),
+                             use_raster = TRUE, raster_quality = 2)
+
+draw(ht_d, heatmap_legend_side = "left")
+
+
 
 
 
