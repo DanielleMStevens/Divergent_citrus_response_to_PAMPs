@@ -9,7 +9,7 @@
 
 
 ######################################################################
-#upload raw data 
+# upload raw data 
 ######################################################################
 
 
@@ -35,38 +35,32 @@ disease_index[is.na(disease_index)] <- 'N/A'
 
 
 
-
 ######################################################################
-#organize data for ploting
+# organize data for ploting
 ######################################################################
 
 #organize raw data
-filtered_avg_PAMP_response$`Sub-family` <- as.factor(filtered_avg_PAMP_response$`Sub-family`)
+filtered_avg_PAMP_response$Tribe <- as.factor(filtered_avg_PAMP_response$Tribe)
 filtered_avg_PAMP_response$`Sub-tribe` <- as.factor(filtered_avg_PAMP_response$`Sub-tribe`)
-filtered_avg_PAMP_response <- filtered_avg_PAMP_response[order(filtered_avg_PAMP_response$`Sub-family`,
+filtered_avg_PAMP_response <- filtered_avg_PAMP_response[order(filtered_avg_PAMP_response$Tribe,
                                                                filtered_avg_PAMP_response$`Sub-tribe`, 
                                                                decreasing = T),]
 
 
 #organize alterante data
-alternate_maping_data$`Sub-family` <- as.factor(alternate_maping_data$`Sub-family`)
+alternate_maping_data$Tribe <- as.factor(alternate_maping_data$Tribe)
 alternate_maping_data$`Sub-tribe` <- as.factor(alternate_maping_data$`Sub-tribe`)
-alternate_maping_data <- alternate_maping_data[order(alternate_maping_data$`Sub-family`,
+alternate_maping_data <- alternate_maping_data[order(alternate_maping_data$Tribe,
                                                      alternate_maping_data$`Sub-tribe`,
                                                      decreasing = T),]
 
 ######################################################################
-#need to subset each 'tribe'
+# need to subset each 'tribe'
 ######################################################################
 
-########## subset raw data
-# Break up by sub-family
-Zanthoxyloideae <- subset(filtered_avg_PAMP_response, `Sub-family` == "Zanthoxyloideae")
-Aurantioideae <- subset(filtered_avg_PAMP_response, `Sub-family` == "Aurantioideae")
-
-
-# Break up by tribe for Aurantioideae Subfamily
-Triphasiinae<- subset(filtered_avg_PAMP_response, `Sub-tribe` == "Triphasiinae")
+# Break up by Tribe and Sub-tribe
+Zanthoxyloideae <- subset(filtered_avg_PAMP_response, Tribe == "Zanthoxyloideae")
+Triphasiinae <- subset(filtered_avg_PAMP_response, `Sub-tribe` == "Triphasiinae")
 Micromelinae <- subset(filtered_avg_PAMP_response, `Sub-tribe` == "Micromelinae")
 Merrilliinae <- subset(filtered_avg_PAMP_response, `Sub-tribe` == "Merrilliinae")
 Clauseninae <- subset(filtered_avg_PAMP_response, `Sub-tribe` == "Clauseninae")
@@ -74,13 +68,8 @@ Citrinae <- subset(filtered_avg_PAMP_response, `Sub-tribe` == "Citrinae")
 Balsamocitrinae <- subset(filtered_avg_PAMP_response, `Sub-tribe` == "Balsamocitrinae")
 
 
-########## subset raw data
-# Break up by sub-family
-Zanthoxyloideae_alt <- subset(alternate_maping_data, `Sub-family` == "Zanthoxyloideae")
-Aurantioideae_alt <- subset(alternate_maping_data, `Sub-family` == "Aurantioideae")
-
-
-# Break up by tribe for Aurantioideae Subfamily
+# Break up by Tribe and Sub-tribe
+Zanthoxyloideae_alt <- subset(alternate_maping_data, Tribe == "Zanthoxyloideae")
 Triphasiinae_alt<- subset(alternate_maping_data, `Sub-tribe` == "Triphasiinae")
 Micromelinae_alt <- subset(alternate_maping_data, `Sub-tribe` == "Micromelinae")
 Merrilliinae_alt <- subset(alternate_maping_data, `Sub-tribe` == "Merrilliinae")

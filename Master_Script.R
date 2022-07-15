@@ -92,14 +92,14 @@ source("./R_scripts/08_All_by_all_blast_comparison.R")
 # conda install -c bioconda hmmer 
 # hmmsearch --tblout all_domains_lysM_receptors.txt -E 1e-5 
 # --cpu 6 ./../../../Documents/Mining_MAMPs/Mining_Known_MAMPs/Protein_alignments_and_trees
-# /cold_shock_protein/Hmm_modles/Pfam-A.hmm All_proteins_best_blast_db/All_proteins_combine.fasta
+# /cold_shock_protein/Hmm_modles/Pfam-A.hmm ./01_All_proteins_best_blast_db/All_proteins_combine.fasta
 
 
 # one arroach will be by blastp and one with be based on HMMER using LysM domain modwl
 # blast apprach - run on command line
 # makeblastdb -in lysM_sequences.fasta -dbtype prot -out lysM_blast_db
-# blastp -db ./../LysM_sequences/lysM_blast_db -query ./cleaned_LYK5_homologs.fasta -outfmt 6 -out LYK5_lysM_hits.tsv
-# blastp -db ./../LysM_sequences/lysM_blast_db -query ./cleaned_CERK1_homologs.fasta -outfmt 6 -out CERK1_lysM_hits.tsv
+# blastp -db ./../LysM_sequences/lysM_blast_db -query ./../../04_final_trees/LYK5/cleaned_LYK5_homologs.fasta -outfmt 6 -out LYK5_lysM_hits.tsv
+# blastp -db ./../LysM_sequences/lysM_blast_db -query ./../../iq04_final_trees/CERK1/cleaned_CERK1_homologs.fasta -outfmt 6 -out CERK1_lysM_hits.tsv
 
 # files were moved to Ecodomain_Comparison/blastp
 
@@ -107,9 +107,9 @@ source("./R_scripts/08_All_by_all_blast_comparison.R")
 # 3. Ecodomain comparison.
 ##############################################
 
-# to extract the eco domain for analysis, we can use blastp online to quickly obtain just this sequence.
-# 1. the eco domain both LYK5 and CERK1 can be found in Eco_domains.fasta in the Protein_Trees/Ecodomain_Comparison folder
-# 2. cleaned up homolog files can be download. Aligned sequences can be dowloaded (be use to change max hit number to above 100) into txt file.
+# to extract the eco domain for analysis, we can use blastp online to quickly obtain just this sequence (be use to change max hit number to above 100).
+# 1. the eco domain both LYK5 and CERK1 can be found in Eco_domains.fasta in the Protein_Trees/03_Ecodomain_Comparison folder
+# 2. cleaned up homolog files can be download. Aligned sequences can be dowloaded into txt file.
 # 3. each txt file can be cleaned up using a text editor such as submine with the follow commands.
 #        3a. search (or find)  ; [a-z]{3}\|[a-z]{5}_[0-9]{5}:   ; select Find all  ; select delete
 #        3b. search (or find)  ; [0-9]{2}-[0-9]{3}   ; select Find all ; commands X  ; command right arrow key  ; space ; [] ; inside brakes command V
@@ -127,8 +127,8 @@ source("./R_scripts/09_Ecodomain_comparison.R")
 
 # ran the following commands on the command line for LYK5 and CERK1
 # mafft --reorder --thread 12 --maxiterate 1000 --localpair cleaned_LYK5_homologs.fasta  > "LYK5_alignment"
-# trimal -in LYK5_alignment_cleaned_up -out LYK5_alignment_cleaned_up_trimmed -automated1
-# iqtree -s LYK5_alignment -bb 1000 -T AUTO -st AA -v -m MFP -safe
+# trimal -in LYK5_alignment -out LYK5_alignment_trimmed -automated1
+# iqtree -s LYK5_alignment_trimmed -bb 1000 -T AUTO -st AA -v -m MFP -safe
 # run similar command for CERK1 homologs
 
 
@@ -143,4 +143,6 @@ source("./R_scripts/10_Protein_tree_plots.R")
 
 # --------------------------------------------------------------------------------------------------------------------
 # NOTE: If you have issues loading packages, I reccomend restarting R. This fixed the issues most times in my experience
+
+
 

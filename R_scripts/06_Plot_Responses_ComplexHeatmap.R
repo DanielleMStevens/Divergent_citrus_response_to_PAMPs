@@ -43,16 +43,16 @@ my_color_scale_breaks <- circlize::colorRamp2(my_scale_breaks, colors)
 
 ##pull out row names to annotate with
 citrus_realtionship_info <- as.data.frame(filtered_avg_PAMP_response[,2:3], stringsAsFactors = FALSE)
-citrus_realtionship_info$`Sub-family` <- as.character(citrus_realtionship_info$`Sub-family`)
+citrus_realtionship_info$Tribe <- as.character(citrus_realtionship_info$Tribe)
 citrus_realtionship_info$`Sub-tribe` <- as.character(citrus_realtionship_info$`Sub-tribe`)
 row_anno <- rowAnnotation(df = citrus_realtionship_info,
                           gap = unit(1, "mm"),
                           show_legend = FALSE,
-                          col = list(`Sub-family` = c("Zanthoxyloideae" = "#E3DECA", "Aurantioideae" = "#273253"), 
+                          col = list(Tribe = c("Zanthoxyloideae" = "#E3DECA", "Citreae" = "#273253", "Clauseneae" = "#F7D57C"), 
                                      
                                      `Sub-tribe` = c("Balsamocitrinae" = "#1F6768", "Citrinae" = "#A8C653", "Clauseninae" = "#E45D50",
                                                "Merrilliinae" = "#544275", "Micromelinae" = "#CAA2DD", "Triphasiinae" = "#4EAEDF",
-                                               "Aurantioideae" = "#273253", "Zanthoxyloideae" = "#E3DECA")))
+                                               "Citreae" = "#273253", "Clauseneae" = "#F7D57C", "Zanthoxyloideae" = "#E3DECA")))
 
 
 
@@ -83,9 +83,9 @@ ht = ComplexHeatmap::Heatmap(melted_filtered_avg_PAMP_responses[,1:3],
                                
                                row_split = factor(filtered_avg_PAMP_response$`Sub-tribe`,
                                                   levels = c("Zanthoxyloideae",
-                                                           "Balsamocitrinae", "Citrinae",
-                                                            "Clauseninae", "Merrilliinae",
-                                                            "Micromelinae", "Triphasiinae")), #manual row split
+                                                             "Balsamocitrinae", "Citrinae",
+                                                             "Clauseninae", "Merrilliinae",
+                                                             "Micromelinae", "Triphasiinae")), #manual row split
                                cluster_row_slices = F,
                                column_dend_reorder = F,
                                row_dend_reorder = T,
@@ -123,10 +123,10 @@ ht = ComplexHeatmap::Heatmap(melted_filtered_avg_PAMP_responses[,1:3],
   
 lgd_list = list(
     # Sub-family annotation
-    Legend(labels = c("Zanthoxyloideae", "Aurantioideae"), title = "Sub-family", 
+    Legend(labels = c("Zanthoxyloideae", "Citreae", "Clauseneae"), title = "Tribe", 
            border = "black",
            gap = unit(2, "mm"),
-           legend_gp = gpar(fill = c("#E3DECA", "#273253"))),
+           legend_gp = gpar(fill = c("#E3DECA", "#273253", "#F7D57C"))),
     
     # Tribe annotation
     Legend(labels = c("Zanthoxyloideae","Balsamocitrinae", "Citrinae", "Clauseninae",
@@ -198,18 +198,17 @@ csp22_filtered_data <- csp22_filtered_data[rownames(alternate_maping_data),]
 citrus_realtionship_info <- as.data.frame(filtered_avg_PAMP_response[match(rownames(melted_filtered_avg_PAMP_responses), rownames(csp22_filtered_data)),], 
                                           stringsAsFactors = FALSE)
 citrus_realtionship_info <- citrus_realtionship_info[,c(2,3)]
-citrus_realtionship_info$`Sub-family` <- as.character(citrus_realtionship_info$`Sub-family`)
+citrus_realtionship_info$Tribe <- as.character(citrus_realtionship_info$Tribe)
 citrus_realtionship_info$`Sub-tribe` <- as.character(citrus_realtionship_info$`Sub-tribe`)
 
 row_anno <- rowAnnotation(df = citrus_realtionship_info,
                           gap = unit(1, "mm"),
                           show_legend = FALSE,
-                          col = list(`Sub-family` = c("Zanthoxyloideae" = "#E3DECA", "Aurantioideae" = "#273253"), 
+                          col = list(Tribe = c("Zanthoxyloideae" = "#E3DECA", "Citreae" = "#273253", "Clauseneae" = "#F7D57C"), 
                                      
                                      `Sub-tribe` = c("Balsamocitrinae" = "#1F6768", "Citrinae" = "#A8C653", "Clauseninae" = "#E45D50",
                                                      "Merrilliinae" = "#544275", "Micromelinae" = "#CAA2DD", "Triphasiinae" = "#4EAEDF",
-                                                     "Aurantioideae" = "#273253", "Zanthoxyloideae" = "#E3DECA")))
-
+                                                     "Citreae" = "#273253", "Clauseneae" = "#F7D57C", "Zanthoxyloideae" = "#E3DECA")))
 
 
 
@@ -239,7 +238,7 @@ ht2 = ComplexHeatmap::Heatmap(csp22_filtered_data,
                              # modifications to titles and dendrogram
                              row_title = NULL,
                              row_gap = unit(1, "mm"),
-                             row_dend_width = unit(80, "mm"),
+                             row_dend_width = unit(0, "mm"),
                              column_dend_height = unit(0, "mm"),
                              
                              

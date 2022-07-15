@@ -21,7 +21,7 @@ At_lysM_domains <- dss2df(At_lysM_domains)
 #########################################################
 
 # load lysM hits from blast search
-LYK5_lysM_domains <- read.table(file = "./Protein_Trees/02_LysM_Comparison/blastp/LYK5_lysM_hits.tsv", sep = '\t', header = FALSE)
+LYK5_lysM_domains <- read.table(file = "./Protein_Trees/02_LysM_Comparison/blastp/LYK5_lysM_hits2.tsv", sep = '\t', header = FALSE)
 colnames(LYK5_lysM_domains) <- c("Subject","Query","Similarity")
 
 # filter out cerk1 hits and pick best match per lysM domain
@@ -48,7 +48,7 @@ colnames(LYK5_lysM_domains_reshaped) <- c("LysM1","LysM2","LysM3")
 #########################################################
 
 # load lysM hits
-CERK1_lysM_domains <- read.table(file = "./Protein_Trees/02_LysM_Comparison/blastp/CERK1_lysM_hits.tsv", sep = '\t', header = FALSE)
+CERK1_lysM_domains <- read.table(file = "./Protein_Trees/02_LysM_Comparison/blastp/CERK1_lysM_hits2.tsv", sep = '\t', header = FALSE)
 colnames(CERK1_lysM_domains) <- c("Subject","Query","Similarity")
 CERK1_lysM_domains <- CERK1_lysM_domains[!grepl("LYK5", CERK1_lysM_domains$Query),]
 CERK1_lysM_domains <- CERK1_lysM_domains[,1:3] %>% group_by(Subject, Query) %>% filter(Similarity == max(Similarity))
@@ -72,7 +72,8 @@ colnames(CERK1_lysM_domains_reshaped) <- c("LysM1","LysM2","LysM3")
 # imoprt HMMER domain hits and process for lysM occurance on tree
 ######################################################################
 
-domain_of_lysM_proteins <- read.table(file = "./Protein_Trees/02_LysM_Comparison/all_domains_lysM_receptors.txt", header = T)
+domain_of_lysM_proteins <- read.table(file = "./Protein_Trees/02_LysM_Comparison/all_domains_lysM_receptors2.txt", header = T)
+
 colnames(domain_of_lysM_proteins) <- c("Target","Accession","Query Name","Query Accession","E-value","Score","Bias","Domain E-value",
                                        "Domain Score","Domain Bias","Expected","Occurance","Number of Multidomains","Overlap", "Envelops Definied",
                                        "Number of Domains Defined")
@@ -120,17 +121,17 @@ EcoDomain_Blast_LYK5 <- xlsx::read.xlsx(file = "./Protein_Trees/03_Ectodomain_Co
 EcoDomain_Blast_CERK1 <- xlsx::read.xlsx(file = "./Protein_Trees/03_Ectodomain_Comparison/CERK1_eco_all_hits-2.xlsx", sheetIndex = 1, header = TRUE)
 
 # weird issue need to remove NAs
-EcoDomain_Blast_LYK5 <- EcoDomain_Blast_LYK5[1:138,1:3]
+EcoDomain_Blast_LYK5 <- EcoDomain_Blast_LYK5[1:139,1:3]
 EcoDomain_Blast_CERK1 <- EcoDomain_Blast_CERK1[1:155,1:3]
 
 
 # arabidopsis against all eco domain hits
-Blast_arabidopsis_eco <- rbind(EcoDomain_Blast_LYK5[1:102,], EcoDomain_Blast_CERK1[1:119,])
+Blast_arabidopsis_eco <- rbind(EcoDomain_Blast_LYK5[1:103,], EcoDomain_Blast_CERK1[1:119,])
 colnames(Blast_arabidopsis_eco) <- c('Query',"Hit","Identity")
 
 
 # citrus against citris eco domain hits
-Blast_citrus_eco <-  rbind(cbind(EcoDomain_Blast_LYK5[103:138,],
+Blast_citrus_eco <-  rbind(cbind(EcoDomain_Blast_LYK5[104:139,],
                                  "Gene" = rep("LYK5", nrow(EcoDomain_Blast_LYK5[103:138,]))
                                  ), 
                            cbind(EcoDomain_Blast_CERK1[120:155,],

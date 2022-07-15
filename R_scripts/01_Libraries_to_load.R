@@ -27,6 +27,7 @@ library(ggrepel)
 library(scales)
 library(forcats)
 library(ggbeeswarm)
+library(gghalves)
 
 # R packages for plotting heatmaps
 library(ComplexHeatmap)

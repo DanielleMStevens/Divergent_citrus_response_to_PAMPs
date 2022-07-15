@@ -1,6 +1,6 @@
 # Citrus relatives exhibit natural variation in perception and response magnitude to microbial features
 
-Jessica Trinh<sup>1\*</sup>, Tianrun Li<sup>1\*</sup>, Jessica Franco<sup>1\*</sup>, Tania Toruño<sup>1\*</sup>, **Danielle M. Stevens<sup>1,3\*</sup>**, Shree Thapa<sup>1</sup>, Justin Wong<sup>1</sup>, Rebeca Pineda<sup>2</sup>, Emmanuel Ávila de Dios<sup>2</sup>, Tracy L. Kahn<sup>2</sup>, Danelle Seymour<sup>2</sup>, Chandrika Ramadugu<sup>2</sup>, Gitta Coaker\#<sup>1</sup>
+Jessica Trinh<sup>1\*</sup>, Tianrun Li<sup>1\*</sup>, Jessica Franco<sup>1\*</sup>, Tania Toruño<sup>1\*</sup>, **Danielle M. Stevens<sup>1,3\*</sup>**, Shree Thapa<sup>1</sup>, Justin Wong<sup>1</sup>, Rebeca Pineda<sup>2</sup>, Emmanuel Ávila de Dios<sup>2</sup>, Tracy L. Kahn<sup>2</sup>, Danelle K. Seymour<sup>2</sup>, Chandrika Ramadugu<sup>2</sup>, Gitta Coaker\#<sup>1</sup>
 
 
 <sup>1</sup>Department of Plant Pathology, University of California, Davis, USA <br />

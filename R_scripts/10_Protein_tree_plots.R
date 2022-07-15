@@ -24,7 +24,7 @@ load_CERK1_tipdata <- load_CERK1_tipdata[complete.cases(load_CERK1_tipdata),]
 
 
 # load tree file
-LYK5_phylo <- read.tree("./Protein_Trees/LYK5/LYK5_alignment_trimmed.treefile")
+LYK5_phylo <- read.tree("./Protein_Trees/04_final_trees/LYK5/LYK5_alignment_trimmed.treefile")
 LYK5_phylo <- phangorn::midpoint(LYK5_phylo, node.labels = 'label')
 
 # clean up tree tips to map data on to
@@ -87,7 +87,7 @@ p
 ##############################################
 
 
-CERK1_phylo <- read.tree("./Protein_Trees/CERK1/CERK1_alignment_trimmed.treefile")
+CERK1_phylo <- read.tree("./Protein_Trees/04_final_trees/CERK1/CERK1_alignment_trimmed.treefile")
 CERK1_phylo <- phangorn::midpoint(CERK1_phylo, node.labels='label')
 
 for (i in 1:length(CERK1_phylo$tip.label)){
