@@ -117,3 +117,119 @@ ggplot(ros_strength_cutoff, aes(x = variable, y = value)) +
 
 
 
+
+############################################################
+# Plot figures - Supplemental Figure
+############################################################
+
+PAMP_response_individual_values <- as.data.frame(readxl::read_excel("./Raw_ROS_files/Summary_of_PAMP_response.xlsx", sheet = 5, col_names = TRUE), stringsAsFactors = F)
+colnames(PAMP_response_individual_values) <- c("Botanical name","Tribe","Sub-tribe","Common name","Chitin - R1","Chitin - R2",
+                                               "Chitin - R3","Chitin - R4","Chitin - R5","Chitin - R6","Chitin - R7","Chitin - R8",
+                                               "Chitin - R9","Chitin - R10","Chitin - R11",
+                                               "Flg22 - R1","Flg22 - R2","Flg22 - R3","Flg22 - R4",
+                                               "Flg22 - R5","Flg22 - R6","Csp22 - R1","Csp22 - R2",
+                                               "Csp22 - R3","Csp22 - R4","Csp22 - R5","Csp22 - R6",
+                                               "Csp22 - R7","Csp22 - R8","Csp22 - R9","Csp22 - R10")
+
+
+
+#collect row name information annotation - first common name + then botanical name (if no common name)
+row_names_to_apply <- PAMP_response_individual_values$`Common name`
+for (i in 1:length(row_names_to_apply)){
+  if(is.na(row_names_to_apply[i]) == TRUE){
+    row_names_to_apply[i] <- PAMP_response_individual_values$`Botanical name`[i]
+  }
+}
+PAMP_response_individual_values["Row names"] <- row_names_to_apply
+
+
+# reshape data
+PAMP_response_individual_values <- reshape2::melt(PAMP_response_individual_values[,c(2,3,5:32)], id.vars = c("Row names","Tribe","Sub-tribe"))
+PAMP_response_individual_values$variable <- as.character(PAMP_response_individual_values$variable)
+PAMP_response_individual_values$value <- as.numeric(PAMP_response_individual_values$value)
+
+
+# replace R1,2,3... into rep counts on datasheet
+for (i in 1:nrow(PAMP_response_individual_values)){
+  if(grepl("Chitin", PAMP_response_individual_values$variable[i]) == TRUE){
+    PAMP_response_individual_values$variable[i] <- gsub("Chitin - R\\d+","Chitin", PAMP_response_individual_values$variable[i])
+  }
+  if(grepl("Flg22", PAMP_response_individual_values$variable[i]) == TRUE){
+    PAMP_response_individual_values$variable[i] <- gsub("Flg22 - R\\d+", "flg22", PAMP_response_individual_values$variable[i])
+  }
+  if(grepl("Csp22", PAMP_response_individual_values$variable[i]) == TRUE){
+    PAMP_response_individual_values$variable[i] <- gsub("Csp22 - R\\d+", "csp22", PAMP_response_individual_values$variable[i])
+  }
+}
+
+#split each datafrmae
+chitin_individual_values <- subset(PAMP_response_individual_values, PAMP_response_individual_values$variable == "Chitin")
+flg22_individual_values <- subset(PAMP_response_individual_values, PAMP_response_individual_values$variable == "flg22")
+csp22_individual_values <- subset(PAMP_response_individual_values, PAMP_response_individual_values$variable == "csp22")
+
+
+
+# plot as split bar chart
+(ggplot(chitin_individual_values[complete.cases(chitin_individual_values),], 
+        aes (x = reorder(`Row names`, value, FUN = median), y = value, fill = `Sub-tribe`)) + 
+  geom_boxplot(outlier.size = 0, alpha = 0.8) +
+  geom_jitter(alpha = 0.4, size = 0.8) +
+  my_ggplot_theme +
+  scale_y_continuous(trans = scales::pseudo_log_trans(base = 10),
+                     breaks = c(0, 10^(1:6)),
+                     labels = math_format(.x)) +
+  coord_flip() +
+  ggtitle("Chitin") +
+  xlab("") +
+  ylab("Avg. Max RLU") +
+  scale_fill_manual(values = Tribe_colors) +
+  theme(title = element_text(face = "bold", hjust = 0.5, family = "Arial"),
+        axis.text.y = element_text(color = "black", size = 6.5, family = "Arial"),
+        axis.text.x = element_text(color = "black", size = 8, angle = 45, hjust = 1, family = "Arial"),
+        axis.title.x = element_text(color = "black", size = 10, family = "Arial"),
+        panel.grid.major.x = element_line(colour="grey87", size = 0.5),
+        legend.position = "none")) +
+
+(ggplot(flg22_individual_values[complete.cases(flg22_individual_values),], 
+        aes (x = reorder(`Row names`, value, FUN = median), y = value, fill = `Sub-tribe`)) + 
+   geom_boxplot(outlier.size = 0, alpha = 0.8) +
+   geom_jitter(alpha = 0.4, size = 0.8) +
+   my_ggplot_theme +
+   scale_y_continuous(trans = scales::pseudo_log_trans(base = 10),
+                      breaks = c(0, 10^(1:6)),
+                      labels = math_format(.x)) +
+   coord_flip() +
+   ggtitle("flg22") +
+   xlab("") +
+   ylab("Avg. Max RLU") +
+   scale_fill_manual(values = Tribe_colors) +
+   theme(title = element_text(face = "bold", hjust = 0.5, family = "Arial"),
+         axis.text.y = element_text(color = "black", size = 6.5, family = "Arial"),
+         axis.text.x = element_text(color = "black", size = 8, angle = 45, hjust = 1, family = "Arial"),
+         axis.title.x = element_text(color = "black", size = 10, family = "Arial"),
+         panel.grid.major.x = element_line(colour="grey87", size = 0.5),
+         legend.position = "none")) +
+   
+(ggplot(csp22_individual_values[complete.cases(csp22_individual_values),], 
+        aes (x = reorder(`Row names`, value, FUN = median), y = value, fill = `Sub-tribe`)) + 
+    geom_boxplot(outlier.size = 0, alpha = 0.8) +
+    geom_jitter(alpha = 0.4, size = 0.8) +
+    my_ggplot_theme +
+    scale_y_continuous(trans = scales::pseudo_log_trans(base = 10),
+                      breaks = c(0, 10^(1:6)),
+                      labels = math_format(.x)) +
+   coord_flip() +
+   ggtitle("csp22") +
+   xlab("") +
+   ylab("Avg. Max RLU") +
+   scale_fill_manual(values = Tribe_colors) +
+   theme(title = element_text(face = "bold", hjust = 0.5, family = "Arial"),
+         axis.text.y = element_text(color = "black", size = 6.5, family = "Arial"),
+         axis.text.x = element_text(color = "black", size = 9, angle = 45, hjust = 1, family = "Arial"),
+         axis.title.x = element_text(color = "black", size = 10, family = "Arial"),
+         panel.grid.major.x = element_line(colour="grey87", size = 0.5),
+         legend.position = "none"))
+
+
+
+
