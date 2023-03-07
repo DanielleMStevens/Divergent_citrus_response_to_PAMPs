@@ -188,16 +188,34 @@ csp22_filtered_data <- melted_filtered_avg_PAMP_responses[,c(3,4)]
 #csp22_filtered_data <- csp22_filtered_data[rowSums(csp22_filtered_data) != 0, ] <--- can use to make F7, or remove extra rows manually
 csp22_filtered_data <- as.data.frame(csp22_filtered_data)
 
+
 # filter out alternate mappind data for just csp22s
 alternate_maping_data <- melted_alternate_maping_data[rownames(melted_alternate_maping_data) %in% rownames(csp22_filtered_data),c(3,4)]
 alternate_maping_data <- as.data.frame(alternate_maping_data)
 alternate_maping_data <- alternate_maping_data %>% arrange(factor(`CLas csp22`, levels = c("Yes","Variable","No")))
 csp22_filtered_data <- csp22_filtered_data[rownames(alternate_maping_data),]
 
+
 ##pull out row names to annotate with
-citrus_realtionship_info <- as.data.frame(filtered_avg_PAMP_response[match(rownames(melted_filtered_avg_PAMP_responses), rownames(csp22_filtered_data)),], 
-                                          stringsAsFactors = FALSE)
+citrus_realtionship_info <- as.data.frame(filtered_avg_PAMP_response[match(rownames(melted_filtered_avg_PAMP_responses), rownames(csp22_filtered_data)),] , stringsAsFactors = FALSE)
+csp22_fix_filtered <- citrus_realtionship_info[,7:8]
+csp22_fix_filtered <- csp22_fix_filtered[match(rownames(alternate_maping_data), rownames(csp22_fix_filtered)),]
+citrus_realtionship_info <- citrus_realtionship_info[match(rownames(alternate_maping_data), rownames(citrus_realtionship_info)),]
+
+for (i in 1:nrow(citrus_realtionship_info)){
+  if (is.na(citrus_realtionship_info$`Common name`[i]) == TRUE){
+    citrus_realtionship_info$`Common name`[i] <- citrus_realtionship_info$`Botanical name (CRC numbers in parenthesis)`[i]
+  }
+}
+
+
+
+
+rownames(csp22_fix_filtered) <- citrus_realtionship_info$`Common name`
+
+
 citrus_realtionship_info <- citrus_realtionship_info[,c(2,3)]
+colnames(citrus_realtionship_info) <- c("Tribe","Sub-tribe")
 citrus_realtionship_info$Tribe <- as.character(citrus_realtionship_info$Tribe)
 citrus_realtionship_info$`Sub-tribe` <- as.character(citrus_realtionship_info$`Sub-tribe`)
 
@@ -218,7 +236,7 @@ row_anno <- rowAnnotation(df = citrus_realtionship_info,
 ######################################################################
 
 
-ht2 = ComplexHeatmap::Heatmap(csp22_filtered_data,
+ht2 = ComplexHeatmap::Heatmap(csp22_fix_filtered,
                              
                              #cluster color modificaiton
                              col = my_color_scale_breaks,
@@ -263,6 +281,8 @@ ht2 = ComplexHeatmap::Heatmap(csp22_filtered_data,
                                                          legend_label_gp = gpar(col = "black", fontsize = 10, fontfamily = "Arial")
                              ),
                              use_raster = TRUE, raster_quality = 4, raster_device = 'png')
+
+
 
 
 

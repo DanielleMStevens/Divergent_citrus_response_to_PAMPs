@@ -139,7 +139,7 @@ p2
 ##############################################
 
 
-CORE_Citrus_phylo <- read.tree("./Protein_Trees/CORE_citrus_tree/CORE_citrus_sequences_aligned.treefile")
+CORE_Citrus_phylo <- read.tree("./Protein_Trees/CORE_citrus_tree/CORE_citrus_sequences_aligned_all.treefile")
 CORE_Citrus_phylo <- phangorn::midpoint(CORE_Citrus_phylo, node.labels='label')
 
 for (i in 1:length(CORE_Citrus_phylo$tip.label)){
@@ -161,7 +161,7 @@ d$label <- as.numeric(d$label)
 d <- d[d$label > 99,]
 
 p3 <- p3 +
-  geom_nodepoint(data=d, aes(label=label), shape = 21, size = 1, color = "black", fill = "grey35") 
+  geom_nodepoint(data=d, aes(label=label), shape = 21, size = 2, color = "black", fill = "grey35") 
 
 
 p3
